@@ -88,7 +88,7 @@ public class SdkUnitTests {
 			// parse first account's baseUrl
 			// below code required for production, no effect in demo (same
 			// domain)
-			apiClient.setBasePath(userInfo.getAccounts().get(0).getBaseUri() + "/restapi");
+			apiClient.setBasePath(userInfo.getAccounts().get(0).getBaseUri() + "/clickapi");
 			Configuration.setDefaultApiClient(apiClient);
 		} catch (ApiException ex) {
 			Assert.fail("Exception: " + ex);
@@ -137,7 +137,7 @@ public class SdkUnitTests {
 			// parse first account's baseUrl
 			// below code required for production, no effect in demo (same
 			// domain)
-			apiClient.setBasePath(userInfo.getAccounts().get(0).getBaseUri() + "/restapi");
+			apiClient.setBasePath(userInfo.getAccounts().get(0).getBaseUri() + "/clickapi");
 			Configuration.setDefaultApiClient(apiClient);
 		} catch (ApiException ex) {
 			Assert.fail("Exception: " + ex);*/
@@ -180,7 +180,7 @@ public class SdkUnitTests {
 			// parse first account's baseUrl
 			// below code required for production, no effect in demo (same
 			// domain)
-			apiClient.setBasePath(userInfo.getAccounts().get(0).getBaseUri() + "/restapi");
+			apiClient.setBasePath(userInfo.getAccounts().get(0).getBaseUri() + "/clickapi");
 			Configuration.setDefaultApiClient(apiClient);*/
 		} catch (UriBuilderException ex) {
 			System.out.println("UriBuilderException: " + ex);

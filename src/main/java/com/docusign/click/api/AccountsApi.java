@@ -1343,6 +1343,7 @@ public class AccountsApi {
   private String fromDate = null;
   private String ownerUserId = null;
   private String pageNumber = null;
+  private String shared = null;
   private String status = null;
   private String toDate = null;
   /*
@@ -1374,6 +1375,16 @@ public class AccountsApi {
 
   public String getPageNumber() {
     return this.pageNumber;
+  }
+  /*
+   * 
+   */
+  public void setShared(String shared) {
+    this.shared = shared;
+  }
+
+  public String getShared() {
+    return this.shared;
   }
   /*
    * 
@@ -1439,6 +1450,8 @@ public class AccountsApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("ownerUserId", options.ownerUserId));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("page_number", options.pageNumber));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("shared", options.shared));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("status", options.status));
     }if (options != null) {

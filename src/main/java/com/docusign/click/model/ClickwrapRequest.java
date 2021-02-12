@@ -28,8 +28,11 @@ public class ClickwrapRequest {
   @JsonProperty("fieldsToNull")
   private String fieldsToNull = null;
 
-  @JsonProperty("isMajorversion")
-  private Boolean isMajorversion = null;
+  @JsonProperty("isMajorVersion")
+  private Boolean isMajorVersion = null;
+
+  @JsonProperty("isShared")
+  private Boolean isShared = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -132,22 +135,40 @@ public class ClickwrapRequest {
     this.fieldsToNull = fieldsToNull;
   }
 
-  public ClickwrapRequest isMajorversion(Boolean isMajorversion) {
-    this.isMajorversion = isMajorversion;
+  public ClickwrapRequest isMajorVersion(Boolean isMajorVersion) {
+    this.isMajorVersion = isMajorVersion;
     return this;
   }
 
    /**
    * 
-   * @return isMajorversion
+   * @return isMajorVersion
   **/
   @ApiModelProperty(value = "")
-  public Boolean isIsMajorversion() {
-    return isMajorversion;
+  public Boolean isIsMajorVersion() {
+    return isMajorVersion;
   }
 
-  public void setIsMajorversion(Boolean isMajorversion) {
-    this.isMajorversion = isMajorversion;
+  public void setIsMajorVersion(Boolean isMajorVersion) {
+    this.isMajorVersion = isMajorVersion;
+  }
+
+  public ClickwrapRequest isShared(Boolean isShared) {
+    this.isShared = isShared;
+    return this;
+  }
+
+   /**
+   * 
+   * @return isShared
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isIsShared() {
+    return isShared;
+  }
+
+  public void setIsShared(Boolean isShared) {
+    this.isShared = isShared;
   }
 
   public ClickwrapRequest name(String name) {
@@ -290,7 +311,8 @@ public class ClickwrapRequest {
         Objects.equals(this.displaySettings, clickwrapRequest.displaySettings) &&
         Objects.equals(this.documents, clickwrapRequest.documents) &&
         Objects.equals(this.fieldsToNull, clickwrapRequest.fieldsToNull) &&
-        Objects.equals(this.isMajorversion, clickwrapRequest.isMajorversion) &&
+        Objects.equals(this.isMajorVersion, clickwrapRequest.isMajorVersion) &&
+        Objects.equals(this.isShared, clickwrapRequest.isShared) &&
         Objects.equals(this.name, clickwrapRequest.name) &&
         Objects.equals(this.requireReacceptance, clickwrapRequest.requireReacceptance) &&
         Objects.equals(this.scheduledDate, clickwrapRequest.scheduledDate) &&
@@ -302,7 +324,7 @@ public class ClickwrapRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(clickwrapName, displaySettings, documents, fieldsToNull, isMajorversion, name, requireReacceptance, scheduledDate, scheduledReacceptance, status, transferFromUserId, transferToUserId);
+    return Objects.hash(clickwrapName, displaySettings, documents, fieldsToNull, isMajorVersion, isShared, name, requireReacceptance, scheduledDate, scheduledReacceptance, status, transferFromUserId, transferToUserId);
   }
 
 
@@ -315,7 +337,8 @@ public class ClickwrapRequest {
     sb.append("    displaySettings: ").append(toIndentedString(displaySettings)).append("\n");
     sb.append("    documents: ").append(toIndentedString(documents)).append("\n");
     sb.append("    fieldsToNull: ").append(toIndentedString(fieldsToNull)).append("\n");
-    sb.append("    isMajorversion: ").append(toIndentedString(isMajorversion)).append("\n");
+    sb.append("    isMajorVersion: ").append(toIndentedString(isMajorVersion)).append("\n");
+    sb.append("    isShared: ").append(toIndentedString(isShared)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    requireReacceptance: ").append(toIndentedString(requireReacceptance)).append("\n");
     sb.append("    scheduledDate: ").append(toIndentedString(scheduledDate)).append("\n");
