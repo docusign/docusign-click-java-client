@@ -12,7 +12,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ClickwrapRequest
+ * ClickwrapRequest.
+ *
  */
 
 public class ClickwrapRequest {
@@ -55,47 +56,76 @@ public class ClickwrapRequest {
   @JsonProperty("transferToUserId")
   private String transferToUserId = null;
 
+
+  /**
+   * clickwrapName.
+   *
+   * @return ClickwrapRequest
+   **/
   public ClickwrapRequest clickwrapName(String clickwrapName) {
     this.clickwrapName = clickwrapName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return clickwrapName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getClickwrapName() {
     return clickwrapName;
   }
 
+  /**
+   * setClickwrapName.
+   **/
   public void setClickwrapName(String clickwrapName) {
     this.clickwrapName = clickwrapName;
   }
 
+
+  /**
+   * displaySettings.
+   *
+   * @return ClickwrapRequest
+   **/
   public ClickwrapRequest displaySettings(DisplaySettings displaySettings) {
     this.displaySettings = displaySettings;
     return this;
   }
 
-   /**
-   * Get displaySettings
+  /**
+   * Get displaySettings.
    * @return displaySettings
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DisplaySettings getDisplaySettings() {
     return displaySettings;
   }
 
+  /**
+   * setDisplaySettings.
+   **/
   public void setDisplaySettings(DisplaySettings displaySettings) {
     this.displaySettings = displaySettings;
   }
 
+
+  /**
+   * documents.
+   *
+   * @return ClickwrapRequest
+   **/
   public ClickwrapRequest documents(java.util.List<Document> documents) {
     this.documents = documents;
     return this;
   }
-
+  
+  /**
+   * addDocumentsItem.
+   *
+   * @return ClickwrapRequest
+   **/
   public ClickwrapRequest addDocumentsItem(Document documentsItem) {
     if (this.documents == null) {
       this.documents = new java.util.ArrayList<Document>();
@@ -104,200 +134,298 @@ public class ClickwrapRequest {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return documents
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Document> getDocuments() {
     return documents;
   }
 
+  /**
+   * setDocuments.
+   **/
   public void setDocuments(java.util.List<Document> documents) {
     this.documents = documents;
   }
 
+
+  /**
+   * fieldsToNull.
+   *
+   * @return ClickwrapRequest
+   **/
   public ClickwrapRequest fieldsToNull(String fieldsToNull) {
     this.fieldsToNull = fieldsToNull;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return fieldsToNull
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getFieldsToNull() {
     return fieldsToNull;
   }
 
+  /**
+   * setFieldsToNull.
+   **/
   public void setFieldsToNull(String fieldsToNull) {
     this.fieldsToNull = fieldsToNull;
   }
 
+
+  /**
+   * isMajorVersion.
+   *
+   * @return ClickwrapRequest
+   **/
   public ClickwrapRequest isMajorVersion(Boolean isMajorVersion) {
     this.isMajorVersion = isMajorVersion;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return isMajorVersion
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsMajorVersion() {
     return isMajorVersion;
   }
 
+  /**
+   * setIsMajorVersion.
+   **/
   public void setIsMajorVersion(Boolean isMajorVersion) {
     this.isMajorVersion = isMajorVersion;
   }
 
+
+  /**
+   * isShared.
+   *
+   * @return ClickwrapRequest
+   **/
   public ClickwrapRequest isShared(Boolean isShared) {
     this.isShared = isShared;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return isShared
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsShared() {
     return isShared;
   }
 
+  /**
+   * setIsShared.
+   **/
   public void setIsShared(Boolean isShared) {
     this.isShared = isShared;
   }
 
+
+  /**
+   * name.
+   *
+   * @return ClickwrapRequest
+   **/
   public ClickwrapRequest name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * requireReacceptance.
+   *
+   * @return ClickwrapRequest
+   **/
   public ClickwrapRequest requireReacceptance(Boolean requireReacceptance) {
     this.requireReacceptance = requireReacceptance;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return requireReacceptance
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isRequireReacceptance() {
     return requireReacceptance;
   }
 
+  /**
+   * setRequireReacceptance.
+   **/
   public void setRequireReacceptance(Boolean requireReacceptance) {
     this.requireReacceptance = requireReacceptance;
   }
 
+
+  /**
+   * scheduledDate.
+   *
+   * @return ClickwrapRequest
+   **/
   public ClickwrapRequest scheduledDate(Object scheduledDate) {
     this.scheduledDate = scheduledDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return scheduledDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Object getScheduledDate() {
     return scheduledDate;
   }
 
+  /**
+   * setScheduledDate.
+   **/
   public void setScheduledDate(Object scheduledDate) {
     this.scheduledDate = scheduledDate;
   }
 
+
+  /**
+   * scheduledReacceptance.
+   *
+   * @return ClickwrapRequest
+   **/
   public ClickwrapRequest scheduledReacceptance(ClickwrapScheduledReacceptance scheduledReacceptance) {
     this.scheduledReacceptance = scheduledReacceptance;
     return this;
   }
 
-   /**
-   * Get scheduledReacceptance
+  /**
+   * Get scheduledReacceptance.
    * @return scheduledReacceptance
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ClickwrapScheduledReacceptance getScheduledReacceptance() {
     return scheduledReacceptance;
   }
 
+  /**
+   * setScheduledReacceptance.
+   **/
   public void setScheduledReacceptance(ClickwrapScheduledReacceptance scheduledReacceptance) {
     this.scheduledReacceptance = scheduledReacceptance;
   }
 
+
+  /**
+   * status.
+   *
+   * @return ClickwrapRequest
+   **/
   public ClickwrapRequest status(Object status) {
     this.status = status;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return status
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Object getStatus() {
     return status;
   }
 
+  /**
+   * setStatus.
+   **/
   public void setStatus(Object status) {
     this.status = status;
   }
 
+
+  /**
+   * transferFromUserId.
+   *
+   * @return ClickwrapRequest
+   **/
   public ClickwrapRequest transferFromUserId(String transferFromUserId) {
     this.transferFromUserId = transferFromUserId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return transferFromUserId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTransferFromUserId() {
     return transferFromUserId;
   }
 
+  /**
+   * setTransferFromUserId.
+   **/
   public void setTransferFromUserId(String transferFromUserId) {
     this.transferFromUserId = transferFromUserId;
   }
 
+
+  /**
+   * transferToUserId.
+   *
+   * @return ClickwrapRequest
+   **/
   public ClickwrapRequest transferToUserId(String transferToUserId) {
     this.transferToUserId = transferToUserId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return transferToUserId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTransferToUserId() {
     return transferToUserId;
   }
 
+  /**
+   * setTransferToUserId.
+   **/
   public void setTransferToUserId(String transferToUserId) {
     this.transferToUserId = transferToUserId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -322,12 +450,18 @@ public class ClickwrapRequest {
         Objects.equals(this.transferToUserId, clickwrapRequest.transferToUserId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(clickwrapName, displaySettings, documents, fieldsToNull, isMajorVersion, isShared, name, requireReacceptance, scheduledDate, scheduledReacceptance, status, transferFromUserId, transferToUserId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ClickwrapVersionDeleteResponse
+ * ClickwrapVersionDeleteResponse.
+ *
  */
 
 public class ClickwrapVersionDeleteResponse {
@@ -53,241 +54,363 @@ public class ClickwrapVersionDeleteResponse {
   @JsonProperty("versionNumber")
   private String versionNumber = null;
 
+
+  /**
+   * clickwrapVersionId.
+   *
+   * @return ClickwrapVersionDeleteResponse
+   **/
   public ClickwrapVersionDeleteResponse clickwrapVersionId(String clickwrapVersionId) {
     this.clickwrapVersionId = clickwrapVersionId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return clickwrapVersionId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getClickwrapVersionId() {
     return clickwrapVersionId;
   }
 
+  /**
+   * setClickwrapVersionId.
+   **/
   public void setClickwrapVersionId(String clickwrapVersionId) {
     this.clickwrapVersionId = clickwrapVersionId;
   }
 
+
+  /**
+   * createdTime.
+   *
+   * @return ClickwrapVersionDeleteResponse
+   **/
   public ClickwrapVersionDeleteResponse createdTime(Object createdTime) {
     this.createdTime = createdTime;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return createdTime
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Object getCreatedTime() {
     return createdTime;
   }
 
+  /**
+   * setCreatedTime.
+   **/
   public void setCreatedTime(Object createdTime) {
     this.createdTime = createdTime;
   }
 
+
+  /**
+   * deletionMessage.
+   *
+   * @return ClickwrapVersionDeleteResponse
+   **/
   public ClickwrapVersionDeleteResponse deletionMessage(String deletionMessage) {
     this.deletionMessage = deletionMessage;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return deletionMessage
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDeletionMessage() {
     return deletionMessage;
   }
 
+  /**
+   * setDeletionMessage.
+   **/
   public void setDeletionMessage(String deletionMessage) {
     this.deletionMessage = deletionMessage;
   }
 
+
+  /**
+   * deletionSuccess.
+   *
+   * @return ClickwrapVersionDeleteResponse
+   **/
   public ClickwrapVersionDeleteResponse deletionSuccess(Boolean deletionSuccess) {
     this.deletionSuccess = deletionSuccess;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return deletionSuccess
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isDeletionSuccess() {
     return deletionSuccess;
   }
 
+  /**
+   * setDeletionSuccess.
+   **/
   public void setDeletionSuccess(Boolean deletionSuccess) {
     this.deletionSuccess = deletionSuccess;
   }
 
+
+  /**
+   * lastModified.
+   *
+   * @return ClickwrapVersionDeleteResponse
+   **/
   public ClickwrapVersionDeleteResponse lastModified(Object lastModified) {
     this.lastModified = lastModified;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return lastModified
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Object getLastModified() {
     return lastModified;
   }
 
+  /**
+   * setLastModified.
+   **/
   public void setLastModified(Object lastModified) {
     this.lastModified = lastModified;
   }
 
+
+  /**
+   * lastModifiedBy.
+   *
+   * @return ClickwrapVersionDeleteResponse
+   **/
   public ClickwrapVersionDeleteResponse lastModifiedBy(String lastModifiedBy) {
     this.lastModifiedBy = lastModifiedBy;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return lastModifiedBy
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLastModifiedBy() {
     return lastModifiedBy;
   }
 
+  /**
+   * setLastModifiedBy.
+   **/
   public void setLastModifiedBy(String lastModifiedBy) {
     this.lastModifiedBy = lastModifiedBy;
   }
 
+
+  /**
+   * ownerUserId.
+   *
+   * @return ClickwrapVersionDeleteResponse
+   **/
   public ClickwrapVersionDeleteResponse ownerUserId(String ownerUserId) {
     this.ownerUserId = ownerUserId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return ownerUserId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getOwnerUserId() {
     return ownerUserId;
   }
 
+  /**
+   * setOwnerUserId.
+   **/
   public void setOwnerUserId(String ownerUserId) {
     this.ownerUserId = ownerUserId;
   }
 
+
+  /**
+   * requireReacceptance.
+   *
+   * @return ClickwrapVersionDeleteResponse
+   **/
   public ClickwrapVersionDeleteResponse requireReacceptance(Boolean requireReacceptance) {
     this.requireReacceptance = requireReacceptance;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return requireReacceptance
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isRequireReacceptance() {
     return requireReacceptance;
   }
 
+  /**
+   * setRequireReacceptance.
+   **/
   public void setRequireReacceptance(Boolean requireReacceptance) {
     this.requireReacceptance = requireReacceptance;
   }
 
+
+  /**
+   * scheduledDate.
+   *
+   * @return ClickwrapVersionDeleteResponse
+   **/
   public ClickwrapVersionDeleteResponse scheduledDate(Object scheduledDate) {
     this.scheduledDate = scheduledDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return scheduledDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Object getScheduledDate() {
     return scheduledDate;
   }
 
+  /**
+   * setScheduledDate.
+   **/
   public void setScheduledDate(Object scheduledDate) {
     this.scheduledDate = scheduledDate;
   }
 
+
+  /**
+   * scheduledReacceptance.
+   *
+   * @return ClickwrapVersionDeleteResponse
+   **/
   public ClickwrapVersionDeleteResponse scheduledReacceptance(ClickwrapScheduledReacceptance scheduledReacceptance) {
     this.scheduledReacceptance = scheduledReacceptance;
     return this;
   }
 
-   /**
-   * Get scheduledReacceptance
+  /**
+   * Get scheduledReacceptance.
    * @return scheduledReacceptance
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ClickwrapScheduledReacceptance getScheduledReacceptance() {
     return scheduledReacceptance;
   }
 
+  /**
+   * setScheduledReacceptance.
+   **/
   public void setScheduledReacceptance(ClickwrapScheduledReacceptance scheduledReacceptance) {
     this.scheduledReacceptance = scheduledReacceptance;
   }
 
+
+  /**
+   * status.
+   *
+   * @return ClickwrapVersionDeleteResponse
+   **/
   public ClickwrapVersionDeleteResponse status(String status) {
     this.status = status;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return status
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getStatus() {
     return status;
   }
 
+  /**
+   * setStatus.
+   **/
   public void setStatus(String status) {
     this.status = status;
   }
 
+
+  /**
+   * versionId.
+   *
+   * @return ClickwrapVersionDeleteResponse
+   **/
   public ClickwrapVersionDeleteResponse versionId(String versionId) {
     this.versionId = versionId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return versionId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getVersionId() {
     return versionId;
   }
 
+  /**
+   * setVersionId.
+   **/
   public void setVersionId(String versionId) {
     this.versionId = versionId;
   }
 
+
+  /**
+   * versionNumber.
+   *
+   * @return ClickwrapVersionDeleteResponse
+   **/
   public ClickwrapVersionDeleteResponse versionNumber(String versionNumber) {
     this.versionNumber = versionNumber;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return versionNumber
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getVersionNumber() {
     return versionNumber;
   }
 
+  /**
+   * setVersionNumber.
+   **/
   public void setVersionNumber(String versionNumber) {
     this.versionNumber = versionNumber;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -312,12 +435,18 @@ public class ClickwrapVersionDeleteResponse {
         Objects.equals(this.versionNumber, clickwrapVersionDeleteResponse.versionNumber);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(clickwrapVersionId, createdTime, deletionMessage, deletionSuccess, lastModified, lastModifiedBy, ownerUserId, requireReacceptance, scheduledDate, scheduledReacceptance, status, versionId, versionNumber);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
