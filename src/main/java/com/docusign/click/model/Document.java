@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Document
+ * Document.
+ *
  */
 
 public class Document {
@@ -28,97 +29,147 @@ public class Document {
   @JsonProperty("order")
   private Integer order = null;
 
+
+  /**
+   * documentBase64.
+   *
+   * @return Document
+   **/
   public Document documentBase64(String documentBase64) {
     this.documentBase64 = documentBase64;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return documentBase64
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDocumentBase64() {
     return documentBase64;
   }
 
+  /**
+   * setDocumentBase64.
+   **/
   public void setDocumentBase64(String documentBase64) {
     this.documentBase64 = documentBase64;
   }
 
+
+  /**
+   * documentHtml.
+   *
+   * @return Document
+   **/
   public Document documentHtml(String documentHtml) {
     this.documentHtml = documentHtml;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return documentHtml
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDocumentHtml() {
     return documentHtml;
   }
 
+  /**
+   * setDocumentHtml.
+   **/
   public void setDocumentHtml(String documentHtml) {
     this.documentHtml = documentHtml;
   }
 
+
+  /**
+   * documentName.
+   *
+   * @return Document
+   **/
   public Document documentName(String documentName) {
     this.documentName = documentName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return documentName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDocumentName() {
     return documentName;
   }
 
+  /**
+   * setDocumentName.
+   **/
   public void setDocumentName(String documentName) {
     this.documentName = documentName;
   }
 
+
+  /**
+   * fileExtension.
+   *
+   * @return Document
+   **/
   public Document fileExtension(String fileExtension) {
     this.fileExtension = fileExtension;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return fileExtension
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getFileExtension() {
     return fileExtension;
   }
 
+  /**
+   * setFileExtension.
+   **/
   public void setFileExtension(String fileExtension) {
     this.fileExtension = fileExtension;
   }
 
+
+  /**
+   * order.
+   *
+   * @return Document
+   **/
   public Document order(Integer order) {
     this.order = order;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return order
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getOrder() {
     return order;
   }
 
+  /**
+   * setOrder.
+   **/
   public void setOrder(Integer order) {
     this.order = order;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -135,12 +186,18 @@ public class Document {
         Objects.equals(this.order, document.order);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(documentBase64, documentHtml, documentName, fileExtension, order);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

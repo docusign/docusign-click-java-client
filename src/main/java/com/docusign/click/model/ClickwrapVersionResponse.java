@@ -12,7 +12,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ClickwrapVersionResponse
+ * ClickwrapVersionResponse.
+ *
  */
 
 public class ClickwrapVersionResponse {
@@ -64,119 +65,184 @@ public class ClickwrapVersionResponse {
   @JsonProperty("versionNumber")
   private String versionNumber = null;
 
+
+  /**
+   * accountId.
+   *
+   * @return ClickwrapVersionResponse
+   **/
   public ClickwrapVersionResponse accountId(String accountId) {
     this.accountId = accountId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return accountId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAccountId() {
     return accountId;
   }
 
+  /**
+   * setAccountId.
+   **/
   public void setAccountId(String accountId) {
     this.accountId = accountId;
   }
 
+
+  /**
+   * clickwrapId.
+   *
+   * @return ClickwrapVersionResponse
+   **/
   public ClickwrapVersionResponse clickwrapId(String clickwrapId) {
     this.clickwrapId = clickwrapId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return clickwrapId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getClickwrapId() {
     return clickwrapId;
   }
 
+  /**
+   * setClickwrapId.
+   **/
   public void setClickwrapId(String clickwrapId) {
     this.clickwrapId = clickwrapId;
   }
 
+
+  /**
+   * clickwrapName.
+   *
+   * @return ClickwrapVersionResponse
+   **/
   public ClickwrapVersionResponse clickwrapName(String clickwrapName) {
     this.clickwrapName = clickwrapName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return clickwrapName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getClickwrapName() {
     return clickwrapName;
   }
 
+  /**
+   * setClickwrapName.
+   **/
   public void setClickwrapName(String clickwrapName) {
     this.clickwrapName = clickwrapName;
   }
 
+
+  /**
+   * clickwrapVersionId.
+   *
+   * @return ClickwrapVersionResponse
+   **/
   public ClickwrapVersionResponse clickwrapVersionId(String clickwrapVersionId) {
     this.clickwrapVersionId = clickwrapVersionId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return clickwrapVersionId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getClickwrapVersionId() {
     return clickwrapVersionId;
   }
 
+  /**
+   * setClickwrapVersionId.
+   **/
   public void setClickwrapVersionId(String clickwrapVersionId) {
     this.clickwrapVersionId = clickwrapVersionId;
   }
 
+
+  /**
+   * createdTime.
+   *
+   * @return ClickwrapVersionResponse
+   **/
   public ClickwrapVersionResponse createdTime(Object createdTime) {
     this.createdTime = createdTime;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return createdTime
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Object getCreatedTime() {
     return createdTime;
   }
 
+  /**
+   * setCreatedTime.
+   **/
   public void setCreatedTime(Object createdTime) {
     this.createdTime = createdTime;
   }
 
+
+  /**
+   * displaySettings.
+   *
+   * @return ClickwrapVersionResponse
+   **/
   public ClickwrapVersionResponse displaySettings(DisplaySettings displaySettings) {
     this.displaySettings = displaySettings;
     return this;
   }
 
-   /**
-   * Get displaySettings
+  /**
+   * Get displaySettings.
    * @return displaySettings
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DisplaySettings getDisplaySettings() {
     return displaySettings;
   }
 
+  /**
+   * setDisplaySettings.
+   **/
   public void setDisplaySettings(DisplaySettings displaySettings) {
     this.displaySettings = displaySettings;
   }
 
+
+  /**
+   * documents.
+   *
+   * @return ClickwrapVersionResponse
+   **/
   public ClickwrapVersionResponse documents(java.util.List<Document> documents) {
     this.documents = documents;
     return this;
   }
-
+  
+  /**
+   * addDocumentsItem.
+   *
+   * @return ClickwrapVersionResponse
+   **/
   public ClickwrapVersionResponse addDocumentsItem(Document documentsItem) {
     if (this.documents == null) {
       this.documents = new java.util.ArrayList<Document>();
@@ -185,182 +251,271 @@ public class ClickwrapVersionResponse {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return documents
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Document> getDocuments() {
     return documents;
   }
 
+  /**
+   * setDocuments.
+   **/
   public void setDocuments(java.util.List<Document> documents) {
     this.documents = documents;
   }
 
+
+  /**
+   * lastModified.
+   *
+   * @return ClickwrapVersionResponse
+   **/
   public ClickwrapVersionResponse lastModified(Object lastModified) {
     this.lastModified = lastModified;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return lastModified
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Object getLastModified() {
     return lastModified;
   }
 
+  /**
+   * setLastModified.
+   **/
   public void setLastModified(Object lastModified) {
     this.lastModified = lastModified;
   }
 
+
+  /**
+   * lastModifiedBy.
+   *
+   * @return ClickwrapVersionResponse
+   **/
   public ClickwrapVersionResponse lastModifiedBy(String lastModifiedBy) {
     this.lastModifiedBy = lastModifiedBy;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return lastModifiedBy
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLastModifiedBy() {
     return lastModifiedBy;
   }
 
+  /**
+   * setLastModifiedBy.
+   **/
   public void setLastModifiedBy(String lastModifiedBy) {
     this.lastModifiedBy = lastModifiedBy;
   }
 
+
+  /**
+   * ownerUserId.
+   *
+   * @return ClickwrapVersionResponse
+   **/
   public ClickwrapVersionResponse ownerUserId(String ownerUserId) {
     this.ownerUserId = ownerUserId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return ownerUserId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getOwnerUserId() {
     return ownerUserId;
   }
 
+  /**
+   * setOwnerUserId.
+   **/
   public void setOwnerUserId(String ownerUserId) {
     this.ownerUserId = ownerUserId;
   }
 
+
+  /**
+   * requireReacceptance.
+   *
+   * @return ClickwrapVersionResponse
+   **/
   public ClickwrapVersionResponse requireReacceptance(Boolean requireReacceptance) {
     this.requireReacceptance = requireReacceptance;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return requireReacceptance
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isRequireReacceptance() {
     return requireReacceptance;
   }
 
+  /**
+   * setRequireReacceptance.
+   **/
   public void setRequireReacceptance(Boolean requireReacceptance) {
     this.requireReacceptance = requireReacceptance;
   }
 
+
+  /**
+   * scheduledDate.
+   *
+   * @return ClickwrapVersionResponse
+   **/
   public ClickwrapVersionResponse scheduledDate(Object scheduledDate) {
     this.scheduledDate = scheduledDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return scheduledDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Object getScheduledDate() {
     return scheduledDate;
   }
 
+  /**
+   * setScheduledDate.
+   **/
   public void setScheduledDate(Object scheduledDate) {
     this.scheduledDate = scheduledDate;
   }
 
+
+  /**
+   * scheduledReacceptance.
+   *
+   * @return ClickwrapVersionResponse
+   **/
   public ClickwrapVersionResponse scheduledReacceptance(ClickwrapScheduledReacceptance scheduledReacceptance) {
     this.scheduledReacceptance = scheduledReacceptance;
     return this;
   }
 
-   /**
-   * Get scheduledReacceptance
+  /**
+   * Get scheduledReacceptance.
    * @return scheduledReacceptance
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ClickwrapScheduledReacceptance getScheduledReacceptance() {
     return scheduledReacceptance;
   }
 
+  /**
+   * setScheduledReacceptance.
+   **/
   public void setScheduledReacceptance(ClickwrapScheduledReacceptance scheduledReacceptance) {
     this.scheduledReacceptance = scheduledReacceptance;
   }
 
+
+  /**
+   * status.
+   *
+   * @return ClickwrapVersionResponse
+   **/
   public ClickwrapVersionResponse status(String status) {
     this.status = status;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return status
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getStatus() {
     return status;
   }
 
+  /**
+   * setStatus.
+   **/
   public void setStatus(String status) {
     this.status = status;
   }
 
+
+  /**
+   * versionId.
+   *
+   * @return ClickwrapVersionResponse
+   **/
   public ClickwrapVersionResponse versionId(String versionId) {
     this.versionId = versionId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return versionId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getVersionId() {
     return versionId;
   }
 
+  /**
+   * setVersionId.
+   **/
   public void setVersionId(String versionId) {
     this.versionId = versionId;
   }
 
+
+  /**
+   * versionNumber.
+   *
+   * @return ClickwrapVersionResponse
+   **/
   public ClickwrapVersionResponse versionNumber(String versionNumber) {
     this.versionNumber = versionNumber;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return versionNumber
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getVersionNumber() {
     return versionNumber;
   }
 
+  /**
+   * setVersionNumber.
+   **/
   public void setVersionNumber(String versionNumber) {
     this.versionNumber = versionNumber;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -388,12 +543,18 @@ public class ClickwrapVersionResponse {
         Objects.equals(this.versionNumber, clickwrapVersionResponse.versionNumber);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(accountId, clickwrapId, clickwrapName, clickwrapVersionId, createdTime, displaySettings, documents, lastModified, lastModifiedBy, ownerUserId, requireReacceptance, scheduledDate, scheduledReacceptance, status, versionId, versionNumber);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ErrorDetails
+ * ErrorDetails.
+ *
  */
 
 public class ErrorDetails {
@@ -19,43 +20,66 @@ public class ErrorDetails {
   @JsonProperty("message")
   private String message = null;
 
+
+  /**
+   * errorCode.
+   *
+   * @return ErrorDetails
+   **/
   public ErrorDetails errorCode(String errorCode) {
     this.errorCode = errorCode;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return errorCode
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getErrorCode() {
     return errorCode;
   }
 
+  /**
+   * setErrorCode.
+   **/
   public void setErrorCode(String errorCode) {
     this.errorCode = errorCode;
   }
 
+
+  /**
+   * message.
+   *
+   * @return ErrorDetails
+   **/
   public ErrorDetails message(String message) {
     this.message = message;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return message
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getMessage() {
     return message;
   }
 
+  /**
+   * setMessage.
+   **/
   public void setMessage(String message) {
     this.message = message;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class ErrorDetails {
         Objects.equals(this.message, errorDetails.message);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(errorCode, message);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

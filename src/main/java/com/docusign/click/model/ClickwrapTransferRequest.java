@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ClickwrapTransferRequest
+ * ClickwrapTransferRequest.
+ *
  */
 
 public class ClickwrapTransferRequest {
@@ -19,43 +20,66 @@ public class ClickwrapTransferRequest {
   @JsonProperty("transferToUserId")
   private String transferToUserId = null;
 
+
+  /**
+   * transferFromUserId.
+   *
+   * @return ClickwrapTransferRequest
+   **/
   public ClickwrapTransferRequest transferFromUserId(String transferFromUserId) {
     this.transferFromUserId = transferFromUserId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return transferFromUserId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTransferFromUserId() {
     return transferFromUserId;
   }
 
+  /**
+   * setTransferFromUserId.
+   **/
   public void setTransferFromUserId(String transferFromUserId) {
     this.transferFromUserId = transferFromUserId;
   }
 
+
+  /**
+   * transferToUserId.
+   *
+   * @return ClickwrapTransferRequest
+   **/
   public ClickwrapTransferRequest transferToUserId(String transferToUserId) {
     this.transferToUserId = transferToUserId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return transferToUserId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTransferToUserId() {
     return transferToUserId;
   }
 
+  /**
+   * setTransferToUserId.
+   **/
   public void setTransferToUserId(String transferToUserId) {
     this.transferToUserId = transferToUserId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class ClickwrapTransferRequest {
         Objects.equals(this.transferToUserId, clickwrapTransferRequest.transferToUserId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(transferFromUserId, transferToUserId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

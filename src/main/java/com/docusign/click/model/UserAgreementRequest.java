@@ -2,6 +2,7 @@ package com.docusign.click.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.click.model.DocumentData;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -9,74 +10,107 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * UserAgreementRequest
+ * UserAgreementRequest.
+ *
  */
 
 public class UserAgreementRequest {
   @JsonProperty("clientUserId")
   private String clientUserId = null;
 
-  @JsonProperty("hostOrigin")
-  private String hostOrigin = null;
+  @JsonProperty("documentData")
+  private DocumentData documentData = null;
 
   @JsonProperty("metadata")
   private String metadata = null;
 
+
+  /**
+   * clientUserId.
+   *
+   * @return UserAgreementRequest
+   **/
   public UserAgreementRequest clientUserId(String clientUserId) {
     this.clientUserId = clientUserId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return clientUserId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getClientUserId() {
     return clientUserId;
   }
 
+  /**
+   * setClientUserId.
+   **/
   public void setClientUserId(String clientUserId) {
     this.clientUserId = clientUserId;
   }
 
-  public UserAgreementRequest hostOrigin(String hostOrigin) {
-    this.hostOrigin = hostOrigin;
+
+  /**
+   * documentData.
+   *
+   * @return UserAgreementRequest
+   **/
+  public UserAgreementRequest documentData(DocumentData documentData) {
+    this.documentData = documentData;
     return this;
   }
 
-   /**
-   * 
-   * @return hostOrigin
-  **/
+  /**
+   * Get documentData.
+   * @return documentData
+   **/
   @ApiModelProperty(value = "")
-  public String getHostOrigin() {
-    return hostOrigin;
+  public DocumentData getDocumentData() {
+    return documentData;
   }
 
-  public void setHostOrigin(String hostOrigin) {
-    this.hostOrigin = hostOrigin;
+  /**
+   * setDocumentData.
+   **/
+  public void setDocumentData(DocumentData documentData) {
+    this.documentData = documentData;
   }
 
+
+  /**
+   * metadata.
+   *
+   * @return UserAgreementRequest
+   **/
   public UserAgreementRequest metadata(String metadata) {
     this.metadata = metadata;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return metadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getMetadata() {
     return metadata;
   }
 
+  /**
+   * setMetadata.
+   **/
   public void setMetadata(String metadata) {
     this.metadata = metadata;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -87,23 +121,29 @@ public class UserAgreementRequest {
     }
     UserAgreementRequest userAgreementRequest = (UserAgreementRequest) o;
     return Objects.equals(this.clientUserId, userAgreementRequest.clientUserId) &&
-        Objects.equals(this.hostOrigin, userAgreementRequest.hostOrigin) &&
+        Objects.equals(this.documentData, userAgreementRequest.documentData) &&
         Objects.equals(this.metadata, userAgreementRequest.metadata);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
-    return Objects.hash(clientUserId, hostOrigin, metadata);
+    return Objects.hash(clientUserId, documentData, metadata);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserAgreementRequest {\n");
     
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
-    sb.append("    hostOrigin: ").append(toIndentedString(hostOrigin)).append("\n");
+    sb.append("    documentData: ").append(toIndentedString(documentData)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("}");
     return sb.toString();
