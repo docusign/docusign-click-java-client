@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ClickwrapScheduledReacceptance
+ * ClickwrapScheduledReacceptance.
+ *
  */
 
 public class ClickwrapScheduledReacceptance {
@@ -22,61 +23,93 @@ public class ClickwrapScheduledReacceptance {
   @JsonProperty("startDateTime")
   private Object startDateTime = null;
 
+
+  /**
+   * recurrenceInterval.
+   *
+   * @return ClickwrapScheduledReacceptance
+   **/
   public ClickwrapScheduledReacceptance recurrenceInterval(Integer recurrenceInterval) {
     this.recurrenceInterval = recurrenceInterval;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return recurrenceInterval
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getRecurrenceInterval() {
     return recurrenceInterval;
   }
 
+  /**
+   * setRecurrenceInterval.
+   **/
   public void setRecurrenceInterval(Integer recurrenceInterval) {
     this.recurrenceInterval = recurrenceInterval;
   }
 
+
+  /**
+   * recurrenceIntervalType.
+   *
+   * @return ClickwrapScheduledReacceptance
+   **/
   public ClickwrapScheduledReacceptance recurrenceIntervalType(String recurrenceIntervalType) {
     this.recurrenceIntervalType = recurrenceIntervalType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return recurrenceIntervalType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRecurrenceIntervalType() {
     return recurrenceIntervalType;
   }
 
+  /**
+   * setRecurrenceIntervalType.
+   **/
   public void setRecurrenceIntervalType(String recurrenceIntervalType) {
     this.recurrenceIntervalType = recurrenceIntervalType;
   }
 
+
+  /**
+   * startDateTime.
+   *
+   * @return ClickwrapScheduledReacceptance
+   **/
   public ClickwrapScheduledReacceptance startDateTime(Object startDateTime) {
     this.startDateTime = startDateTime;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return startDateTime
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Object getStartDateTime() {
     return startDateTime;
   }
 
+  /**
+   * setStartDateTime.
+   **/
   public void setStartDateTime(Object startDateTime) {
     this.startDateTime = startDateTime;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -91,12 +124,18 @@ public class ClickwrapScheduledReacceptance {
         Objects.equals(this.startDateTime, clickwrapScheduledReacceptance.startDateTime);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(recurrenceInterval, recurrenceIntervalType, startDateTime);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

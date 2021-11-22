@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ClickwrapDeleteResponse
+ * ClickwrapDeleteResponse.
+ *
  */
 
 public class ClickwrapDeleteResponse {
@@ -28,97 +29,147 @@ public class ClickwrapDeleteResponse {
   @JsonProperty("status")
   private String status = null;
 
+
+  /**
+   * clickwrapId.
+   *
+   * @return ClickwrapDeleteResponse
+   **/
   public ClickwrapDeleteResponse clickwrapId(String clickwrapId) {
     this.clickwrapId = clickwrapId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return clickwrapId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getClickwrapId() {
     return clickwrapId;
   }
 
+  /**
+   * setClickwrapId.
+   **/
   public void setClickwrapId(String clickwrapId) {
     this.clickwrapId = clickwrapId;
   }
 
+
+  /**
+   * clickwrapName.
+   *
+   * @return ClickwrapDeleteResponse
+   **/
   public ClickwrapDeleteResponse clickwrapName(String clickwrapName) {
     this.clickwrapName = clickwrapName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return clickwrapName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getClickwrapName() {
     return clickwrapName;
   }
 
+  /**
+   * setClickwrapName.
+   **/
   public void setClickwrapName(String clickwrapName) {
     this.clickwrapName = clickwrapName;
   }
 
+
+  /**
+   * deletionMessage.
+   *
+   * @return ClickwrapDeleteResponse
+   **/
   public ClickwrapDeleteResponse deletionMessage(String deletionMessage) {
     this.deletionMessage = deletionMessage;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return deletionMessage
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDeletionMessage() {
     return deletionMessage;
   }
 
+  /**
+   * setDeletionMessage.
+   **/
   public void setDeletionMessage(String deletionMessage) {
     this.deletionMessage = deletionMessage;
   }
 
+
+  /**
+   * deletionSuccess.
+   *
+   * @return ClickwrapDeleteResponse
+   **/
   public ClickwrapDeleteResponse deletionSuccess(Boolean deletionSuccess) {
     this.deletionSuccess = deletionSuccess;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return deletionSuccess
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isDeletionSuccess() {
     return deletionSuccess;
   }
 
+  /**
+   * setDeletionSuccess.
+   **/
   public void setDeletionSuccess(Boolean deletionSuccess) {
     this.deletionSuccess = deletionSuccess;
   }
 
+
+  /**
+   * status.
+   *
+   * @return ClickwrapDeleteResponse
+   **/
   public ClickwrapDeleteResponse status(String status) {
     this.status = status;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return status
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getStatus() {
     return status;
   }
 
+  /**
+   * setStatus.
+   **/
   public void setStatus(String status) {
     this.status = status;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -135,12 +186,18 @@ public class ClickwrapDeleteResponse {
         Objects.equals(this.status, clickwrapDeleteResponse.status);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(clickwrapId, clickwrapName, deletionMessage, deletionSuccess, status);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

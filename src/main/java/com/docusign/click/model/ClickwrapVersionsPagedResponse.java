@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ClickwrapVersionsPagedResponse
+ * ClickwrapVersionsPagedResponse.
+ *
  */
 
 public class ClickwrapVersionsPagedResponse {
@@ -35,119 +36,184 @@ public class ClickwrapVersionsPagedResponse {
   @JsonProperty("versions")
   private java.util.List<ClickwrapVersion> versions = null;
 
+
+  /**
+   * accountId.
+   *
+   * @return ClickwrapVersionsPagedResponse
+   **/
   public ClickwrapVersionsPagedResponse accountId(String accountId) {
     this.accountId = accountId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return accountId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAccountId() {
     return accountId;
   }
 
+  /**
+   * setAccountId.
+   **/
   public void setAccountId(String accountId) {
     this.accountId = accountId;
   }
 
+
+  /**
+   * clickwrapId.
+   *
+   * @return ClickwrapVersionsPagedResponse
+   **/
   public ClickwrapVersionsPagedResponse clickwrapId(String clickwrapId) {
     this.clickwrapId = clickwrapId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return clickwrapId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getClickwrapId() {
     return clickwrapId;
   }
 
+  /**
+   * setClickwrapId.
+   **/
   public void setClickwrapId(String clickwrapId) {
     this.clickwrapId = clickwrapId;
   }
 
+
+  /**
+   * clickwrapName.
+   *
+   * @return ClickwrapVersionsPagedResponse
+   **/
   public ClickwrapVersionsPagedResponse clickwrapName(String clickwrapName) {
     this.clickwrapName = clickwrapName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return clickwrapName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getClickwrapName() {
     return clickwrapName;
   }
 
+  /**
+   * setClickwrapName.
+   **/
   public void setClickwrapName(String clickwrapName) {
     this.clickwrapName = clickwrapName;
   }
 
+
+  /**
+   * minimumPagesRemaining.
+   *
+   * @return ClickwrapVersionsPagedResponse
+   **/
   public ClickwrapVersionsPagedResponse minimumPagesRemaining(Integer minimumPagesRemaining) {
     this.minimumPagesRemaining = minimumPagesRemaining;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return minimumPagesRemaining
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getMinimumPagesRemaining() {
     return minimumPagesRemaining;
   }
 
+  /**
+   * setMinimumPagesRemaining.
+   **/
   public void setMinimumPagesRemaining(Integer minimumPagesRemaining) {
     this.minimumPagesRemaining = minimumPagesRemaining;
   }
 
+
+  /**
+   * page.
+   *
+   * @return ClickwrapVersionsPagedResponse
+   **/
   public ClickwrapVersionsPagedResponse page(Integer page) {
     this.page = page;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return page
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getPage() {
     return page;
   }
 
+  /**
+   * setPage.
+   **/
   public void setPage(Integer page) {
     this.page = page;
   }
 
+
+  /**
+   * pageSize.
+   *
+   * @return ClickwrapVersionsPagedResponse
+   **/
   public ClickwrapVersionsPagedResponse pageSize(Integer pageSize) {
     this.pageSize = pageSize;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return pageSize
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getPageSize() {
     return pageSize;
   }
 
+  /**
+   * setPageSize.
+   **/
   public void setPageSize(Integer pageSize) {
     this.pageSize = pageSize;
   }
 
+
+  /**
+   * versions.
+   *
+   * @return ClickwrapVersionsPagedResponse
+   **/
   public ClickwrapVersionsPagedResponse versions(java.util.List<ClickwrapVersion> versions) {
     this.versions = versions;
     return this;
   }
-
+  
+  /**
+   * addVersionsItem.
+   *
+   * @return ClickwrapVersionsPagedResponse
+   **/
   public ClickwrapVersionsPagedResponse addVersionsItem(ClickwrapVersion versionsItem) {
     if (this.versions == null) {
       this.versions = new java.util.ArrayList<ClickwrapVersion>();
@@ -156,20 +222,28 @@ public class ClickwrapVersionsPagedResponse {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return versions
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<ClickwrapVersion> getVersions() {
     return versions;
   }
 
+  /**
+   * setVersions.
+   **/
   public void setVersions(java.util.List<ClickwrapVersion> versions) {
     this.versions = versions;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -188,12 +262,18 @@ public class ClickwrapVersionsPagedResponse {
         Objects.equals(this.versions, clickwrapVersionsPagedResponse.versions);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(accountId, clickwrapId, clickwrapName, minimumPagesRemaining, page, pageSize, versions);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

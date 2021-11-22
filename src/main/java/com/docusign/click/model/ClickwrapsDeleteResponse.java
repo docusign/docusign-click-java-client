@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ClickwrapsDeleteResponse
+ * ClickwrapsDeleteResponse.
+ *
  */
 
 public class ClickwrapsDeleteResponse {
   @JsonProperty("clickwraps")
   private java.util.List<ClickwrapDeleteResponse> clickwraps = null;
 
+
+  /**
+   * clickwraps.
+   *
+   * @return ClickwrapsDeleteResponse
+   **/
   public ClickwrapsDeleteResponse clickwraps(java.util.List<ClickwrapDeleteResponse> clickwraps) {
     this.clickwraps = clickwraps;
     return this;
   }
-
+  
+  /**
+   * addClickwrapsItem.
+   *
+   * @return ClickwrapsDeleteResponse
+   **/
   public ClickwrapsDeleteResponse addClickwrapsItem(ClickwrapDeleteResponse clickwrapsItem) {
     if (this.clickwraps == null) {
       this.clickwraps = new java.util.ArrayList<ClickwrapDeleteResponse>();
@@ -30,20 +42,28 @@ public class ClickwrapsDeleteResponse {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return clickwraps
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<ClickwrapDeleteResponse> getClickwraps() {
     return clickwraps;
   }
 
+  /**
+   * setClickwraps.
+   **/
   public void setClickwraps(java.util.List<ClickwrapDeleteResponse> clickwraps) {
     this.clickwraps = clickwraps;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class ClickwrapsDeleteResponse {
     return Objects.equals(this.clickwraps, clickwrapsDeleteResponse.clickwraps);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(clickwraps);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
