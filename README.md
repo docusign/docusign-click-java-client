@@ -1,4 +1,4 @@
-# The Official DocuSign Click Java Client
+# The Official DocuSign Click Java Client SDK
 
 [![Build status][travis-image]][travis-url]
 [![Maven Central status][maven-image]][maven-url]
@@ -6,18 +6,15 @@
 ## Requirements
 
 - Java 1.9+
-- Free [Developer Sandbox](https://go.docusign.com/sandbox/productshot/?elqCampaignId=16531)
+- Free [developer account](https://go.docusign.com/sandbox/productshot/?elqCampaignId=16531)
 
 ## Compatibility
 
 - Java 1.9+
 
-## Note
-
-This open-source SDK is provided for cases where you would like to make additional changes that the SDK does not
- provide out-of-the-box. If you simply want to use the SDK with any of the examples shown in the [Developer Center ](https://developers.docusign.com/click-api/code-examples), follow the installation instructions below.
-
 ## Installation
+
+This SDK is provided as open source, which enables you to customize its functionality to suit your particular use case. To do so, download or clone the repository. If the SDK’s given functionality meets your integration needs, or if you simply want to use the SDK with any of the examples shown in the [Developer Center](https://developers.docusign.com/docs/click-api/how-to/), you merely need to install it by following the instructions below.
 
 Note: DocuSign uses **Eclipse** with **Maven** for testing purposes.
 
@@ -27,15 +24,15 @@ Note: DocuSign uses **Eclipse** with **Maven** for testing purposes.
 2. In the **New Project Wizard** , expand **Maven** , then select **Maven Project.**
 3. Leave **Create a simple project** unchecked.
 4. Select **Next** , then provide a unique **Group** and **Artifact Id**.
-5. In the directory where you've saved your project, open the _pom.xml_ file.
-6. In the _pom.xml_ file, locate the **dependencies** node.
+5. In the directory where you've saved your project, open the pom.xml file.
+6. In the pom.xml file, locate the **dependencies** node.
 7. Add:
 
 ```
 <dependency>
   <groupId>com.docusign</groupId>
   <artifactId>docusign-click-java</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0-RC1</version>
 </dependency>
 ```
 
@@ -52,19 +49,21 @@ This client has the following external dependencies:
 - com.fasterxml.jackson.core:jackson-core:jar:2.10.1
 - com.fasterxml.jackson.core:jackson-annotations:jar:2.10.1
 - com.fasterxml.jackson.core:jackson-databind:2.10.1
-- com.fasterxml.jackson.datatype:jackson-datatype-joda:jar:2.10.1
 - com.brsanthu:migbase64:2.2
 - junit:junit:jar:4.12
 - com.apache.oltu.oauth2:org.apache.oltu.oauth2.client:1.0.2
 - com.auth0:java-jwt:3.4.1
 - org.bouncycastle:bcprov-jdk15on:1.60
 
-## OAuth Implementations
+## Code examples
 
-For details regarding which type of OAuth grant will work best for your DocuSign integration, see the [REST API
- Authentication Overview](https://developers.docusign.com/click-api/guides/auth) guide located on the [DocuSign Developer Center](https://developers.docusign.com/).
+DocuSign provides a sample application code referred to as a [Launcher](https://github.com/docusign/code-examples-java). The Launcher includes, in addition to eSignature and Rooms code examples, a set of code examples and associated source files for common Click use cases. These examples can use either the [Authorization Code Grant](https://developers.docusign.com/platform/auth/authcode/) or [JSON Web Token (JWT) Grant](https://developers.docusign.com/platform/auth/jwt/) authentication flow.
 
-For security purposes, DocuSign recommends using the Authorization Code Grant flow.
+## OAuth implementations
+
+For details regarding which type of OAuth grant will work best for your DocuSign integration, see the [Choose OAuth Type](https://developers.docusign.com/platform/auth/choose/) guide located on the [DocuSign Developer Center](https://developers.docusign.com/).
+
+For security purposes, DocuSign recommends using the [Authorization Code Grant](https://developers.docusign.com/platform/auth/authcode/) flow.
 
 ## Support
 
@@ -72,7 +71,7 @@ Log issues against this client through GitHub. We also have an [active developer
 
 ## License
 
-The DocuSign Java Client is licensed under the [MIT License](https://github.com/docusign/docusign-click-java-client/blob
+The DocuSign Click Java Client SDK is licensed under the [MIT License](https://github.com/docusign/docusign-click-java-client/blob
 /master/LICENSE).
 
 
@@ -81,7 +80,8 @@ The DocuSign Java Client is licensed under the [MIT License](https://github.com/
 [maven-image]: https://img.shields.io/maven-central/v/com.docusign/docusign-click-java.svg?style=flat
 [maven-url]: https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.docusign%22
 
-### Additional Resources
+### Additional resources
+* [DocuSign Click API documentation](https://developers.docusign.com/docs/click-api)
 * [DocuSign Developer Center](https://developers.docusign.com)
 * [DocuSign API on Twitter](https://twitter.com/docusignapi)
 * [DocuSign For Developers on LinkedIn](https://www.linkedin.com/showcase/docusign-for-developers/)

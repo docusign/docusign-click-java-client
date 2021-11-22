@@ -9,29 +9,29 @@ import com.docusign.click.client.Configuration;
 import com.docusign.click.model.*;
 import com.docusign.click.client.Pair;
 
-
+import java.util.Date;
 
 
 /**
- * AccountsApi class.
+ * ManageApi class.
  *
  **/
-public class AccountsApi {
+public class ManageApi {
   private ApiClient apiClient;
 
  /**
-  * AccountsApi.
+  * ManageApi.
   *
   **/
-  public AccountsApi() {
+  public ManageApi() {
     this(Configuration.getDefaultApiClient());
   }
 
  /**
-  * AccountsApi.
+  * ManageApi.
   *
   **/
-  public AccountsApi(ApiClient apiClient) {
+  public ManageApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
@@ -155,61 +155,6 @@ public class AccountsApi {
     GenericType<ClickwrapVersionSummaryResponse> localVarReturnType = new GenericType<ClickwrapVersionSummaryResponse>() {};
     return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
-
-  /**
-   * Checks if a user has agreed to a clickwrap and returns a response with the agreement url. Returns HttpStatusCode.OK if user has no pending agreement..
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
-   * @param userAgreementRequest  (optional)
-   * @return UserAgreementResponse
-   * @throws ApiException if fails to make API call
-   */
-  public UserAgreementResponse createHasAgreed(String accountId, String clickwrapId, UserAgreementRequest userAgreementRequest) throws ApiException {
-    Object localVarPostBody = userAgreementRequest;
-    
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createHasAgreed");
-    }
-    
-    // verify the required parameter 'clickwrapId' is set
-    if (clickwrapId == null) {
-      throw new ApiException(400, "Missing the required parameter 'clickwrapId' when calling createHasAgreed");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v1/accounts/{accountId}/clickwraps/{clickwrapId}/agreements"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "clickwrapId" + "\\}", apiClient.escapeString(clickwrapId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-    GenericType<UserAgreementResponse> localVarReturnType = new GenericType<UserAgreementResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
   /// <summary>
   /// Deletes the clickwrap and all its version specified by clickwrapId. Active clickwrap will not get deleted 
   /// </summary>
@@ -220,21 +165,21 @@ public class AccountsApi {
   **/
   public class DeleteClickwrapOptions
   {
-  private String versions = null;
+  private java.util.List<Integer> versions = null;
   
  /**
   * setVersions method.
   */
-  public void setVersions(String versions) {
+  public void setVersions(java.util.List<Integer> versions) {
     this.versions = versions;
   }
 
  /**
   * getVersions method.
   *
-  * @return String
+  * @return java.util.List<Integer>
   */
-  public String getVersions() {
+  public java.util.List<Integer> getVersions() {
     return this.versions;
   }
   }
@@ -259,7 +204,7 @@ public class AccountsApi {
    * @return ClickwrapVersionsDeleteResponse
    * @throws ApiException if fails to make API call
    */
-  public ClickwrapVersionsDeleteResponse deleteClickwrap(String accountId, String clickwrapId, AccountsApi.DeleteClickwrapOptions options) throws ApiException {
+  public ClickwrapVersionsDeleteResponse deleteClickwrap(String accountId, String clickwrapId, ManageApi.DeleteClickwrapOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -284,7 +229,7 @@ public class AccountsApi {
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("versions", options.versions));
+      localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("csv", "versions", options.versions));
     }
 
     
@@ -377,21 +322,21 @@ public class AccountsApi {
   **/
   public class DeleteClickwrapVersionsOptions
   {
-  private String clickwrapVersionIds = null;
+  private java.util.List<java.util.UUID> clickwrapVersionIds = null;
   
  /**
   * setClickwrapVersionIds method.
   */
-  public void setClickwrapVersionIds(String clickwrapVersionIds) {
+  public void setClickwrapVersionIds(java.util.List<java.util.UUID> clickwrapVersionIds) {
     this.clickwrapVersionIds = clickwrapVersionIds;
   }
 
  /**
   * getClickwrapVersionIds method.
   *
-  * @return String
+  * @return java.util.List<java.util.UUID>
   */
-  public String getClickwrapVersionIds() {
+  public java.util.List<java.util.UUID> getClickwrapVersionIds() {
     return this.clickwrapVersionIds;
   }
   }
@@ -416,7 +361,7 @@ public class AccountsApi {
    * @return ClickwrapVersionsDeleteResponse
    * @throws ApiException if fails to make API call
    */
-  public ClickwrapVersionsDeleteResponse deleteClickwrapVersions(String accountId, String clickwrapId, AccountsApi.DeleteClickwrapVersionsOptions options) throws ApiException {
+  public ClickwrapVersionsDeleteResponse deleteClickwrapVersions(String accountId, String clickwrapId, ManageApi.DeleteClickwrapVersionsOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -441,7 +386,7 @@ public class AccountsApi {
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("clickwrapVersionIds", options.clickwrapVersionIds));
+      localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("csv", "clickwrapVersionIds", options.clickwrapVersionIds));
     }
 
     
@@ -473,21 +418,21 @@ public class AccountsApi {
   **/
   public class DeleteClickwrapsOptions
   {
-  private String clickwrapIds = null;
+  private java.util.List<java.util.UUID> clickwrapIds = null;
   
  /**
   * setClickwrapIds method.
   */
-  public void setClickwrapIds(String clickwrapIds) {
+  public void setClickwrapIds(java.util.List<java.util.UUID> clickwrapIds) {
     this.clickwrapIds = clickwrapIds;
   }
 
  /**
   * getClickwrapIds method.
   *
-  * @return String
+  * @return java.util.List<java.util.UUID>
   */
-  public String getClickwrapIds() {
+  public java.util.List<java.util.UUID> getClickwrapIds() {
     return this.clickwrapIds;
   }
   }
@@ -510,7 +455,7 @@ public class AccountsApi {
    * @return ClickwrapsDeleteResponse
    * @throws ApiException if fails to make API call
    */
-  public ClickwrapsDeleteResponse deleteClickwraps(String accountId, AccountsApi.DeleteClickwrapsOptions options) throws ApiException {
+  public ClickwrapsDeleteResponse deleteClickwraps(String accountId, ManageApi.DeleteClickwrapsOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -529,7 +474,7 @@ public class AccountsApi {
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("clickwrapIds", options.clickwrapIds));
+      localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("csv", "clickwrapIds", options.clickwrapIds));
     }
 
     
@@ -622,21 +567,21 @@ public class AccountsApi {
   **/
   public class GetAgreementPdfOptions
   {
-  private String includeCoc = null;
+  private Boolean includeCoc = null;
   
  /**
   * setIncludeCoc method.
   */
-  public void setIncludeCoc(String includeCoc) {
+  public void setIncludeCoc(Boolean includeCoc) {
     this.includeCoc = includeCoc;
   }
 
  /**
   * getIncludeCoc method.
   *
-  * @return String
+  * @return Boolean
   */
-  public String getIncludeCoc() {
+  public Boolean getIncludeCoc() {
     return this.includeCoc;
   }
   }
@@ -663,7 +608,7 @@ public class AccountsApi {
    * @return byte[]
    * @throws ApiException if fails to make API call
    */
-  public byte[] getAgreementPdf(String accountId, String clickwrapId, String agreementId, AccountsApi.GetAgreementPdfOptions options) throws ApiException {
+  public byte[] getAgreementPdf(String accountId, String clickwrapId, String agreementId, ManageApi.GetAgreementPdfOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -781,10 +726,10 @@ public class AccountsApi {
   public class GetClickwrapAgreementsOptions
   {
   private String clientUserId = null;
-  private String fromDate = null;
-  private String pageNumber = null;
+  private Date fromDate = null;
+  private Integer pageNumber = null;
   private String status = null;
-  private String toDate = null;
+  private Date toDate = null;
   
  /**
   * setClientUserId method.
@@ -805,32 +750,32 @@ public class AccountsApi {
  /**
   * setFromDate method.
   */
-  public void setFromDate(String fromDate) {
+  public void setFromDate(Date fromDate) {
     this.fromDate = fromDate;
   }
 
  /**
   * getFromDate method.
   *
-  * @return String
+  * @return Date
   */
-  public String getFromDate() {
+  public Date getFromDate() {
     return this.fromDate;
   }
   
  /**
   * setPageNumber method.
   */
-  public void setPageNumber(String pageNumber) {
+  public void setPageNumber(Integer pageNumber) {
     this.pageNumber = pageNumber;
   }
 
  /**
   * getPageNumber method.
   *
-  * @return String
+  * @return Integer
   */
-  public String getPageNumber() {
+  public Integer getPageNumber() {
     return this.pageNumber;
   }
   
@@ -853,16 +798,16 @@ public class AccountsApi {
  /**
   * setToDate method.
   */
-  public void setToDate(String toDate) {
+  public void setToDate(Date toDate) {
     this.toDate = toDate;
   }
 
  /**
   * getToDate method.
   *
-  * @return String
+  * @return Date
   */
-  public String getToDate() {
+  public Date getToDate() {
     return this.toDate;
   }
   }
@@ -887,7 +832,7 @@ public class AccountsApi {
    * @return ClickwrapAgreementsResponse
    * @throws ApiException if fails to make API call
    */
-  public ClickwrapAgreementsResponse getClickwrapAgreements(String accountId, String clickwrapId, AccountsApi.GetClickwrapAgreementsOptions options) throws ApiException {
+  public ClickwrapAgreementsResponse getClickwrapAgreements(String accountId, String clickwrapId, ManageApi.GetClickwrapAgreementsOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -1014,10 +959,10 @@ public class AccountsApi {
   public class GetClickwrapVersionAgreementsOptions
   {
   private String clientUserId = null;
-  private String fromDate = null;
-  private String pageNumber = null;
+  private Date fromDate = null;
+  private Integer pageNumber = null;
   private String status = null;
-  private String toDate = null;
+  private Date toDate = null;
   
  /**
   * setClientUserId method.
@@ -1038,32 +983,32 @@ public class AccountsApi {
  /**
   * setFromDate method.
   */
-  public void setFromDate(String fromDate) {
+  public void setFromDate(Date fromDate) {
     this.fromDate = fromDate;
   }
 
  /**
   * getFromDate method.
   *
-  * @return String
+  * @return Date
   */
-  public String getFromDate() {
+  public Date getFromDate() {
     return this.fromDate;
   }
   
  /**
   * setPageNumber method.
   */
-  public void setPageNumber(String pageNumber) {
+  public void setPageNumber(Integer pageNumber) {
     this.pageNumber = pageNumber;
   }
 
  /**
   * getPageNumber method.
   *
-  * @return String
+  * @return Integer
   */
-  public String getPageNumber() {
+  public Integer getPageNumber() {
     return this.pageNumber;
   }
   
@@ -1086,16 +1031,16 @@ public class AccountsApi {
  /**
   * setToDate method.
   */
-  public void setToDate(String toDate) {
+  public void setToDate(Date toDate) {
     this.toDate = toDate;
   }
 
  /**
   * getToDate method.
   *
-  * @return String
+  * @return Date
   */
-  public String getToDate() {
+  public Date getToDate() {
     return this.toDate;
   }
   }
@@ -1122,7 +1067,7 @@ public class AccountsApi {
    * @return ClickwrapAgreementsResponse
    * @throws ApiException if fails to make API call
    */
-  public ClickwrapAgreementsResponse getClickwrapVersionAgreements(String accountId, String clickwrapId, String versionId, AccountsApi.GetClickwrapVersionAgreementsOptions options) throws ApiException {
+  public ClickwrapAgreementsResponse getClickwrapVersionAgreements(String accountId, String clickwrapId, String versionId, ManageApi.GetClickwrapVersionAgreementsOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -1248,12 +1193,12 @@ public class AccountsApi {
   public class GetClickwrapsOptions
   {
   private String filter = null;
-  private String fromDate = null;
+  private Date fromDate = null;
   private String name = null;
-  private String ownerUserId = null;
-  private String pageNumber = null;
+  private java.util.UUID ownerUserId = null;
+  private Integer pageNumber = null;
   private String status = null;
-  private String toDate = null;
+  private Date toDate = null;
   
  /**
   * setFilter method.
@@ -1274,16 +1219,16 @@ public class AccountsApi {
  /**
   * setFromDate method.
   */
-  public void setFromDate(String fromDate) {
+  public void setFromDate(Date fromDate) {
     this.fromDate = fromDate;
   }
 
  /**
   * getFromDate method.
   *
-  * @return String
+  * @return Date
   */
-  public String getFromDate() {
+  public Date getFromDate() {
     return this.fromDate;
   }
   
@@ -1306,32 +1251,32 @@ public class AccountsApi {
  /**
   * setOwnerUserId method.
   */
-  public void setOwnerUserId(String ownerUserId) {
+  public void setOwnerUserId(java.util.UUID ownerUserId) {
     this.ownerUserId = ownerUserId;
   }
 
  /**
   * getOwnerUserId method.
   *
-  * @return String
+  * @return java.util.UUID
   */
-  public String getOwnerUserId() {
+  public java.util.UUID getOwnerUserId() {
     return this.ownerUserId;
   }
   
  /**
   * setPageNumber method.
   */
-  public void setPageNumber(String pageNumber) {
+  public void setPageNumber(Integer pageNumber) {
     this.pageNumber = pageNumber;
   }
 
  /**
   * getPageNumber method.
   *
-  * @return String
+  * @return Integer
   */
-  public String getPageNumber() {
+  public Integer getPageNumber() {
     return this.pageNumber;
   }
   
@@ -1354,16 +1299,16 @@ public class AccountsApi {
  /**
   * setToDate method.
   */
-  public void setToDate(String toDate) {
+  public void setToDate(Date toDate) {
     this.toDate = toDate;
   }
 
  /**
   * getToDate method.
   *
-  * @return String
+  * @return Date
   */
-  public String getToDate() {
+  public Date getToDate() {
     return this.toDate;
   }
   }
@@ -1386,7 +1331,7 @@ public class AccountsApi {
    * @return ClickwrapVersionsResponse
    * @throws ApiException if fails to make API call
    */
-  public ClickwrapVersionsResponse getClickwraps(String accountId, AccountsApi.GetClickwrapsOptions options) throws ApiException {
+  public ClickwrapVersionsResponse getClickwraps(String accountId, ManageApi.GetClickwrapsOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -1437,46 +1382,6 @@ public class AccountsApi {
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
     GenericType<ClickwrapVersionsResponse> localVarReturnType = new GenericType<ClickwrapVersionsResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
-
-  /**
-   * Provides base service and version access information..
-   * 
-   * @return ServiceInformation
-   * @throws ApiException if fails to make API call
-   */
-  public ServiceInformation getServiceInformation() throws ApiException {
-    Object localVarPostBody = "{}";
-    
-    // create path and map variables
-    String localVarPath = "/service_information";
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-    GenericType<ServiceInformation> localVarReturnType = new GenericType<ServiceInformation>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
 
