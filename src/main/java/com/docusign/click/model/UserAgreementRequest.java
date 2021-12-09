@@ -2,6 +2,7 @@ package com.docusign.click.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.click.model.DocumentData;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -16,6 +17,9 @@ import io.swagger.annotations.ApiModelProperty;
 public class UserAgreementRequest {
   @JsonProperty("clientUserId")
   private String clientUserId = null;
+
+  @JsonProperty("documentData")
+  private DocumentData documentData = null;
 
   @JsonProperty("metadata")
   private String metadata = null;
@@ -45,6 +49,33 @@ public class UserAgreementRequest {
    **/
   public void setClientUserId(String clientUserId) {
     this.clientUserId = clientUserId;
+  }
+
+
+  /**
+   * documentData.
+   *
+   * @return UserAgreementRequest
+   **/
+  public UserAgreementRequest documentData(DocumentData documentData) {
+    this.documentData = documentData;
+    return this;
+  }
+
+  /**
+   * Get documentData.
+   * @return documentData
+   **/
+  @ApiModelProperty(value = "")
+  public DocumentData getDocumentData() {
+    return documentData;
+  }
+
+  /**
+   * setDocumentData.
+   **/
+  public void setDocumentData(DocumentData documentData) {
+    this.documentData = documentData;
   }
 
 
@@ -90,6 +121,7 @@ public class UserAgreementRequest {
     }
     UserAgreementRequest userAgreementRequest = (UserAgreementRequest) o;
     return Objects.equals(this.clientUserId, userAgreementRequest.clientUserId) &&
+        Objects.equals(this.documentData, userAgreementRequest.documentData) &&
         Objects.equals(this.metadata, userAgreementRequest.metadata);
   }
 
@@ -98,7 +130,7 @@ public class UserAgreementRequest {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(clientUserId, metadata);
+    return Objects.hash(clientUserId, documentData, metadata);
   }
 
 
@@ -111,6 +143,7 @@ public class UserAgreementRequest {
     sb.append("class UserAgreementRequest {\n");
     
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
+    sb.append("    documentData: ").append(toIndentedString(documentData)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("}");
     return sb.toString();
