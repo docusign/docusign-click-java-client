@@ -4,7 +4,6 @@ import java.util.Objects;
 import java.util.Arrays;
 import com.docusign.click.model.DisplaySettings;
 import com.docusign.click.model.Document;
-import com.docusign.click.model.DocumentData;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -43,9 +42,6 @@ public class UserAgreementResponse {
 
   @JsonProperty("declinedOn")
   private Object declinedOn = null;
-
-  @JsonProperty("documentData")
-  private DocumentData documentData = null;
 
   @JsonProperty("documents")
   private java.util.List<Document> documents = null;
@@ -313,33 +309,6 @@ public class UserAgreementResponse {
 
 
   /**
-   * documentData.
-   *
-   * @return UserAgreementResponse
-   **/
-  public UserAgreementResponse documentData(DocumentData documentData) {
-    this.documentData = documentData;
-    return this;
-  }
-
-  /**
-   * Get documentData.
-   * @return documentData
-   **/
-  @ApiModelProperty(value = "")
-  public DocumentData getDocumentData() {
-    return documentData;
-  }
-
-  /**
-   * setDocumentData.
-   **/
-  public void setDocumentData(DocumentData documentData) {
-    this.documentData = documentData;
-  }
-
-
-  /**
    * documents.
    *
    * @return UserAgreementResponse
@@ -564,7 +533,6 @@ public class UserAgreementResponse {
         Objects.equals(this.consumerDisclosureHtml, userAgreementResponse.consumerDisclosureHtml) &&
         Objects.equals(this.createdOn, userAgreementResponse.createdOn) &&
         Objects.equals(this.declinedOn, userAgreementResponse.declinedOn) &&
-        Objects.equals(this.documentData, userAgreementResponse.documentData) &&
         Objects.equals(this.documents, userAgreementResponse.documents) &&
         Objects.equals(this.metadata, userAgreementResponse.metadata) &&
         Objects.equals(this.settings, userAgreementResponse.settings) &&
@@ -579,7 +547,7 @@ public class UserAgreementResponse {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, agreedOn, agreementId, agreementUrl, clickwrapId, clientUserId, consumerDisclosureHtml, createdOn, declinedOn, documentData, documents, metadata, settings, status, version, versionId, versionNumber);
+    return Objects.hash(accountId, agreedOn, agreementId, agreementUrl, clickwrapId, clientUserId, consumerDisclosureHtml, createdOn, declinedOn, documents, metadata, settings, status, version, versionId, versionNumber);
   }
 
 
@@ -600,7 +568,6 @@ public class UserAgreementResponse {
     sb.append("    consumerDisclosureHtml: ").append(toIndentedString(consumerDisclosureHtml)).append("\n");
     sb.append("    createdOn: ").append(toIndentedString(createdOn)).append("\n");
     sb.append("    declinedOn: ").append(toIndentedString(declinedOn)).append("\n");
-    sb.append("    documentData: ").append(toIndentedString(documentData)).append("\n");
     sb.append("    documents: ").append(toIndentedString(documents)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("    settings: ").append(toIndentedString(settings)).append("\n");
