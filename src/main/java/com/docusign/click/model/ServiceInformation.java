@@ -159,7 +159,7 @@ public class ServiceInformation {
    **/
   public ServiceInformation addLinkedSitesItem(String linkedSitesItem) {
     if (this.linkedSites == null) {
-      this.linkedSites = new java.util.ArrayList<String>();
+      this.linkedSites = new java.util.ArrayList<>();
     }
     this.linkedSites.add(linkedSitesItem);
     return this;
@@ -199,7 +199,7 @@ public class ServiceInformation {
    **/
   public ServiceInformation addServiceVersionsItem(ServiceVersion serviceVersionsItem) {
     if (this.serviceVersions == null) {
-      this.serviceVersions = new java.util.ArrayList<ServiceVersion>();
+      this.serviceVersions = new java.util.ArrayList<>();
     }
     this.serviceVersions.add(serviceVersionsItem);
     return this;

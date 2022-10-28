@@ -59,11 +59,11 @@ public class ApiClient {
   protected Map<String, String> defaultHeaderMap = new HashMap<String, String>();
   // Rest API base path constants
   /** live/production base path. */
-  public final static String PRODUCTION_REST_BASEPATH = "https://www.docusign.net/clickapi";
+  public final static String PRODUCTION_REST_BASEPATH = "https://www.docusign.net/restapi";
   /** sandbox/demo base path. */
-  public final static String DEMO_REST_BASEPATH = "https://demo.docusign.net/clickapi";
+  public final static String DEMO_REST_BASEPATH = "https://demo.docusign.net/restapi";
   /** stage base path. */
-  public final static String STAGE_REST_BASEPATH = "https://stage.docusign.net/clickapi";
+  public final static String STAGE_REST_BASEPATH = "https://stage.docusign.net/restapi";
 
   private String basePath = PRODUCTION_REST_BASEPATH;
   private String oAuthBasePath = OAuth.PRODUCTION_OAUTH_BASEPATH;
@@ -92,9 +92,10 @@ public class ApiClient {
     httpClient = buildHttpClient(debugging);
 
     this.dateFormat = new RFC3339DateFormat();
+    String javaVersion = System.getProperty("java.version");
 
     // Set default User-Agent.
-    setUserAgent("Swagger-Codegen/1.1.0/java");
+    setUserAgent("/SDK/1.2.2/Java/");
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();

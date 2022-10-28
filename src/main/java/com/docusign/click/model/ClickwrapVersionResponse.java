@@ -3,6 +3,7 @@ package com.docusign.click.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.docusign.click.model.ClickwrapScheduledReacceptance;
+import com.docusign.click.model.DataField;
 import com.docusign.click.model.DisplaySettings;
 import com.docusign.click.model.Document;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -31,6 +32,9 @@ public class ClickwrapVersionResponse {
 
   @JsonProperty("createdTime")
   private Object createdTime = null;
+
+  @JsonProperty("dataFields")
+  private java.util.List<DataField> dataFields = null;
 
   @JsonProperty("displaySettings")
   private DisplaySettings displaySettings = null;
@@ -202,6 +206,46 @@ public class ClickwrapVersionResponse {
 
 
   /**
+   * dataFields.
+   *
+   * @return ClickwrapVersionResponse
+   **/
+  public ClickwrapVersionResponse dataFields(java.util.List<DataField> dataFields) {
+    this.dataFields = dataFields;
+    return this;
+  }
+  
+  /**
+   * addDataFieldsItem.
+   *
+   * @return ClickwrapVersionResponse
+   **/
+  public ClickwrapVersionResponse addDataFieldsItem(DataField dataFieldsItem) {
+    if (this.dataFields == null) {
+      this.dataFields = new java.util.ArrayList<>();
+    }
+    this.dataFields.add(dataFieldsItem);
+    return this;
+  }
+
+  /**
+   * .
+   * @return dataFields
+   **/
+  @ApiModelProperty(value = "")
+  public java.util.List<DataField> getDataFields() {
+    return dataFields;
+  }
+
+  /**
+   * setDataFields.
+   **/
+  public void setDataFields(java.util.List<DataField> dataFields) {
+    this.dataFields = dataFields;
+  }
+
+
+  /**
    * displaySettings.
    *
    * @return ClickwrapVersionResponse
@@ -245,7 +289,7 @@ public class ClickwrapVersionResponse {
    **/
   public ClickwrapVersionResponse addDocumentsItem(Document documentsItem) {
     if (this.documents == null) {
-      this.documents = new java.util.ArrayList<Document>();
+      this.documents = new java.util.ArrayList<>();
     }
     this.documents.add(documentsItem);
     return this;
@@ -530,6 +574,7 @@ public class ClickwrapVersionResponse {
         Objects.equals(this.clickwrapName, clickwrapVersionResponse.clickwrapName) &&
         Objects.equals(this.clickwrapVersionId, clickwrapVersionResponse.clickwrapVersionId) &&
         Objects.equals(this.createdTime, clickwrapVersionResponse.createdTime) &&
+        Objects.equals(this.dataFields, clickwrapVersionResponse.dataFields) &&
         Objects.equals(this.displaySettings, clickwrapVersionResponse.displaySettings) &&
         Objects.equals(this.documents, clickwrapVersionResponse.documents) &&
         Objects.equals(this.lastModified, clickwrapVersionResponse.lastModified) &&
@@ -548,7 +593,7 @@ public class ClickwrapVersionResponse {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, clickwrapId, clickwrapName, clickwrapVersionId, createdTime, displaySettings, documents, lastModified, lastModifiedBy, ownerUserId, requireReacceptance, scheduledDate, scheduledReacceptance, status, versionId, versionNumber);
+    return Objects.hash(accountId, clickwrapId, clickwrapName, clickwrapVersionId, createdTime, dataFields, displaySettings, documents, lastModified, lastModifiedBy, ownerUserId, requireReacceptance, scheduledDate, scheduledReacceptance, status, versionId, versionNumber);
   }
 
 
@@ -565,6 +610,7 @@ public class ClickwrapVersionResponse {
     sb.append("    clickwrapName: ").append(toIndentedString(clickwrapName)).append("\n");
     sb.append("    clickwrapVersionId: ").append(toIndentedString(clickwrapVersionId)).append("\n");
     sb.append("    createdTime: ").append(toIndentedString(createdTime)).append("\n");
+    sb.append("    dataFields: ").append(toIndentedString(dataFields)).append("\n");
     sb.append("    displaySettings: ").append(toIndentedString(displaySettings)).append("\n");
     sb.append("    documents: ").append(toIndentedString(documents)).append("\n");
     sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");

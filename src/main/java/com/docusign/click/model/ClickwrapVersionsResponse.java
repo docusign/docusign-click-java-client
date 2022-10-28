@@ -45,7 +45,7 @@ public class ClickwrapVersionsResponse {
    **/
   public ClickwrapVersionsResponse addClickwrapsItem(ClickwrapVersionSummaryResponse clickwrapsItem) {
     if (this.clickwraps == null) {
-      this.clickwraps = new java.util.ArrayList<ClickwrapVersionSummaryResponse>();
+      this.clickwraps = new java.util.ArrayList<>();
     }
     this.clickwraps.add(clickwrapsItem);
     return this;

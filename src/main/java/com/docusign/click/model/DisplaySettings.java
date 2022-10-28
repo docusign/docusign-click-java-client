@@ -65,6 +65,9 @@ public class DisplaySettings {
   @JsonProperty("sendToEmail")
   private Boolean sendToEmail = null;
 
+  @JsonProperty("statementAlignment")
+  private String statementAlignment = null;
+
 
   /**
    * actionButtonAlignment.
@@ -137,7 +140,7 @@ public class DisplaySettings {
    **/
   public DisplaySettings addAllowedHostsItem(String allowedHostsItem) {
     if (this.allowedHosts == null) {
-      this.allowedHosts = new java.util.ArrayList<String>();
+      this.allowedHosts = new java.util.ArrayList<>();
     }
     this.allowedHosts.add(allowedHostsItem);
     return this;
@@ -539,6 +542,33 @@ public class DisplaySettings {
 
 
   /**
+   * statementAlignment.
+   *
+   * @return DisplaySettings
+   **/
+  public DisplaySettings statementAlignment(String statementAlignment) {
+    this.statementAlignment = statementAlignment;
+    return this;
+  }
+
+  /**
+   * .
+   * @return statementAlignment
+   **/
+  @ApiModelProperty(value = "")
+  public String getStatementAlignment() {
+    return statementAlignment;
+  }
+
+  /**
+   * setStatementAlignment.
+   **/
+  public void setStatementAlignment(String statementAlignment) {
+    this.statementAlignment = statementAlignment;
+  }
+
+
+  /**
    * Compares objects.
    *
    * @return true or false depending on comparison result.
@@ -568,7 +598,8 @@ public class DisplaySettings {
         Objects.equals(this.mustView, displaySettings.mustView) &&
         Objects.equals(this.recordDeclineResponses, displaySettings.recordDeclineResponses) &&
         Objects.equals(this.requireAccept, displaySettings.requireAccept) &&
-        Objects.equals(this.sendToEmail, displaySettings.sendToEmail);
+        Objects.equals(this.sendToEmail, displaySettings.sendToEmail) &&
+        Objects.equals(this.statementAlignment, displaySettings.statementAlignment);
   }
 
   /**
@@ -576,7 +607,7 @@ public class DisplaySettings {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(actionButtonAlignment, allowClientOnly, allowedHosts, brandId, consentButtonText, consentText, declineButtonText, displayName, documentDisplay, downloadable, format, hasDeclineButton, mustRead, mustView, recordDeclineResponses, requireAccept, sendToEmail);
+    return Objects.hash(actionButtonAlignment, allowClientOnly, allowedHosts, brandId, consentButtonText, consentText, declineButtonText, displayName, documentDisplay, downloadable, format, hasDeclineButton, mustRead, mustView, recordDeclineResponses, requireAccept, sendToEmail, statementAlignment);
   }
 
 
@@ -605,6 +636,7 @@ public class DisplaySettings {
     sb.append("    recordDeclineResponses: ").append(toIndentedString(recordDeclineResponses)).append("\n");
     sb.append("    requireAccept: ").append(toIndentedString(requireAccept)).append("\n");
     sb.append("    sendToEmail: ").append(toIndentedString(sendToEmail)).append("\n");
+    sb.append("    statementAlignment: ").append(toIndentedString(statementAlignment)).append("\n");
     sb.append("}");
     return sb.toString();
   }

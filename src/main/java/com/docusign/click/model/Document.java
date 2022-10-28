@@ -17,6 +17,9 @@ public class Document {
   @JsonProperty("documentBase64")
   private String documentBase64 = null;
 
+  @JsonProperty("documentDisplay")
+  private String documentDisplay = null;
+
   @JsonProperty("documentHtml")
   private String documentHtml = null;
 
@@ -25,6 +28,12 @@ public class Document {
 
   @JsonProperty("fileExtension")
   private String fileExtension = null;
+
+  @JsonProperty("mustRead")
+  private Boolean mustRead = null;
+
+  @JsonProperty("mustView")
+  private Boolean mustView = null;
 
   @JsonProperty("order")
   private Integer order = null;
@@ -54,6 +63,33 @@ public class Document {
    **/
   public void setDocumentBase64(String documentBase64) {
     this.documentBase64 = documentBase64;
+  }
+
+
+  /**
+   * documentDisplay.
+   *
+   * @return Document
+   **/
+  public Document documentDisplay(String documentDisplay) {
+    this.documentDisplay = documentDisplay;
+    return this;
+  }
+
+  /**
+   * .
+   * @return documentDisplay
+   **/
+  @ApiModelProperty(value = "")
+  public String getDocumentDisplay() {
+    return documentDisplay;
+  }
+
+  /**
+   * setDocumentDisplay.
+   **/
+  public void setDocumentDisplay(String documentDisplay) {
+    this.documentDisplay = documentDisplay;
   }
 
 
@@ -139,6 +175,60 @@ public class Document {
 
 
   /**
+   * mustRead.
+   *
+   * @return Document
+   **/
+  public Document mustRead(Boolean mustRead) {
+    this.mustRead = mustRead;
+    return this;
+  }
+
+  /**
+   * .
+   * @return mustRead
+   **/
+  @ApiModelProperty(value = "")
+  public Boolean isMustRead() {
+    return mustRead;
+  }
+
+  /**
+   * setMustRead.
+   **/
+  public void setMustRead(Boolean mustRead) {
+    this.mustRead = mustRead;
+  }
+
+
+  /**
+   * mustView.
+   *
+   * @return Document
+   **/
+  public Document mustView(Boolean mustView) {
+    this.mustView = mustView;
+    return this;
+  }
+
+  /**
+   * .
+   * @return mustView
+   **/
+  @ApiModelProperty(value = "")
+  public Boolean isMustView() {
+    return mustView;
+  }
+
+  /**
+   * setMustView.
+   **/
+  public void setMustView(Boolean mustView) {
+    this.mustView = mustView;
+  }
+
+
+  /**
    * order.
    *
    * @return Document
@@ -180,9 +270,12 @@ public class Document {
     }
     Document document = (Document) o;
     return Objects.equals(this.documentBase64, document.documentBase64) &&
+        Objects.equals(this.documentDisplay, document.documentDisplay) &&
         Objects.equals(this.documentHtml, document.documentHtml) &&
         Objects.equals(this.documentName, document.documentName) &&
         Objects.equals(this.fileExtension, document.fileExtension) &&
+        Objects.equals(this.mustRead, document.mustRead) &&
+        Objects.equals(this.mustView, document.mustView) &&
         Objects.equals(this.order, document.order);
   }
 
@@ -191,7 +284,7 @@ public class Document {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(documentBase64, documentHtml, documentName, fileExtension, order);
+    return Objects.hash(documentBase64, documentDisplay, documentHtml, documentName, fileExtension, mustRead, mustView, order);
   }
 
 
@@ -204,9 +297,12 @@ public class Document {
     sb.append("class Document {\n");
     
     sb.append("    documentBase64: ").append(toIndentedString(documentBase64)).append("\n");
+    sb.append("    documentDisplay: ").append(toIndentedString(documentDisplay)).append("\n");
     sb.append("    documentHtml: ").append(toIndentedString(documentHtml)).append("\n");
     sb.append("    documentName: ").append(toIndentedString(documentName)).append("\n");
     sb.append("    fileExtension: ").append(toIndentedString(fileExtension)).append("\n");
+    sb.append("    mustRead: ").append(toIndentedString(mustRead)).append("\n");
+    sb.append("    mustView: ").append(toIndentedString(mustView)).append("\n");
     sb.append("    order: ").append(toIndentedString(order)).append("\n");
     sb.append("}");
     return sb.toString();
