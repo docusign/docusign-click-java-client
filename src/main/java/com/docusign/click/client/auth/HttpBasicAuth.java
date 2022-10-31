@@ -4,8 +4,8 @@ package com.docusign.click.client.auth;
 
 import com.docusign.click.client.Pair;
 
-import java.util.Base64;
-import java.nio.charset.StandardCharsets;
+import com.migcomponents.migbase64.Base64;
+import java.io.UnsupportedEncodingException;
 
 import java.util.Map;
 import java.util.List;
@@ -69,6 +69,10 @@ public class HttpBasicAuth implements Authentication {
       return;
     }
     String str = (username == null ? "" : username) + ":" + (password == null ? "" : password);
-    headerParams.put("Authorization", "Basic " + Base64.getEncoder().encodeToString(str.getBytes(StandardCharsets.UTF_8)));
+    try {
+        headerParams.put("Authorization", "Basic " + Base64.encodeToString(str.getBytes("UTF-8"), false));
+    } catch (UnsupportedEncodingException e) {
+        throw new RuntimeException(e);
+    }
   }
 }
