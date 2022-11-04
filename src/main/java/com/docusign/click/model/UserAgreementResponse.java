@@ -34,6 +34,9 @@ public class UserAgreementResponse {
   @JsonProperty("clientUserId")
   private String clientUserId = null;
 
+  @JsonProperty("consumerDisclosureEnabled")
+  private Boolean consumerDisclosureEnabled = null;
+
   @JsonProperty("consumerDisclosureHtml")
   private String consumerDisclosureHtml = null;
 
@@ -42,6 +45,9 @@ public class UserAgreementResponse {
 
   @JsonProperty("declinedOn")
   private Object declinedOn = null;
+
+  @JsonProperty("documentData")
+  private java.util.Map<String, String> documentData = null;
 
   @JsonProperty("documents")
   private java.util.List<Document> documents = null;
@@ -54,6 +60,9 @@ public class UserAgreementResponse {
 
   @JsonProperty("status")
   private String status = null;
+
+  @JsonProperty("style")
+  private java.util.Map<String, String> style = null;
 
   @JsonProperty("version")
   private String version = null;
@@ -228,6 +237,33 @@ public class UserAgreementResponse {
 
 
   /**
+   * consumerDisclosureEnabled.
+   *
+   * @return UserAgreementResponse
+   **/
+  public UserAgreementResponse consumerDisclosureEnabled(Boolean consumerDisclosureEnabled) {
+    this.consumerDisclosureEnabled = consumerDisclosureEnabled;
+    return this;
+  }
+
+  /**
+   * .
+   * @return consumerDisclosureEnabled
+   **/
+  @ApiModelProperty(value = "")
+  public Boolean isConsumerDisclosureEnabled() {
+    return consumerDisclosureEnabled;
+  }
+
+  /**
+   * setConsumerDisclosureEnabled.
+   **/
+  public void setConsumerDisclosureEnabled(Boolean consumerDisclosureEnabled) {
+    this.consumerDisclosureEnabled = consumerDisclosureEnabled;
+  }
+
+
+  /**
    * consumerDisclosureHtml.
    *
    * @return UserAgreementResponse
@@ -309,6 +345,46 @@ public class UserAgreementResponse {
 
 
   /**
+   * documentData.
+   *
+   * @return UserAgreementResponse
+   **/
+  public UserAgreementResponse documentData(java.util.Map<String, String> documentData) {
+    this.documentData = documentData;
+    return this;
+  }
+
+  /**
+   * putDocumentDataItem.
+   *
+   * @return UserAgreementResponse
+   **/
+  public UserAgreementResponse putDocumentDataItem(String key, String documentDataItem) {
+    if (this.documentData == null) {
+      this.documentData = new java.util.HashMap<>();
+    }
+    this.documentData.put(key, documentDataItem);
+    return this;
+  }
+
+  /**
+   * .
+   * @return documentData
+   **/
+  @ApiModelProperty(value = "")
+  public java.util.Map<String, String> getDocumentData() {
+    return documentData;
+  }
+
+  /**
+   * setDocumentData.
+   **/
+  public void setDocumentData(java.util.Map<String, String> documentData) {
+    this.documentData = documentData;
+  }
+
+
+  /**
    * documents.
    *
    * @return UserAgreementResponse
@@ -325,7 +401,7 @@ public class UserAgreementResponse {
    **/
   public UserAgreementResponse addDocumentsItem(Document documentsItem) {
     if (this.documents == null) {
-      this.documents = new java.util.ArrayList<Document>();
+      this.documents = new java.util.ArrayList<>();
     }
     this.documents.add(documentsItem);
     return this;
@@ -430,6 +506,46 @@ public class UserAgreementResponse {
 
 
   /**
+   * style.
+   *
+   * @return UserAgreementResponse
+   **/
+  public UserAgreementResponse style(java.util.Map<String, String> style) {
+    this.style = style;
+    return this;
+  }
+
+  /**
+   * putStyleItem.
+   *
+   * @return UserAgreementResponse
+   **/
+  public UserAgreementResponse putStyleItem(String key, String styleItem) {
+    if (this.style == null) {
+      this.style = new java.util.HashMap<>();
+    }
+    this.style.put(key, styleItem);
+    return this;
+  }
+
+  /**
+   * .
+   * @return style
+   **/
+  @ApiModelProperty(value = "")
+  public java.util.Map<String, String> getStyle() {
+    return style;
+  }
+
+  /**
+   * setStyle.
+   **/
+  public void setStyle(java.util.Map<String, String> style) {
+    this.style = style;
+  }
+
+
+  /**
    * version.
    *
    * @return UserAgreementResponse
@@ -530,13 +646,16 @@ public class UserAgreementResponse {
         Objects.equals(this.agreementUrl, userAgreementResponse.agreementUrl) &&
         Objects.equals(this.clickwrapId, userAgreementResponse.clickwrapId) &&
         Objects.equals(this.clientUserId, userAgreementResponse.clientUserId) &&
+        Objects.equals(this.consumerDisclosureEnabled, userAgreementResponse.consumerDisclosureEnabled) &&
         Objects.equals(this.consumerDisclosureHtml, userAgreementResponse.consumerDisclosureHtml) &&
         Objects.equals(this.createdOn, userAgreementResponse.createdOn) &&
         Objects.equals(this.declinedOn, userAgreementResponse.declinedOn) &&
+        Objects.equals(this.documentData, userAgreementResponse.documentData) &&
         Objects.equals(this.documents, userAgreementResponse.documents) &&
         Objects.equals(this.metadata, userAgreementResponse.metadata) &&
         Objects.equals(this.settings, userAgreementResponse.settings) &&
         Objects.equals(this.status, userAgreementResponse.status) &&
+        Objects.equals(this.style, userAgreementResponse.style) &&
         Objects.equals(this.version, userAgreementResponse.version) &&
         Objects.equals(this.versionId, userAgreementResponse.versionId) &&
         Objects.equals(this.versionNumber, userAgreementResponse.versionNumber);
@@ -547,7 +666,7 @@ public class UserAgreementResponse {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, agreedOn, agreementId, agreementUrl, clickwrapId, clientUserId, consumerDisclosureHtml, createdOn, declinedOn, documents, metadata, settings, status, version, versionId, versionNumber);
+    return Objects.hash(accountId, agreedOn, agreementId, agreementUrl, clickwrapId, clientUserId, consumerDisclosureEnabled, consumerDisclosureHtml, createdOn, declinedOn, documentData, documents, metadata, settings, status, style, version, versionId, versionNumber);
   }
 
 
@@ -565,13 +684,16 @@ public class UserAgreementResponse {
     sb.append("    agreementUrl: ").append(toIndentedString(agreementUrl)).append("\n");
     sb.append("    clickwrapId: ").append(toIndentedString(clickwrapId)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
+    sb.append("    consumerDisclosureEnabled: ").append(toIndentedString(consumerDisclosureEnabled)).append("\n");
     sb.append("    consumerDisclosureHtml: ").append(toIndentedString(consumerDisclosureHtml)).append("\n");
     sb.append("    createdOn: ").append(toIndentedString(createdOn)).append("\n");
     sb.append("    declinedOn: ").append(toIndentedString(declinedOn)).append("\n");
+    sb.append("    documentData: ").append(toIndentedString(documentData)).append("\n");
     sb.append("    documents: ").append(toIndentedString(documents)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("    settings: ").append(toIndentedString(settings)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    style: ").append(toIndentedString(style)).append("\n");
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
     sb.append("    versionId: ").append(toIndentedString(versionId)).append("\n");
     sb.append("    versionNumber: ").append(toIndentedString(versionNumber)).append("\n");

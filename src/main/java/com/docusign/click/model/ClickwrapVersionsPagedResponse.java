@@ -216,7 +216,7 @@ public class ClickwrapVersionsPagedResponse {
    **/
   public ClickwrapVersionsPagedResponse addVersionsItem(ClickwrapVersion versionsItem) {
     if (this.versions == null) {
-      this.versions = new java.util.ArrayList<ClickwrapVersion>();
+      this.versions = new java.util.ArrayList<>();
     }
     this.versions.add(versionsItem);
     return this;

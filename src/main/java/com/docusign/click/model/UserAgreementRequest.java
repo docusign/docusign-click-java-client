@@ -17,6 +17,9 @@ public class UserAgreementRequest {
   @JsonProperty("clientUserId")
   private String clientUserId = null;
 
+  @JsonProperty("documentData")
+  private java.util.Map<String, String> documentData = null;
+
   @JsonProperty("metadata")
   private String metadata = null;
 
@@ -45,6 +48,46 @@ public class UserAgreementRequest {
    **/
   public void setClientUserId(String clientUserId) {
     this.clientUserId = clientUserId;
+  }
+
+
+  /**
+   * documentData.
+   *
+   * @return UserAgreementRequest
+   **/
+  public UserAgreementRequest documentData(java.util.Map<String, String> documentData) {
+    this.documentData = documentData;
+    return this;
+  }
+
+  /**
+   * putDocumentDataItem.
+   *
+   * @return UserAgreementRequest
+   **/
+  public UserAgreementRequest putDocumentDataItem(String key, String documentDataItem) {
+    if (this.documentData == null) {
+      this.documentData = new java.util.HashMap<>();
+    }
+    this.documentData.put(key, documentDataItem);
+    return this;
+  }
+
+  /**
+   * .
+   * @return documentData
+   **/
+  @ApiModelProperty(value = "")
+  public java.util.Map<String, String> getDocumentData() {
+    return documentData;
+  }
+
+  /**
+   * setDocumentData.
+   **/
+  public void setDocumentData(java.util.Map<String, String> documentData) {
+    this.documentData = documentData;
   }
 
 
@@ -90,6 +133,7 @@ public class UserAgreementRequest {
     }
     UserAgreementRequest userAgreementRequest = (UserAgreementRequest) o;
     return Objects.equals(this.clientUserId, userAgreementRequest.clientUserId) &&
+        Objects.equals(this.documentData, userAgreementRequest.documentData) &&
         Objects.equals(this.metadata, userAgreementRequest.metadata);
   }
 
@@ -98,7 +142,7 @@ public class UserAgreementRequest {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(clientUserId, metadata);
+    return Objects.hash(clientUserId, documentData, metadata);
   }
 
 
@@ -111,6 +155,7 @@ public class UserAgreementRequest {
     sb.append("class UserAgreementRequest {\n");
     
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
+    sb.append("    documentData: ").append(toIndentedString(documentData)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("}");
     return sb.toString();

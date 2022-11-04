@@ -3,6 +3,7 @@ package com.docusign.click.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.docusign.click.model.ClickwrapScheduledReacceptance;
+import com.docusign.click.model.DataField;
 import com.docusign.click.model.DisplaySettings;
 import com.docusign.click.model.Document;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -19,6 +20,9 @@ import io.swagger.annotations.ApiModelProperty;
 public class ClickwrapRequest {
   @JsonProperty("clickwrapName")
   private String clickwrapName = null;
+
+  @JsonProperty("dataFields")
+  private java.util.List<DataField> dataFields = null;
 
   @JsonProperty("displaySettings")
   private DisplaySettings displaySettings = null;
@@ -48,7 +52,7 @@ public class ClickwrapRequest {
   private ClickwrapScheduledReacceptance scheduledReacceptance = null;
 
   @JsonProperty("status")
-  private Object status = null;
+  private String status = null;
 
   @JsonProperty("transferFromUserId")
   private String transferFromUserId = null;
@@ -81,6 +85,46 @@ public class ClickwrapRequest {
    **/
   public void setClickwrapName(String clickwrapName) {
     this.clickwrapName = clickwrapName;
+  }
+
+
+  /**
+   * dataFields.
+   *
+   * @return ClickwrapRequest
+   **/
+  public ClickwrapRequest dataFields(java.util.List<DataField> dataFields) {
+    this.dataFields = dataFields;
+    return this;
+  }
+  
+  /**
+   * addDataFieldsItem.
+   *
+   * @return ClickwrapRequest
+   **/
+  public ClickwrapRequest addDataFieldsItem(DataField dataFieldsItem) {
+    if (this.dataFields == null) {
+      this.dataFields = new java.util.ArrayList<>();
+    }
+    this.dataFields.add(dataFieldsItem);
+    return this;
+  }
+
+  /**
+   * .
+   * @return dataFields
+   **/
+  @ApiModelProperty(value = "")
+  public java.util.List<DataField> getDataFields() {
+    return dataFields;
+  }
+
+  /**
+   * setDataFields.
+   **/
+  public void setDataFields(java.util.List<DataField> dataFields) {
+    this.dataFields = dataFields;
   }
 
 
@@ -128,7 +172,7 @@ public class ClickwrapRequest {
    **/
   public ClickwrapRequest addDocumentsItem(Document documentsItem) {
     if (this.documents == null) {
-      this.documents = new java.util.ArrayList<Document>();
+      this.documents = new java.util.ArrayList<>();
     }
     this.documents.add(documentsItem);
     return this;
@@ -345,7 +389,7 @@ public class ClickwrapRequest {
    *
    * @return ClickwrapRequest
    **/
-  public ClickwrapRequest status(Object status) {
+  public ClickwrapRequest status(String status) {
     this.status = status;
     return this;
   }
@@ -355,14 +399,14 @@ public class ClickwrapRequest {
    * @return status
    **/
   @ApiModelProperty(value = "")
-  public Object getStatus() {
+  public String getStatus() {
     return status;
   }
 
   /**
    * setStatus.
    **/
-  public void setStatus(Object status) {
+  public void setStatus(String status) {
     this.status = status;
   }
 
@@ -436,6 +480,7 @@ public class ClickwrapRequest {
     }
     ClickwrapRequest clickwrapRequest = (ClickwrapRequest) o;
     return Objects.equals(this.clickwrapName, clickwrapRequest.clickwrapName) &&
+        Objects.equals(this.dataFields, clickwrapRequest.dataFields) &&
         Objects.equals(this.displaySettings, clickwrapRequest.displaySettings) &&
         Objects.equals(this.documents, clickwrapRequest.documents) &&
         Objects.equals(this.fieldsToNull, clickwrapRequest.fieldsToNull) &&
@@ -455,7 +500,7 @@ public class ClickwrapRequest {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(clickwrapName, displaySettings, documents, fieldsToNull, isMajorVersion, isShared, name, requireReacceptance, scheduledDate, scheduledReacceptance, status, transferFromUserId, transferToUserId);
+    return Objects.hash(clickwrapName, dataFields, displaySettings, documents, fieldsToNull, isMajorVersion, isShared, name, requireReacceptance, scheduledDate, scheduledReacceptance, status, transferFromUserId, transferToUserId);
   }
 
 
@@ -468,6 +513,7 @@ public class ClickwrapRequest {
     sb.append("class ClickwrapRequest {\n");
     
     sb.append("    clickwrapName: ").append(toIndentedString(clickwrapName)).append("\n");
+    sb.append("    dataFields: ").append(toIndentedString(dataFields)).append("\n");
     sb.append("    displaySettings: ").append(toIndentedString(displaySettings)).append("\n");
     sb.append("    documents: ").append(toIndentedString(documents)).append("\n");
     sb.append("    fieldsToNull: ").append(toIndentedString(fieldsToNull)).append("\n");

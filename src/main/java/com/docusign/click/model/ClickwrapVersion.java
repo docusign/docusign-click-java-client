@@ -3,6 +3,7 @@ package com.docusign.click.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.docusign.click.model.ClickwrapScheduledReacceptance;
+import com.docusign.click.model.DataField;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -20,6 +21,9 @@ public class ClickwrapVersion {
 
   @JsonProperty("createdTime")
   private Object createdTime = null;
+
+  @JsonProperty("dataFields")
+  private java.util.List<DataField> dataFields = null;
 
   @JsonProperty("lastModified")
   private Object lastModified = null;
@@ -100,6 +104,46 @@ public class ClickwrapVersion {
    **/
   public void setCreatedTime(Object createdTime) {
     this.createdTime = createdTime;
+  }
+
+
+  /**
+   * dataFields.
+   *
+   * @return ClickwrapVersion
+   **/
+  public ClickwrapVersion dataFields(java.util.List<DataField> dataFields) {
+    this.dataFields = dataFields;
+    return this;
+  }
+  
+  /**
+   * addDataFieldsItem.
+   *
+   * @return ClickwrapVersion
+   **/
+  public ClickwrapVersion addDataFieldsItem(DataField dataFieldsItem) {
+    if (this.dataFields == null) {
+      this.dataFields = new java.util.ArrayList<>();
+    }
+    this.dataFields.add(dataFieldsItem);
+    return this;
+  }
+
+  /**
+   * .
+   * @return dataFields
+   **/
+  @ApiModelProperty(value = "")
+  public java.util.List<DataField> getDataFields() {
+    return dataFields;
+  }
+
+  /**
+   * setDataFields.
+   **/
+  public void setDataFields(java.util.List<DataField> dataFields) {
+    this.dataFields = dataFields;
   }
 
 
@@ -362,6 +406,7 @@ public class ClickwrapVersion {
     ClickwrapVersion clickwrapVersion = (ClickwrapVersion) o;
     return Objects.equals(this.clickwrapVersionId, clickwrapVersion.clickwrapVersionId) &&
         Objects.equals(this.createdTime, clickwrapVersion.createdTime) &&
+        Objects.equals(this.dataFields, clickwrapVersion.dataFields) &&
         Objects.equals(this.lastModified, clickwrapVersion.lastModified) &&
         Objects.equals(this.lastModifiedBy, clickwrapVersion.lastModifiedBy) &&
         Objects.equals(this.ownerUserId, clickwrapVersion.ownerUserId) &&
@@ -378,7 +423,7 @@ public class ClickwrapVersion {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(clickwrapVersionId, createdTime, lastModified, lastModifiedBy, ownerUserId, requireReacceptance, scheduledDate, scheduledReacceptance, status, versionId, versionNumber);
+    return Objects.hash(clickwrapVersionId, createdTime, dataFields, lastModified, lastModifiedBy, ownerUserId, requireReacceptance, scheduledDate, scheduledReacceptance, status, versionId, versionNumber);
   }
 
 
@@ -392,6 +437,7 @@ public class ClickwrapVersion {
     
     sb.append("    clickwrapVersionId: ").append(toIndentedString(clickwrapVersionId)).append("\n");
     sb.append("    createdTime: ").append(toIndentedString(createdTime)).append("\n");
+    sb.append("    dataFields: ").append(toIndentedString(dataFields)).append("\n");
     sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
     sb.append("    lastModifiedBy: ").append(toIndentedString(lastModifiedBy)).append("\n");
     sb.append("    ownerUserId: ").append(toIndentedString(ownerUserId)).append("\n");

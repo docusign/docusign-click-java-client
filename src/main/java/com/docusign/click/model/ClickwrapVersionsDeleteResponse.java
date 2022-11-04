@@ -96,7 +96,7 @@ public class ClickwrapVersionsDeleteResponse {
    **/
   public ClickwrapVersionsDeleteResponse addVersionsItem(ClickwrapVersionDeleteResponse versionsItem) {
     if (this.versions == null) {
-      this.versions = new java.util.ArrayList<ClickwrapVersionDeleteResponse>();
+      this.versions = new java.util.ArrayList<>();
     }
     this.versions.add(versionsItem);
     return this;

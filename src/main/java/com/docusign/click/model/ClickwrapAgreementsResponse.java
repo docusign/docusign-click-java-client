@@ -156,7 +156,7 @@ public class ClickwrapAgreementsResponse {
    **/
   public ClickwrapAgreementsResponse addUserAgreementsItem(UserAgreementResponse userAgreementsItem) {
     if (this.userAgreements == null) {
-      this.userAgreements = new java.util.ArrayList<UserAgreementResponse>();
+      this.userAgreements = new java.util.ArrayList<>();
     }
     this.userAgreements.add(userAgreementsItem);
     return this;

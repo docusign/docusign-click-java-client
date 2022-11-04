@@ -3,6 +3,7 @@ package com.docusign.click.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.docusign.click.model.ClickwrapScheduledReacceptance;
+import com.docusign.click.model.DataField;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -20,6 +21,9 @@ public class ClickwrapVersionDeleteResponse {
 
   @JsonProperty("createdTime")
   private Object createdTime = null;
+
+  @JsonProperty("dataFields")
+  private java.util.List<DataField> dataFields = null;
 
   @JsonProperty("deletionMessage")
   private String deletionMessage = null;
@@ -106,6 +110,46 @@ public class ClickwrapVersionDeleteResponse {
    **/
   public void setCreatedTime(Object createdTime) {
     this.createdTime = createdTime;
+  }
+
+
+  /**
+   * dataFields.
+   *
+   * @return ClickwrapVersionDeleteResponse
+   **/
+  public ClickwrapVersionDeleteResponse dataFields(java.util.List<DataField> dataFields) {
+    this.dataFields = dataFields;
+    return this;
+  }
+  
+  /**
+   * addDataFieldsItem.
+   *
+   * @return ClickwrapVersionDeleteResponse
+   **/
+  public ClickwrapVersionDeleteResponse addDataFieldsItem(DataField dataFieldsItem) {
+    if (this.dataFields == null) {
+      this.dataFields = new java.util.ArrayList<>();
+    }
+    this.dataFields.add(dataFieldsItem);
+    return this;
+  }
+
+  /**
+   * .
+   * @return dataFields
+   **/
+  @ApiModelProperty(value = "")
+  public java.util.List<DataField> getDataFields() {
+    return dataFields;
+  }
+
+  /**
+   * setDataFields.
+   **/
+  public void setDataFields(java.util.List<DataField> dataFields) {
+    this.dataFields = dataFields;
   }
 
 
@@ -422,6 +466,7 @@ public class ClickwrapVersionDeleteResponse {
     ClickwrapVersionDeleteResponse clickwrapVersionDeleteResponse = (ClickwrapVersionDeleteResponse) o;
     return Objects.equals(this.clickwrapVersionId, clickwrapVersionDeleteResponse.clickwrapVersionId) &&
         Objects.equals(this.createdTime, clickwrapVersionDeleteResponse.createdTime) &&
+        Objects.equals(this.dataFields, clickwrapVersionDeleteResponse.dataFields) &&
         Objects.equals(this.deletionMessage, clickwrapVersionDeleteResponse.deletionMessage) &&
         Objects.equals(this.deletionSuccess, clickwrapVersionDeleteResponse.deletionSuccess) &&
         Objects.equals(this.lastModified, clickwrapVersionDeleteResponse.lastModified) &&
@@ -440,7 +485,7 @@ public class ClickwrapVersionDeleteResponse {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(clickwrapVersionId, createdTime, deletionMessage, deletionSuccess, lastModified, lastModifiedBy, ownerUserId, requireReacceptance, scheduledDate, scheduledReacceptance, status, versionId, versionNumber);
+    return Objects.hash(clickwrapVersionId, createdTime, dataFields, deletionMessage, deletionSuccess, lastModified, lastModifiedBy, ownerUserId, requireReacceptance, scheduledDate, scheduledReacceptance, status, versionId, versionNumber);
   }
 
 
@@ -454,6 +499,7 @@ public class ClickwrapVersionDeleteResponse {
     
     sb.append("    clickwrapVersionId: ").append(toIndentedString(clickwrapVersionId)).append("\n");
     sb.append("    createdTime: ").append(toIndentedString(createdTime)).append("\n");
+    sb.append("    dataFields: ").append(toIndentedString(dataFields)).append("\n");
     sb.append("    deletionMessage: ").append(toIndentedString(deletionMessage)).append("\n");
     sb.append("    deletionSuccess: ").append(toIndentedString(deletionSuccess)).append("\n");
     sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");

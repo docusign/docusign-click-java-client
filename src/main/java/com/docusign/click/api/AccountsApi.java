@@ -8,6 +8,7 @@ import com.docusign.click.client.ApiClient;
 import com.docusign.click.client.Configuration;
 import com.docusign.click.model.*;
 import com.docusign.click.client.Pair;
+import com.docusign.click.client.ApiResponse;
 
 
 
@@ -62,6 +63,19 @@ public class AccountsApi {
    * @throws ApiException if fails to make API call
    */
   public ClickwrapVersionSummaryResponse createClickwrap(String accountId, ClickwrapRequest clickwrapRequest) throws ApiException {
+    ApiResponse<ClickwrapVersionSummaryResponse> localVarResponse = createClickwrapWithHttpInfo(accountId, clickwrapRequest);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Creates a Clickwrap for the specified accountId
+   * 
+   * @param accountId  (required)
+   * @param clickwrapRequest  (optional)
+   * @return ClickwrapVersionSummaryResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<ClickwrapVersionSummaryResponse > createClickwrapWithHttpInfo(String accountId, ClickwrapRequest clickwrapRequest) throws ApiException {
     Object localVarPostBody = clickwrapRequest;
     
     // verify the required parameter 'accountId' is set
@@ -96,10 +110,11 @@ public class AccountsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<ClickwrapVersionSummaryResponse> localVarReturnType = new GenericType<ClickwrapVersionSummaryResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    ClickwrapVersionSummaryResponse localVarResponse = apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<ClickwrapVersionSummaryResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 
   /**
    * Creates the clickwrap version.
@@ -111,6 +126,20 @@ public class AccountsApi {
    * @throws ApiException if fails to make API call
    */
   public ClickwrapVersionSummaryResponse createClickwrapVersion(String accountId, String clickwrapId, ClickwrapRequest clickwrapRequest) throws ApiException {
+    ApiResponse<ClickwrapVersionSummaryResponse> localVarResponse = createClickwrapVersionWithHttpInfo(accountId, clickwrapId, clickwrapRequest);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Creates the clickwrap version
+   * 
+   * @param accountId  (required)
+   * @param clickwrapId  (required)
+   * @param clickwrapRequest  (optional)
+   * @return ClickwrapVersionSummaryResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<ClickwrapVersionSummaryResponse > createClickwrapVersionWithHttpInfo(String accountId, String clickwrapId, ClickwrapRequest clickwrapRequest) throws ApiException {
     Object localVarPostBody = clickwrapRequest;
     
     // verify the required parameter 'accountId' is set
@@ -151,10 +180,11 @@ public class AccountsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<ClickwrapVersionSummaryResponse> localVarReturnType = new GenericType<ClickwrapVersionSummaryResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    ClickwrapVersionSummaryResponse localVarResponse = apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<ClickwrapVersionSummaryResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 
   /**
    * Checks if a user has agreed to a clickwrap and returns a response with the agreement url. Returns HttpStatusCode.OK if user has no pending agreement..
@@ -166,6 +196,20 @@ public class AccountsApi {
    * @throws ApiException if fails to make API call
    */
   public UserAgreementResponse createHasAgreed(String accountId, String clickwrapId, UserAgreementRequest userAgreementRequest) throws ApiException {
+    ApiResponse<UserAgreementResponse> localVarResponse = createHasAgreedWithHttpInfo(accountId, clickwrapId, userAgreementRequest);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Checks if a user has agreed to a clickwrap and returns a response with the agreement url. Returns HttpStatusCode.OK if user has no pending agreement.
+   * 
+   * @param accountId  (required)
+   * @param clickwrapId  (required)
+   * @param userAgreementRequest  (optional)
+   * @return UserAgreementResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<UserAgreementResponse > createHasAgreedWithHttpInfo(String accountId, String clickwrapId, UserAgreementRequest userAgreementRequest) throws ApiException {
     Object localVarPostBody = userAgreementRequest;
     
     // verify the required parameter 'accountId' is set
@@ -206,10 +250,11 @@ public class AccountsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<UserAgreementResponse> localVarReturnType = new GenericType<UserAgreementResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    UserAgreementResponse localVarResponse = apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<UserAgreementResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
   /// <summary>
   /// Deletes the clickwrap and all its version specified by clickwrapId. Active clickwrap will not get deleted 
   /// </summary>
@@ -260,6 +305,20 @@ public class AccountsApi {
    * @throws ApiException if fails to make API call
    */
   public ClickwrapVersionsDeleteResponse deleteClickwrap(String accountId, String clickwrapId, AccountsApi.DeleteClickwrapOptions options) throws ApiException {
+    ApiResponse<ClickwrapVersionsDeleteResponse> localVarResponse = deleteClickwrapWithHttpInfo(accountId, clickwrapId, options);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Deletes the clickwrap and all its version specified by clickwrapId. Active clickwrap will not get deleted
+   * 
+   * @param accountId  (required)
+   * @param clickwrapId  (required)
+   * @param options for modifying the method behavior.
+   * @return ClickwrapVersionsDeleteResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<ClickwrapVersionsDeleteResponse > deleteClickwrapWithHttpInfo(String accountId, String clickwrapId, AccountsApi.DeleteClickwrapOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -302,10 +361,11 @@ public class AccountsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<ClickwrapVersionsDeleteResponse> localVarReturnType = new GenericType<ClickwrapVersionsDeleteResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    ClickwrapVersionsDeleteResponse localVarResponse = apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<ClickwrapVersionsDeleteResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 
   /**
    * Delete a Clickwrap version specified by versionId.
@@ -317,6 +377,20 @@ public class AccountsApi {
    * @throws ApiException if fails to make API call
    */
   public ClickwrapVersionDeleteResponse deleteClickwrapVersion(String accountId, String clickwrapId, String versionId) throws ApiException {
+    ApiResponse<ClickwrapVersionDeleteResponse> localVarResponse = deleteClickwrapVersionWithHttpInfo(accountId, clickwrapId, versionId);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Delete a Clickwrap version specified by versionId
+   * 
+   * @param accountId  (required)
+   * @param clickwrapId  (required)
+   * @param versionId  (required)
+   * @return ClickwrapVersionDeleteResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<ClickwrapVersionDeleteResponse > deleteClickwrapVersionWithHttpInfo(String accountId, String clickwrapId, String versionId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -363,10 +437,11 @@ public class AccountsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<ClickwrapVersionDeleteResponse> localVarReturnType = new GenericType<ClickwrapVersionDeleteResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    ClickwrapVersionDeleteResponse localVarResponse = apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<ClickwrapVersionDeleteResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
   /// <summary>
   /// Deletes the versions specified by query parameter clickwrapVersionIds for a clickwrap, or all versions if no query parameter is specified. It will not delete if a version is active. 
   /// </summary>
@@ -417,6 +492,20 @@ public class AccountsApi {
    * @throws ApiException if fails to make API call
    */
   public ClickwrapVersionsDeleteResponse deleteClickwrapVersions(String accountId, String clickwrapId, AccountsApi.DeleteClickwrapVersionsOptions options) throws ApiException {
+    ApiResponse<ClickwrapVersionsDeleteResponse> localVarResponse = deleteClickwrapVersionsWithHttpInfo(accountId, clickwrapId, options);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Deletes the versions specified by query parameter clickwrapVersionIds for a clickwrap, or all versions if no query parameter is specified. It will not delete if a version is active.
+   * 
+   * @param accountId  (required)
+   * @param clickwrapId  (required)
+   * @param options for modifying the method behavior.
+   * @return ClickwrapVersionsDeleteResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<ClickwrapVersionsDeleteResponse > deleteClickwrapVersionsWithHttpInfo(String accountId, String clickwrapId, AccountsApi.DeleteClickwrapVersionsOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -459,10 +548,11 @@ public class AccountsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<ClickwrapVersionsDeleteResponse> localVarReturnType = new GenericType<ClickwrapVersionsDeleteResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    ClickwrapVersionsDeleteResponse localVarResponse = apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<ClickwrapVersionsDeleteResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
   /// <summary>
   /// Deletes all the clickwraps for an account or the ones passed in query parameter clickwrapIds. It will not delete active clickwraps. 
   /// </summary>
@@ -511,6 +601,19 @@ public class AccountsApi {
    * @throws ApiException if fails to make API call
    */
   public ClickwrapsDeleteResponse deleteClickwraps(String accountId, AccountsApi.DeleteClickwrapsOptions options) throws ApiException {
+    ApiResponse<ClickwrapsDeleteResponse> localVarResponse = deleteClickwrapsWithHttpInfo(accountId, options);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Deletes all the clickwraps for an account or the ones passed in query parameter clickwrapIds. It will not delete active clickwraps.
+   * 
+   * @param accountId  (required)
+   * @param options for modifying the method behavior.
+   * @return ClickwrapsDeleteResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<ClickwrapsDeleteResponse > deleteClickwrapsWithHttpInfo(String accountId, AccountsApi.DeleteClickwrapsOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -547,10 +650,11 @@ public class AccountsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<ClickwrapsDeleteResponse> localVarReturnType = new GenericType<ClickwrapsDeleteResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    ClickwrapsDeleteResponse localVarResponse = apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<ClickwrapsDeleteResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 
   /**
    * Gets the agreement by a provided agreement ID.
@@ -562,6 +666,20 @@ public class AccountsApi {
    * @throws ApiException if fails to make API call
    */
   public UserAgreementResponse getAgreement(String accountId, String clickwrapId, String agreementId) throws ApiException {
+    ApiResponse<UserAgreementResponse> localVarResponse = getAgreementWithHttpInfo(accountId, clickwrapId, agreementId);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Gets the agreement by a provided agreement ID
+   * 
+   * @param accountId  (required)
+   * @param clickwrapId  (required)
+   * @param agreementId  (required)
+   * @return UserAgreementResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<UserAgreementResponse > getAgreementWithHttpInfo(String accountId, String clickwrapId, String agreementId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -608,10 +726,95 @@ public class AccountsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<UserAgreementResponse> localVarReturnType = new GenericType<UserAgreementResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    UserAgreementResponse localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<UserAgreementResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
+
+  /**
+   * Downloads a document at an order within the agreement..
+   * 
+   * @param accountId  (required)
+   * @param clickwrapId  (required)
+   * @param versionId  (required)
+   * @param orderOrDisclosure  (required)
+   * @return Document
+   * @throws ApiException if fails to make API call
+   */
+  public Document getAgreementDocument(String accountId, String clickwrapId, String versionId, String orderOrDisclosure) throws ApiException {
+    ApiResponse<Document> localVarResponse = getAgreementDocumentWithHttpInfo(accountId, clickwrapId, versionId, orderOrDisclosure);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Downloads a document at an order within the agreement.
+   * 
+   * @param accountId  (required)
+   * @param clickwrapId  (required)
+   * @param versionId  (required)
+   * @param orderOrDisclosure  (required)
+   * @return Document
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Document > getAgreementDocumentWithHttpInfo(String accountId, String clickwrapId, String versionId, String orderOrDisclosure) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getAgreementDocument");
+    }
+    
+    // verify the required parameter 'clickwrapId' is set
+    if (clickwrapId == null) {
+      throw new ApiException(400, "Missing the required parameter 'clickwrapId' when calling getAgreementDocument");
+    }
+    
+    // verify the required parameter 'versionId' is set
+    if (versionId == null) {
+      throw new ApiException(400, "Missing the required parameter 'versionId' when calling getAgreementDocument");
+    }
+    
+    // verify the required parameter 'orderOrDisclosure' is set
+    if (orderOrDisclosure == null) {
+      throw new ApiException(400, "Missing the required parameter 'orderOrDisclosure' when calling getAgreementDocument");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v1/accounts/{accountId}/clickwraps/{clickwrapId}/versions/{versionId}/documents/{orderOrDisclosure}"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "clickwrapId" + "\\}", apiClient.escapeString(clickwrapId.toString()))
+      .replaceAll("\\{" + "versionId" + "\\}", apiClient.escapeString(versionId.toString()))
+      .replaceAll("\\{" + "orderOrDisclosure" + "\\}", apiClient.escapeString(orderOrDisclosure.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<Document> localVarReturnType = new GenericType<Document>() {};
+    Document localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<Document>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
   /// <summary>
   /// Downloads the agreement PDF and optionally certificate of completion. 
   /// </summary>
@@ -664,6 +867,21 @@ public class AccountsApi {
    * @throws ApiException if fails to make API call
    */
   public byte[] getAgreementPdf(String accountId, String clickwrapId, String agreementId, AccountsApi.GetAgreementPdfOptions options) throws ApiException {
+    ApiResponse<byte[]> localVarResponse = getAgreementPdfWithHttpInfo(accountId, clickwrapId, agreementId, options);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Downloads the agreement PDF and optionally certificate of completion.
+   * 
+   * @param accountId  (required)
+   * @param clickwrapId  (required)
+   * @param agreementId  (required)
+   * @param options for modifying the method behavior.
+   * @return byte[]
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<byte[] > getAgreementPdfWithHttpInfo(String accountId, String clickwrapId, String agreementId, AccountsApi.GetAgreementPdfOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -712,10 +930,11 @@ public class AccountsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    byte[] localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<byte[]>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 
   /**
    * Gets the clickwrap for an account specified by clickwrapId.
@@ -726,6 +945,19 @@ public class AccountsApi {
    * @throws ApiException if fails to make API call
    */
   public ClickwrapVersionResponse getClickwrap(String accountId, String clickwrapId) throws ApiException {
+    ApiResponse<ClickwrapVersionResponse> localVarResponse = getClickwrapWithHttpInfo(accountId, clickwrapId);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Gets the clickwrap for an account specified by clickwrapId
+   * 
+   * @param accountId  (required)
+   * @param clickwrapId  (required)
+   * @return ClickwrapVersionResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<ClickwrapVersionResponse > getClickwrapWithHttpInfo(String accountId, String clickwrapId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -766,10 +998,11 @@ public class AccountsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<ClickwrapVersionResponse> localVarReturnType = new GenericType<ClickwrapVersionResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    ClickwrapVersionResponse localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<ClickwrapVersionResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
   /// <summary>
   /// Gets the agreement responses for a clickwrap 
   /// </summary>
@@ -888,6 +1121,20 @@ public class AccountsApi {
    * @throws ApiException if fails to make API call
    */
   public ClickwrapAgreementsResponse getClickwrapAgreements(String accountId, String clickwrapId, AccountsApi.GetClickwrapAgreementsOptions options) throws ApiException {
+    ApiResponse<ClickwrapAgreementsResponse> localVarResponse = getClickwrapAgreementsWithHttpInfo(accountId, clickwrapId, options);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Gets the agreement responses for a clickwrap
+   * 
+   * @param accountId  (required)
+   * @param clickwrapId  (required)
+   * @param options for modifying the method behavior.
+   * @return ClickwrapAgreementsResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<ClickwrapAgreementsResponse > getClickwrapAgreementsWithHttpInfo(String accountId, String clickwrapId, AccountsApi.GetClickwrapAgreementsOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -938,10 +1185,11 @@ public class AccountsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<ClickwrapAgreementsResponse> localVarReturnType = new GenericType<ClickwrapAgreementsResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    ClickwrapAgreementsResponse localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<ClickwrapAgreementsResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 
   /**
    * Gets the Clickwrap version by clickwrapId and versionId for an account.
@@ -953,6 +1201,20 @@ public class AccountsApi {
    * @throws ApiException if fails to make API call
    */
   public ClickwrapVersionResponse getClickwrapVersion(String accountId, String clickwrapId, String versionId) throws ApiException {
+    ApiResponse<ClickwrapVersionResponse> localVarResponse = getClickwrapVersionWithHttpInfo(accountId, clickwrapId, versionId);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Gets the Clickwrap version by clickwrapId and versionId for an account
+   * 
+   * @param accountId  (required)
+   * @param clickwrapId  (required)
+   * @param versionId  (required)
+   * @return ClickwrapVersionResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<ClickwrapVersionResponse > getClickwrapVersionWithHttpInfo(String accountId, String clickwrapId, String versionId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -999,10 +1261,11 @@ public class AccountsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<ClickwrapVersionResponse> localVarReturnType = new GenericType<ClickwrapVersionResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    ClickwrapVersionResponse localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<ClickwrapVersionResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
   /// <summary>
   /// Gets the agreement responses for a clickwrap version 
   /// </summary>
@@ -1123,6 +1386,21 @@ public class AccountsApi {
    * @throws ApiException if fails to make API call
    */
   public ClickwrapAgreementsResponse getClickwrapVersionAgreements(String accountId, String clickwrapId, String versionId, AccountsApi.GetClickwrapVersionAgreementsOptions options) throws ApiException {
+    ApiResponse<ClickwrapAgreementsResponse> localVarResponse = getClickwrapVersionAgreementsWithHttpInfo(accountId, clickwrapId, versionId, options);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Gets the agreement responses for a clickwrap version
+   * 
+   * @param accountId  (required)
+   * @param clickwrapId  (required)
+   * @param versionId  (required)
+   * @param options for modifying the method behavior.
+   * @return ClickwrapAgreementsResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<ClickwrapAgreementsResponse > getClickwrapVersionAgreementsWithHttpInfo(String accountId, String clickwrapId, String versionId, AccountsApi.GetClickwrapVersionAgreementsOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -1179,10 +1457,11 @@ public class AccountsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<ClickwrapAgreementsResponse> localVarReturnType = new GenericType<ClickwrapAgreementsResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    ClickwrapAgreementsResponse localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<ClickwrapAgreementsResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 
   /**
    * Gets all the versions of a clickwrap for an account.
@@ -1193,6 +1472,19 @@ public class AccountsApi {
    * @throws ApiException if fails to make API call
    */
   public ClickwrapVersionsPagedResponse getClickwrapVersions(String accountId, String clickwrapId) throws ApiException {
+    ApiResponse<ClickwrapVersionsPagedResponse> localVarResponse = getClickwrapVersionsWithHttpInfo(accountId, clickwrapId);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Gets all the versions of a clickwrap for an account
+   * 
+   * @param accountId  (required)
+   * @param clickwrapId  (required)
+   * @return ClickwrapVersionsPagedResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<ClickwrapVersionsPagedResponse > getClickwrapVersionsWithHttpInfo(String accountId, String clickwrapId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -1233,10 +1525,11 @@ public class AccountsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<ClickwrapVersionsPagedResponse> localVarReturnType = new GenericType<ClickwrapVersionsPagedResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    ClickwrapVersionsPagedResponse localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<ClickwrapVersionsPagedResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
   /// <summary>
   /// Gets the Clickwraps for an account 
   /// </summary>
@@ -1387,6 +1680,19 @@ public class AccountsApi {
    * @throws ApiException if fails to make API call
    */
   public ClickwrapVersionsResponse getClickwraps(String accountId, AccountsApi.GetClickwrapsOptions options) throws ApiException {
+    ApiResponse<ClickwrapVersionsResponse> localVarResponse = getClickwrapsWithHttpInfo(accountId, options);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Gets the Clickwraps for an account
+   * 
+   * @param accountId  (required)
+   * @param options for modifying the method behavior.
+   * @return ClickwrapVersionsResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<ClickwrapVersionsResponse > getClickwrapsWithHttpInfo(String accountId, AccountsApi.GetClickwrapsOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -1435,10 +1741,11 @@ public class AccountsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<ClickwrapVersionsResponse> localVarReturnType = new GenericType<ClickwrapVersionsResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    ClickwrapVersionsResponse localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<ClickwrapVersionsResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 
   /**
    * Provides base service and version access information..
@@ -1447,6 +1754,17 @@ public class AccountsApi {
    * @throws ApiException if fails to make API call
    */
   public ServiceInformation getServiceInformation() throws ApiException {
+    ApiResponse<ServiceInformation> localVarResponse = getServiceInformationWithHttpInfo();
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Provides base service and version access information.
+   * 
+   * @return ServiceInformation
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<ServiceInformation > getServiceInformationWithHttpInfo() throws ApiException {
     Object localVarPostBody = "{}";
     
     // create path and map variables
@@ -1475,10 +1793,11 @@ public class AccountsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<ServiceInformation> localVarReturnType = new GenericType<ServiceInformation>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    ServiceInformation localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<ServiceInformation>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 
   /**
    * Updates the clickwrap specified by clickwrapId.
@@ -1490,6 +1809,20 @@ public class AccountsApi {
    * @throws ApiException if fails to make API call
    */
   public ClickwrapVersionSummaryResponse updateClickwrap(String accountId, String clickwrapId, ClickwrapTransferRequest clickwrapTransferRequest) throws ApiException {
+    ApiResponse<ClickwrapVersionSummaryResponse> localVarResponse = updateClickwrapWithHttpInfo(accountId, clickwrapId, clickwrapTransferRequest);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Updates the clickwrap specified by clickwrapId
+   * 
+   * @param accountId  (required)
+   * @param clickwrapId  (required)
+   * @param clickwrapTransferRequest  (optional)
+   * @return ClickwrapVersionSummaryResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<ClickwrapVersionSummaryResponse > updateClickwrapWithHttpInfo(String accountId, String clickwrapId, ClickwrapTransferRequest clickwrapTransferRequest) throws ApiException {
     Object localVarPostBody = clickwrapTransferRequest;
     
     // verify the required parameter 'accountId' is set
@@ -1530,10 +1863,11 @@ public class AccountsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<ClickwrapVersionSummaryResponse> localVarReturnType = new GenericType<ClickwrapVersionSummaryResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    ClickwrapVersionSummaryResponse localVarResponse = apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<ClickwrapVersionSummaryResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 
   /**
    * Updates the clickwrap version specified by versionId.
@@ -1546,6 +1880,21 @@ public class AccountsApi {
    * @throws ApiException if fails to make API call
    */
   public ClickwrapVersionSummaryResponse updateClickwrapVersion(String accountId, String clickwrapId, String versionId, ClickwrapRequest clickwrapRequest) throws ApiException {
+    ApiResponse<ClickwrapVersionSummaryResponse> localVarResponse = updateClickwrapVersionWithHttpInfo(accountId, clickwrapId, versionId, clickwrapRequest);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Updates the clickwrap version specified by versionId
+   * 
+   * @param accountId  (required)
+   * @param clickwrapId  (required)
+   * @param versionId  (required)
+   * @param clickwrapRequest  (optional)
+   * @return ClickwrapVersionSummaryResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<ClickwrapVersionSummaryResponse > updateClickwrapVersionWithHttpInfo(String accountId, String clickwrapId, String versionId, ClickwrapRequest clickwrapRequest) throws ApiException {
     Object localVarPostBody = clickwrapRequest;
     
     // verify the required parameter 'accountId' is set
@@ -1592,8 +1941,9 @@ public class AccountsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<ClickwrapVersionSummaryResponse> localVarReturnType = new GenericType<ClickwrapVersionSummaryResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    ClickwrapVersionSummaryResponse localVarResponse = apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<ClickwrapVersionSummaryResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 }

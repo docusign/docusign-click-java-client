@@ -36,7 +36,7 @@ public class ClickwrapsDeleteResponse {
    **/
   public ClickwrapsDeleteResponse addClickwrapsItem(ClickwrapDeleteResponse clickwrapsItem) {
     if (this.clickwraps == null) {
-      this.clickwraps = new java.util.ArrayList<ClickwrapDeleteResponse>();
+      this.clickwraps = new java.util.ArrayList<>();
     }
     this.clickwraps.add(clickwrapsItem);
     return this;
