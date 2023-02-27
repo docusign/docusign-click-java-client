@@ -36,10 +36,10 @@ public class ClickwrapVersionsDeleteResponse {
   }
 
   /**
-   * .
+   * The ID of the clickwrap..
    * @return clickwrapId
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the clickwrap.")
   public String getClickwrapId() {
     return clickwrapId;
   }
@@ -63,10 +63,10 @@ public class ClickwrapVersionsDeleteResponse {
   }
 
   /**
-   * .
+   * The name of the clickwrap..
    * @return clickwrapName
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The name of the clickwrap.")
   public String getClickwrapName() {
     return clickwrapName;
   }
@@ -103,10 +103,10 @@ public class ClickwrapVersionsDeleteResponse {
   }
 
   /**
-   * .
+   * An array of delete responses..
    * @return versions
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "An array of delete responses.")
   public java.util.List<ClickwrapVersionDeleteResponse> getVersions() {
     return versions;
   }

@@ -45,10 +45,10 @@ public class ServiceInformation {
   }
 
   /**
-   * .
+   * The internal source control branch..
    * @return buildBranch
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The internal source control branch.")
   public String getBuildBranch() {
     return buildBranch;
   }
@@ -72,10 +72,10 @@ public class ServiceInformation {
   }
 
   /**
-   * .
+   * The date-time this branch was deployed..
    * @return buildBranchDeployedDateTime
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The date-time this branch was deployed.")
   public String getBuildBranchDeployedDateTime() {
     return buildBranchDeployedDateTime;
   }
@@ -99,10 +99,10 @@ public class ServiceInformation {
   }
 
   /**
-   * .
+   * The internal source control SHA..
    * @return buildSHA
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The internal source control SHA.")
   public String getBuildSHA() {
     return buildSHA;
   }
@@ -126,10 +126,10 @@ public class ServiceInformation {
   }
 
   /**
-   * .
+   * The internal build version information..
    * @return buildVersion
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The internal build version information.")
   public String getBuildVersion() {
     return buildVersion;
   }
@@ -166,10 +166,10 @@ public class ServiceInformation {
   }
 
   /**
-   * .
+   * An array of URLs (strings) of related sites..
    * @return linkedSites
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "An array of URLs (strings) of related sites.")
   public java.util.List<String> getLinkedSites() {
     return linkedSites;
   }
@@ -206,10 +206,10 @@ public class ServiceInformation {
   }
 
   /**
-   * .
+   * An array of `serviceVersion` objects..
    * @return serviceVersions
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "An array of `serviceVersion` objects.")
   public java.util.List<ServiceVersion> getServiceVersions() {
     return serviceVersions;
   }

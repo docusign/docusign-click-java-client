@@ -9,9 +9,10 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ClickwrapTransferRequest.
+ * Data used to transfer a clickwrap from one user to another..
  *
  */
+@ApiModel(description = "Data used to transfer a clickwrap from one user to another.")
 
 public class ClickwrapTransferRequest {
   @JsonProperty("transferFromUserId")
@@ -32,10 +33,10 @@ public class ClickwrapTransferRequest {
   }
 
   /**
-   * .
+   * ID of the user to transfer from. This property is required..
    * @return transferFromUserId
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "ID of the user to transfer from. This property is required.")
   public String getTransferFromUserId() {
     return transferFromUserId;
   }
@@ -59,10 +60,10 @@ public class ClickwrapTransferRequest {
   }
 
   /**
-   * .
+   * ID of the user to transfer to. This property is required..
    * @return transferToUserId
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "ID of the user to transfer to. This property is required.")
   public String getTransferToUserId() {
     return transferToUserId;
   }

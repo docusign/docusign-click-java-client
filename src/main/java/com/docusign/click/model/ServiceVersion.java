@@ -32,10 +32,10 @@ public class ServiceVersion {
   }
 
   /**
-   * .
+   * The human-readable semver version string..
    * @return version
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The human-readable semver version string.")
   public String getVersion() {
     return version;
   }
@@ -59,10 +59,10 @@ public class ServiceVersion {
   }
 
   /**
-   * .
+   * The URL where this version of the API can be found..
    * @return versionUrl
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The URL where this version of the API can be found.")
   public String getVersionUrl() {
     return versionUrl;
   }

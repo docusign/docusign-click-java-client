@@ -55,10 +55,76 @@ public class AccountsApi {
 
 
   /**
-   * Creates a Clickwrap for the specified accountId.
-   * 
-   * @param accountId  (required)
-   * @param clickwrapRequest  (optional)
+   * Starts an export of clickwrap agreements for a specified date range..
+   * Starts an asynchronus process to export clickwrap agreements for a specified date range. An email will be sent to the creator after it has been processed.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
+   * @param bulkClickwrapRequest Data used to start a bulk agreements export. (optional)
+   * @throws ApiException if fails to make API call
+   */
+  public void createBulkClickwrapAgreements(String accountId, String clickwrapId, BulkClickwrapRequest bulkClickwrapRequest) throws ApiException {
+    createBulkClickwrapAgreementsWithHttpInfo(accountId, clickwrapId, bulkClickwrapRequest);
+  }
+
+  /**
+   * Starts an export of clickwrap agreements for a specified date range.
+   * Starts an asynchronus process to export clickwrap agreements for a specified date range. An email will be sent to the creator after it has been processed.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
+   * @param bulkClickwrapRequest Data used to start a bulk agreements export. (optional)
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Object> createBulkClickwrapAgreementsWithHttpInfo(String accountId, String clickwrapId, BulkClickwrapRequest bulkClickwrapRequest) throws ApiException {
+    Object localVarPostBody = bulkClickwrapRequest;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createBulkClickwrapAgreements");
+    }
+    
+    // verify the required parameter 'clickwrapId' is set
+    if (clickwrapId == null) {
+      throw new ApiException(400, "Missing the required parameter 'clickwrapId' when calling createBulkClickwrapAgreements");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v1/accounts/{accountId}/clickwraps/{clickwrapId}/bulk_agreements"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "clickwrapId" + "\\}", apiClient.escapeString(clickwrapId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    return new ApiResponse<Object>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), null);
+  }
+
+  /**
+   * Creates a clickwrap for an account..
+   * Creates a clickwrap for an account.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapRequest Request body for working with clickwrap. (optional)
    * @return ClickwrapVersionSummaryResponse
    * @throws ApiException if fails to make API call
    */
@@ -68,10 +134,10 @@ public class AccountsApi {
   }
 
   /**
-   * Creates a Clickwrap for the specified accountId
-   * 
-   * @param accountId  (required)
-   * @param clickwrapRequest  (optional)
+   * Creates a clickwrap for an account.
+   * Creates a clickwrap for an account.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapRequest Request body for working with clickwrap. (optional)
    * @return ClickwrapVersionSummaryResponse
    * @throws ApiException if fails to make API call
    */
@@ -117,11 +183,11 @@ public class AccountsApi {
   }
 
   /**
-   * Creates the clickwrap version.
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
-   * @param clickwrapRequest  (optional)
+   * Creates a new clickwrap version..
+   * Creates a new version of an existing clickwrap. In a new version, you can replace the uploaded documents, change the display settings, and change the name of the clickwrap. The version number is automatically incremented based on the last version of the clickwrap.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
+   * @param clickwrapRequest Request body for working with clickwrap. (optional)
    * @return ClickwrapVersionSummaryResponse
    * @throws ApiException if fails to make API call
    */
@@ -131,11 +197,11 @@ public class AccountsApi {
   }
 
   /**
-   * Creates the clickwrap version
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
-   * @param clickwrapRequest  (optional)
+   * Creates a new clickwrap version.
+   * Creates a new version of an existing clickwrap. In a new version, you can replace the uploaded documents, change the display settings, and change the name of the clickwrap. The version number is automatically incremented based on the last version of the clickwrap.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
+   * @param clickwrapRequest Request body for working with clickwrap. (optional)
    * @return ClickwrapVersionSummaryResponse
    * @throws ApiException if fails to make API call
    */
@@ -187,11 +253,11 @@ public class AccountsApi {
   }
 
   /**
-   * Checks if a user has agreed to a clickwrap and returns a response with the agreement url. Returns HttpStatusCode.OK if user has no pending agreement..
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
-   * @param userAgreementRequest  (optional)
+   * Creates a unique URL for the agreement that you can embed in your application..
+   * Creates a unique URL for the agreement that you can embed in your application.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60; and &#x60;click.send&#x60;.  The request must include at least the &#x60;clientUserId&#x60;. This is a value that you generate to identify the unique recipient of the agreement.  If you are using a [dynamic content][] document, you can supply the values in the documentData property of the request, like this:  &#x60;&#x60;&#x60;json {   \&quot;clientUserId\&quot;: \&quot;cl-bc7f-48a9\&quot;,   \&quot;documentData\&quot;: {     \&quot;fullName\&quot;: \&quot;T. J. Fanning\&quot;,     \&quot;email\&quot;: \&quot;tj@example.com\&quot;,     \&quot;company\&quot;: \&quot;Fanning Indusdtries\&quot;,     \&quot;title\&quot;: \&quot;Cat wrangler\&quot;,     \&quot;date\&quot;: \&quot;2022-10-13T05:17:14-07:00\&quot;   } } &#x60;&#x60;&#x60;  A response will look like this. The &#x60;agreementUrl&#x60; is unique to the user identified by the &#x60;clientUserId&#x60;. Your user can open the URL to approve the agreement. The &#x60;documentData&#x60; property appears only if you provided it in the request.  &#x60;&#x60;&#x60;json {   \&quot;accountId\&quot;: \&quot;624e3e00-xxxx-xxxx-xxxx-43918c520dab\&quot;,   \&quot;clickwrapId\&quot;: \&quot;0e64e4a7-xxxx-xxxx-xxxx-ce5a93b162af\&quot;,   \&quot;clientUserId\&quot;: \&quot;tcl-bc7f-48a9j\&quot;,   \&quot;agreementId\&quot;: \&quot;1f346c7d-xxxx-xxxx-xxxx-a5c968666785\&quot;,   \&quot;documents\&quot;: [ . . .],   \&quot;consumerDisclosureEnabled\&quot;: true,   \&quot;agreementUrl\&quot;: \&quot;https://demo.docusign.net/clickapi/v1/redeem?agreementToken&#x3D;AcTZT8g ... cxEqrUsA1lQ8DPPy05dE0\&quot;,   \&quot;createdOn\&quot;: \&quot;2022-10-20T16:27:25.1287685Z\&quot;,   \&quot;status\&quot;: \&quot;created\&quot;,   \&quot;versionId\&quot;: \&quot;5957716d-xxxx-xxxx-xxxx-e1594f00ff12\&quot;,   \&quot;versionNumber\&quot;: 1,   \&quot;settings\&quot;: {     \&quot;displayName\&quot;: \&quot;Agree with me\&quot;,     \&quot;hasDeclineButton\&quot;: true,     .  . .     \&quot;statementAlignment\&quot;: \&quot;bottom\&quot;   },   \&quot;documentData\&quot;: {     \&quot;fullName\&quot;: \&quot;T. J. Fanning\&quot;,     \&quot;email\&quot;: \&quot;tj@example.com\&quot;,     \&quot;company\&quot;: \&quot;Fanning Indusdtries\&quot;,     \&quot;title\&quot;: \&quot;Cat wrangler\&quot;,     \&quot;date\&quot;: \&quot;2022-10-13T05:17:14-07:00\&quot;   } } &#x60;&#x60;&#x60;  This method returns the following result codes and response bodies depending on whether the user has agreed.   | Agreed | Response code | Response body          | | :----- | :------------ | :--------------------- | | No     | 201           | Full response as above | | Yes    | 200           | No response (empty)    |   ### Related topics  - [Add dynamic content to your clickwrap][dynamic content] - [How to embed a clickwrap][embed-howto]   [dynamic content]:  /docs/click-api/click101/customize-clickwrap-fields/#add-dynamic-content-to-your-clickwrap [embedding]:        /docs/click-api/click101/customize-clickwrap-fields/#embed-clickwraps-that-contain-dynamic-content [embed-howto]:      /docs/click-api/how-to/embed-clickwraps/ 
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
+   * @param userAgreementRequest Data used to create the agreement. (optional)
    * @return UserAgreementResponse
    * @throws ApiException if fails to make API call
    */
@@ -201,11 +267,11 @@ public class AccountsApi {
   }
 
   /**
-   * Checks if a user has agreed to a clickwrap and returns a response with the agreement url. Returns HttpStatusCode.OK if user has no pending agreement.
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
-   * @param userAgreementRequest  (optional)
+   * Creates a unique URL for the agreement that you can embed in your application.
+   * Creates a unique URL for the agreement that you can embed in your application.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60; and &#x60;click.send&#x60;.  The request must include at least the &#x60;clientUserId&#x60;. This is a value that you generate to identify the unique recipient of the agreement.  If you are using a [dynamic content][] document, you can supply the values in the documentData property of the request, like this:  &#x60;&#x60;&#x60;json {   \&quot;clientUserId\&quot;: \&quot;cl-bc7f-48a9\&quot;,   \&quot;documentData\&quot;: {     \&quot;fullName\&quot;: \&quot;T. J. Fanning\&quot;,     \&quot;email\&quot;: \&quot;tj@example.com\&quot;,     \&quot;company\&quot;: \&quot;Fanning Indusdtries\&quot;,     \&quot;title\&quot;: \&quot;Cat wrangler\&quot;,     \&quot;date\&quot;: \&quot;2022-10-13T05:17:14-07:00\&quot;   } } &#x60;&#x60;&#x60;  A response will look like this. The &#x60;agreementUrl&#x60; is unique to the user identified by the &#x60;clientUserId&#x60;. Your user can open the URL to approve the agreement. The &#x60;documentData&#x60; property appears only if you provided it in the request.  &#x60;&#x60;&#x60;json {   \&quot;accountId\&quot;: \&quot;624e3e00-xxxx-xxxx-xxxx-43918c520dab\&quot;,   \&quot;clickwrapId\&quot;: \&quot;0e64e4a7-xxxx-xxxx-xxxx-ce5a93b162af\&quot;,   \&quot;clientUserId\&quot;: \&quot;tcl-bc7f-48a9j\&quot;,   \&quot;agreementId\&quot;: \&quot;1f346c7d-xxxx-xxxx-xxxx-a5c968666785\&quot;,   \&quot;documents\&quot;: [ . . .],   \&quot;consumerDisclosureEnabled\&quot;: true,   \&quot;agreementUrl\&quot;: \&quot;https://demo.docusign.net/clickapi/v1/redeem?agreementToken&#x3D;AcTZT8g ... cxEqrUsA1lQ8DPPy05dE0\&quot;,   \&quot;createdOn\&quot;: \&quot;2022-10-20T16:27:25.1287685Z\&quot;,   \&quot;status\&quot;: \&quot;created\&quot;,   \&quot;versionId\&quot;: \&quot;5957716d-xxxx-xxxx-xxxx-e1594f00ff12\&quot;,   \&quot;versionNumber\&quot;: 1,   \&quot;settings\&quot;: {     \&quot;displayName\&quot;: \&quot;Agree with me\&quot;,     \&quot;hasDeclineButton\&quot;: true,     .  . .     \&quot;statementAlignment\&quot;: \&quot;bottom\&quot;   },   \&quot;documentData\&quot;: {     \&quot;fullName\&quot;: \&quot;T. J. Fanning\&quot;,     \&quot;email\&quot;: \&quot;tj@example.com\&quot;,     \&quot;company\&quot;: \&quot;Fanning Indusdtries\&quot;,     \&quot;title\&quot;: \&quot;Cat wrangler\&quot;,     \&quot;date\&quot;: \&quot;2022-10-13T05:17:14-07:00\&quot;   } } &#x60;&#x60;&#x60;  This method returns the following result codes and response bodies depending on whether the user has agreed.   | Agreed | Response code | Response body          | | :----- | :------------ | :--------------------- | | No     | 201           | Full response as above | | Yes    | 200           | No response (empty)    |   ### Related topics  - [Add dynamic content to your clickwrap][dynamic content] - [How to embed a clickwrap][embed-howto]   [dynamic content]:  /docs/click-api/click101/customize-clickwrap-fields/#add-dynamic-content-to-your-clickwrap [embedding]:        /docs/click-api/click101/customize-clickwrap-fields/#embed-clickwraps-that-contain-dynamic-content [embed-howto]:      /docs/click-api/how-to/embed-clickwraps/ 
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
+   * @param userAgreementRequest Data used to create the agreement. (optional)
    * @return UserAgreementResponse
    * @throws ApiException if fails to make API call
    */
@@ -256,7 +322,7 @@ public class AccountsApi {
     return new ApiResponse<UserAgreementResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
   }
   /// <summary>
-  /// Deletes the clickwrap and all its version specified by clickwrapId. Active clickwrap will not get deleted 
+  /// Deletes a clickwrap and all of its versions. Deletes the clickwrap specified by &#x60;clickwrapId&#x60; and all of its versions. Active clickwraps are not deleted  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
   /// </summary>
 
  /**
@@ -285,10 +351,10 @@ public class AccountsApi {
   }
 
    /**
-   * Deletes the clickwrap and all its version specified by clickwrapId. Active clickwrap will not get deleted.
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
+   * Deletes a clickwrap and all of its versions..
+   * Deletes the clickwrap specified by &#x60;clickwrapId&#x60; and all of its versions. Active clickwraps are not deleted  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
    * @return ClickwrapVersionsDeleteResponse
    */ 
   public ClickwrapVersionsDeleteResponse deleteClickwrap(String accountId, String clickwrapId) throws ApiException {
@@ -296,10 +362,10 @@ public class AccountsApi {
   }
 
   /**
-   * Deletes the clickwrap and all its version specified by clickwrapId. Active clickwrap will not get deleted.
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
+   * Deletes a clickwrap and all of its versions..
+   * Deletes the clickwrap specified by &#x60;clickwrapId&#x60; and all of its versions. Active clickwraps are not deleted  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
    * @param options for modifying the method behavior.
    * @return ClickwrapVersionsDeleteResponse
    * @throws ApiException if fails to make API call
@@ -310,10 +376,10 @@ public class AccountsApi {
   }
 
   /**
-   * Deletes the clickwrap and all its version specified by clickwrapId. Active clickwrap will not get deleted
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
+   * Deletes a clickwrap and all of its versions.
+   * Deletes the clickwrap specified by &#x60;clickwrapId&#x60; and all of its versions. Active clickwraps are not deleted  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
    * @param options for modifying the method behavior.
    * @return ClickwrapVersionsDeleteResponse
    * @throws ApiException if fails to make API call
@@ -368,11 +434,11 @@ public class AccountsApi {
   }
 
   /**
-   * Delete a Clickwrap version specified by versionId.
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
-   * @param versionId  (required)
+   * Deletes a clickwrap version by version ID..
+   * Deletes the clickwrap version specified by &#x60;versionId&#x60; of the clickwrap specified by &#x60;clickwrapId&#x60;.  **Note:** This endpoint requires the version ID (a GUID), not the version number (an integer).  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
+   * @param versionId The ID of the clickwrap version. (required)
    * @return ClickwrapVersionDeleteResponse
    * @throws ApiException if fails to make API call
    */
@@ -382,11 +448,11 @@ public class AccountsApi {
   }
 
   /**
-   * Delete a Clickwrap version specified by versionId
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
-   * @param versionId  (required)
+   * Deletes a clickwrap version by version ID.
+   * Deletes the clickwrap version specified by &#x60;versionId&#x60; of the clickwrap specified by &#x60;clickwrapId&#x60;.  **Note:** This endpoint requires the version ID (a GUID), not the version number (an integer).  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
+   * @param versionId The ID of the clickwrap version. (required)
    * @return ClickwrapVersionDeleteResponse
    * @throws ApiException if fails to make API call
    */
@@ -443,7 +509,7 @@ public class AccountsApi {
     return new ApiResponse<ClickwrapVersionDeleteResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
   }
   /// <summary>
-  /// Deletes the versions specified by query parameter clickwrapVersionIds for a clickwrap, or all versions if no query parameter is specified. It will not delete if a version is active. 
+  /// Deletes the versions of a clickwrap. Deletes all versions of a clickwrap, or only the ones specified in the &#x60;clickwrapVersionIds&#x60; query parameter.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
   /// </summary>
 
  /**
@@ -472,10 +538,10 @@ public class AccountsApi {
   }
 
    /**
-   * Deletes the versions specified by query parameter clickwrapVersionIds for a clickwrap, or all versions if no query parameter is specified. It will not delete if a version is active..
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
+   * Deletes the versions of a clickwrap..
+   * Deletes all versions of a clickwrap, or only the ones specified in the &#x60;clickwrapVersionIds&#x60; query parameter.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
    * @return ClickwrapVersionsDeleteResponse
    */ 
   public ClickwrapVersionsDeleteResponse deleteClickwrapVersions(String accountId, String clickwrapId) throws ApiException {
@@ -483,10 +549,10 @@ public class AccountsApi {
   }
 
   /**
-   * Deletes the versions specified by query parameter clickwrapVersionIds for a clickwrap, or all versions if no query parameter is specified. It will not delete if a version is active..
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
+   * Deletes the versions of a clickwrap..
+   * Deletes all versions of a clickwrap, or only the ones specified in the &#x60;clickwrapVersionIds&#x60; query parameter.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
    * @param options for modifying the method behavior.
    * @return ClickwrapVersionsDeleteResponse
    * @throws ApiException if fails to make API call
@@ -497,10 +563,10 @@ public class AccountsApi {
   }
 
   /**
-   * Deletes the versions specified by query parameter clickwrapVersionIds for a clickwrap, or all versions if no query parameter is specified. It will not delete if a version is active.
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
+   * Deletes the versions of a clickwrap.
+   * Deletes all versions of a clickwrap, or only the ones specified in the &#x60;clickwrapVersionIds&#x60; query parameter.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
    * @param options for modifying the method behavior.
    * @return ClickwrapVersionsDeleteResponse
    * @throws ApiException if fails to make API call
@@ -554,7 +620,7 @@ public class AccountsApi {
     return new ApiResponse<ClickwrapVersionsDeleteResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
   }
   /// <summary>
-  /// Deletes all the clickwraps for an account or the ones passed in query parameter clickwrapIds. It will not delete active clickwraps. 
+  /// Deletes clickwraps for an account. Deletes all clickwraps for an account or only the ones specified in the &#x60;clickwrapIds&#x60; query parameter.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
   /// </summary>
 
  /**
@@ -583,9 +649,9 @@ public class AccountsApi {
   }
 
    /**
-   * Deletes all the clickwraps for an account or the ones passed in query parameter clickwrapIds. It will not delete active clickwraps..
-   * 
-   * @param accountId  (required)
+   * Deletes clickwraps for an account..
+   * Deletes all clickwraps for an account or only the ones specified in the &#x60;clickwrapIds&#x60; query parameter.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
    * @return ClickwrapsDeleteResponse
    */ 
   public ClickwrapsDeleteResponse deleteClickwraps(String accountId) throws ApiException {
@@ -593,9 +659,9 @@ public class AccountsApi {
   }
 
   /**
-   * Deletes all the clickwraps for an account or the ones passed in query parameter clickwrapIds. It will not delete active clickwraps..
-   * 
-   * @param accountId  (required)
+   * Deletes clickwraps for an account..
+   * Deletes all clickwraps for an account or only the ones specified in the &#x60;clickwrapIds&#x60; query parameter.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
    * @param options for modifying the method behavior.
    * @return ClickwrapsDeleteResponse
    * @throws ApiException if fails to make API call
@@ -606,9 +672,9 @@ public class AccountsApi {
   }
 
   /**
-   * Deletes all the clickwraps for an account or the ones passed in query parameter clickwrapIds. It will not delete active clickwraps.
-   * 
-   * @param accountId  (required)
+   * Deletes clickwraps for an account.
+   * Deletes all clickwraps for an account or only the ones specified in the &#x60;clickwrapIds&#x60; query parameter.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
    * @param options for modifying the method behavior.
    * @return ClickwrapsDeleteResponse
    * @throws ApiException if fails to make API call
@@ -657,11 +723,11 @@ public class AccountsApi {
   }
 
   /**
-   * Gets the agreement by a provided agreement ID.
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
-   * @param agreementId  (required)
+   * Gets a specific agreement for a specified clickwrap..
+   * Gets the agreement specified by &#x60;agreementId&#x60;.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60; or &#x60;click.send&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
+   * @param agreementId The agreement ID. (required)
    * @return UserAgreementResponse
    * @throws ApiException if fails to make API call
    */
@@ -671,11 +737,11 @@ public class AccountsApi {
   }
 
   /**
-   * Gets the agreement by a provided agreement ID
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
-   * @param agreementId  (required)
+   * Gets a specific agreement for a specified clickwrap.
+   * Gets the agreement specified by &#x60;agreementId&#x60;.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60; or &#x60;click.send&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
+   * @param agreementId The agreement ID. (required)
    * @return UserAgreementResponse
    * @throws ApiException if fails to make API call
    */
@@ -734,11 +800,11 @@ public class AccountsApi {
 
   /**
    * Downloads a document at an order within the agreement..
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
-   * @param versionId  (required)
-   * @param orderOrDisclosure  (required)
+   * Downloads a specific document from the agreement presented to the user.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.sign&#x60;
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
+   * @param versionId The ID of the clickwrap version. (required)
+   * @param orderOrDisclosure The order of the document or consumer_disclosure. (required)
    * @return Document
    * @throws ApiException if fails to make API call
    */
@@ -749,11 +815,11 @@ public class AccountsApi {
 
   /**
    * Downloads a document at an order within the agreement.
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
-   * @param versionId  (required)
-   * @param orderOrDisclosure  (required)
+   * Downloads a specific document from the agreement presented to the user.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.sign&#x60;
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
+   * @param versionId The ID of the clickwrap version. (required)
+   * @param orderOrDisclosure The order of the document or consumer_disclosure. (required)
    * @return Document
    * @throws ApiException if fails to make API call
    */
@@ -816,7 +882,7 @@ public class AccountsApi {
     return new ApiResponse<Document>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
   }
   /// <summary>
-  /// Downloads the agreement PDF and optionally certificate of completion. 
+  /// Gets the completed user agreement PDF. Gets the PDF of  &#x60;agreementId&#x60; for the clickwrap specified by &#x60;clickwrapId&#x60;.  The response to this method is the bytes of the PDF file. The response includes the HTTP header &#x60;application/pdf&#x60;.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60; or &#x60;click.send&#x60;.
   /// </summary>
 
  /**
@@ -845,11 +911,11 @@ public class AccountsApi {
   }
 
    /**
-   * Downloads the agreement PDF and optionally certificate of completion..
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
-   * @param agreementId  (required)
+   * Gets the completed user agreement PDF..
+   * Gets the PDF of  &#x60;agreementId&#x60; for the clickwrap specified by &#x60;clickwrapId&#x60;.  The response to this method is the bytes of the PDF file. The response includes the HTTP header &#x60;application/pdf&#x60;.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60; or &#x60;click.send&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
+   * @param agreementId The agreement ID. (required)
    * @return byte[]
    */ 
   public byte[] getAgreementPdf(String accountId, String clickwrapId, String agreementId) throws ApiException {
@@ -857,11 +923,11 @@ public class AccountsApi {
   }
 
   /**
-   * Downloads the agreement PDF and optionally certificate of completion..
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
-   * @param agreementId  (required)
+   * Gets the completed user agreement PDF..
+   * Gets the PDF of  &#x60;agreementId&#x60; for the clickwrap specified by &#x60;clickwrapId&#x60;.  The response to this method is the bytes of the PDF file. The response includes the HTTP header &#x60;application/pdf&#x60;.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60; or &#x60;click.send&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
+   * @param agreementId The agreement ID. (required)
    * @param options for modifying the method behavior.
    * @return byte[]
    * @throws ApiException if fails to make API call
@@ -872,11 +938,11 @@ public class AccountsApi {
   }
 
   /**
-   * Downloads the agreement PDF and optionally certificate of completion.
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
-   * @param agreementId  (required)
+   * Gets the completed user agreement PDF.
+   * Gets the PDF of  &#x60;agreementId&#x60; for the clickwrap specified by &#x60;clickwrapId&#x60;.  The response to this method is the bytes of the PDF file. The response includes the HTTP header &#x60;application/pdf&#x60;.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60; or &#x60;click.send&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
+   * @param agreementId The agreement ID. (required)
    * @param options for modifying the method behavior.
    * @return byte[]
    * @throws ApiException if fails to make API call
@@ -937,10 +1003,10 @@ public class AccountsApi {
   }
 
   /**
-   * Gets the clickwrap for an account specified by clickwrapId.
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
+   * Gets a  single clickwrap object..
+   * Retrieves the definition of the specified clickwrap.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
    * @return ClickwrapVersionResponse
    * @throws ApiException if fails to make API call
    */
@@ -950,10 +1016,10 @@ public class AccountsApi {
   }
 
   /**
-   * Gets the clickwrap for an account specified by clickwrapId
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
+   * Gets a  single clickwrap object.
+   * Retrieves the definition of the specified clickwrap.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
    * @return ClickwrapVersionResponse
    * @throws ApiException if fails to make API call
    */
@@ -1004,7 +1070,7 @@ public class AccountsApi {
     return new ApiResponse<ClickwrapVersionResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
   }
   /// <summary>
-  /// Gets the agreement responses for a clickwrap 
+  /// Get user agreements Retrieves the user agreements for a specified clickwrap. Each &#x60;userAgreementResponse&#x60; object describes a single user&#39;s response to the clickwrap. You can also filter the agreements by date, status, page number, and client user ID.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
   /// </summary>
 
  /**
@@ -1101,10 +1167,10 @@ public class AccountsApi {
   }
 
    /**
-   * Gets the agreement responses for a clickwrap.
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
+   * Get user agreements.
+   * Retrieves the user agreements for a specified clickwrap. Each &#x60;userAgreementResponse&#x60; object describes a single user&#39;s response to the clickwrap. You can also filter the agreements by date, status, page number, and client user ID.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
    * @return ClickwrapAgreementsResponse
    */ 
   public ClickwrapAgreementsResponse getClickwrapAgreements(String accountId, String clickwrapId) throws ApiException {
@@ -1112,10 +1178,10 @@ public class AccountsApi {
   }
 
   /**
-   * Gets the agreement responses for a clickwrap.
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
+   * Get user agreements.
+   * Retrieves the user agreements for a specified clickwrap. Each &#x60;userAgreementResponse&#x60; object describes a single user&#39;s response to the clickwrap. You can also filter the agreements by date, status, page number, and client user ID.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
    * @param options for modifying the method behavior.
    * @return ClickwrapAgreementsResponse
    * @throws ApiException if fails to make API call
@@ -1126,10 +1192,10 @@ public class AccountsApi {
   }
 
   /**
-   * Gets the agreement responses for a clickwrap
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
+   * Get user agreements
+   * Retrieves the user agreements for a specified clickwrap. Each &#x60;userAgreementResponse&#x60; object describes a single user&#39;s response to the clickwrap. You can also filter the agreements by date, status, page number, and client user ID.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
    * @param options for modifying the method behavior.
    * @return ClickwrapAgreementsResponse
    * @throws ApiException if fails to make API call
@@ -1192,11 +1258,11 @@ public class AccountsApi {
   }
 
   /**
-   * Gets the Clickwrap version by clickwrapId and versionId for an account.
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
-   * @param versionId  (required)
+   * Gets a specific version of a clickwrap by version ID..
+   * Gets the version specified by &#x60;versionId&#x60;  from the clickwrap &#x60;clickwrapId&#x60;.  **Note:** This endpoint requires the version ID (a GUID), not the version number (an integer).  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
+   * @param versionId The ID of the clickwrap version. (required)
    * @return ClickwrapVersionResponse
    * @throws ApiException if fails to make API call
    */
@@ -1206,11 +1272,11 @@ public class AccountsApi {
   }
 
   /**
-   * Gets the Clickwrap version by clickwrapId and versionId for an account
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
-   * @param versionId  (required)
+   * Gets a specific version of a clickwrap by version ID.
+   * Gets the version specified by &#x60;versionId&#x60;  from the clickwrap &#x60;clickwrapId&#x60;.  **Note:** This endpoint requires the version ID (a GUID), not the version number (an integer).  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
+   * @param versionId The ID of the clickwrap version. (required)
    * @return ClickwrapVersionResponse
    * @throws ApiException if fails to make API call
    */
@@ -1267,7 +1333,7 @@ public class AccountsApi {
     return new ApiResponse<ClickwrapVersionResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
   }
   /// <summary>
-  /// Gets the agreement responses for a clickwrap version 
+  /// Gets the agreement responses for a clickwrap version by version ID. Gets the agreement responses for a specific version.  **Note:** This endpoint requires the version ID (a GUID), not the version number (an integer).  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
   /// </summary>
 
  /**
@@ -1364,11 +1430,11 @@ public class AccountsApi {
   }
 
    /**
-   * Gets the agreement responses for a clickwrap version.
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
-   * @param versionId  (required)
+   * Gets the agreement responses for a clickwrap version by version ID..
+   * Gets the agreement responses for a specific version.  **Note:** This endpoint requires the version ID (a GUID), not the version number (an integer).  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
+   * @param versionId The ID of the clickwrap version. (required)
    * @return ClickwrapAgreementsResponse
    */ 
   public ClickwrapAgreementsResponse getClickwrapVersionAgreements(String accountId, String clickwrapId, String versionId) throws ApiException {
@@ -1376,11 +1442,11 @@ public class AccountsApi {
   }
 
   /**
-   * Gets the agreement responses for a clickwrap version.
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
-   * @param versionId  (required)
+   * Gets the agreement responses for a clickwrap version by version ID..
+   * Gets the agreement responses for a specific version.  **Note:** This endpoint requires the version ID (a GUID), not the version number (an integer).  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
+   * @param versionId The ID of the clickwrap version. (required)
    * @param options for modifying the method behavior.
    * @return ClickwrapAgreementsResponse
    * @throws ApiException if fails to make API call
@@ -1391,11 +1457,11 @@ public class AccountsApi {
   }
 
   /**
-   * Gets the agreement responses for a clickwrap version
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
-   * @param versionId  (required)
+   * Gets the agreement responses for a clickwrap version by version ID.
+   * Gets the agreement responses for a specific version.  **Note:** This endpoint requires the version ID (a GUID), not the version number (an integer).  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
+   * @param versionId The ID of the clickwrap version. (required)
    * @param options for modifying the method behavior.
    * @return ClickwrapAgreementsResponse
    * @throws ApiException if fails to make API call
@@ -1464,10 +1530,10 @@ public class AccountsApi {
   }
 
   /**
-   * Gets all the versions of a clickwrap for an account.
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
+   * Gets all the versions of a clickwrap..
+   * Gets all the versions of a clickwrap for an account.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
    * @return ClickwrapVersionsPagedResponse
    * @throws ApiException if fails to make API call
    */
@@ -1477,10 +1543,10 @@ public class AccountsApi {
   }
 
   /**
-   * Gets all the versions of a clickwrap for an account
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
+   * Gets all the versions of a clickwrap.
+   * Gets all the versions of a clickwrap for an account.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
    * @return ClickwrapVersionsPagedResponse
    * @throws ApiException if fails to make API call
    */
@@ -1531,7 +1597,7 @@ public class AccountsApi {
     return new ApiResponse<ClickwrapVersionsPagedResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
   }
   /// <summary>
-  /// Gets the Clickwraps for an account 
+  /// Gets all the clickwraps for a user. Gets all the clickwraps for a user.   **Note:** This endpoint returns a list of &#x60;clickwrapVersionSummaryResponse&#x60; objects. Each version of each clickwrap is returned as a separate entry in the list.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;. 
   /// </summary>
 
  /**
@@ -1662,9 +1728,9 @@ public class AccountsApi {
   }
 
    /**
-   * Gets the Clickwraps for an account.
-   * 
-   * @param accountId  (required)
+   * Gets all the clickwraps for a user..
+   * Gets all the clickwraps for a user.   **Note:** This endpoint returns a list of &#x60;clickwrapVersionSummaryResponse&#x60; objects. Each version of each clickwrap is returned as a separate entry in the list.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;. 
+   * @param accountId The external account number (int) or account ID GUID. (required)
    * @return ClickwrapVersionsResponse
    */ 
   public ClickwrapVersionsResponse getClickwraps(String accountId) throws ApiException {
@@ -1672,9 +1738,9 @@ public class AccountsApi {
   }
 
   /**
-   * Gets the Clickwraps for an account.
-   * 
-   * @param accountId  (required)
+   * Gets all the clickwraps for a user..
+   * Gets all the clickwraps for a user.   **Note:** This endpoint returns a list of &#x60;clickwrapVersionSummaryResponse&#x60; objects. Each version of each clickwrap is returned as a separate entry in the list.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;. 
+   * @param accountId The external account number (int) or account ID GUID. (required)
    * @param options for modifying the method behavior.
    * @return ClickwrapVersionsResponse
    * @throws ApiException if fails to make API call
@@ -1685,9 +1751,9 @@ public class AccountsApi {
   }
 
   /**
-   * Gets the Clickwraps for an account
-   * 
-   * @param accountId  (required)
+   * Gets all the clickwraps for a user.
+   * Gets all the clickwraps for a user.   **Note:** This endpoint returns a list of &#x60;clickwrapVersionSummaryResponse&#x60; objects. Each version of each clickwrap is returned as a separate entry in the list.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;. 
+   * @param accountId The external account number (int) or account ID GUID. (required)
    * @param options for modifying the method behavior.
    * @return ClickwrapVersionsResponse
    * @throws ApiException if fails to make API call
@@ -1748,8 +1814,8 @@ public class AccountsApi {
   }
 
   /**
-   * Provides base service and version access information..
-   * 
+   * Gets the current version and other information about the Click API..
+   * The response includes information about the Click API, including the service version, build version, and linked sites.  This method does not require authentication.
    * @return ServiceInformation
    * @throws ApiException if fails to make API call
    */
@@ -1759,8 +1825,8 @@ public class AccountsApi {
   }
 
   /**
-   * Provides base service and version access information.
-   * 
+   * Gets the current version and other information about the Click API.
+   * The response includes information about the Click API, including the service version, build version, and linked sites.  This method does not require authentication.
    * @return ServiceInformation
    * @throws ApiException if fails to make API call
    */
@@ -1800,11 +1866,11 @@ public class AccountsApi {
   }
 
   /**
-   * Updates the clickwrap specified by clickwrapId.
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
-   * @param clickwrapTransferRequest  (optional)
+   * Update a clickwrap by ID..
+   * Update a subset of properties on the clickwrap.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
+   * @param clickwrapTransferRequest Data used to transfer a clickwrap from one user to another. (optional)
    * @return ClickwrapVersionSummaryResponse
    * @throws ApiException if fails to make API call
    */
@@ -1814,11 +1880,11 @@ public class AccountsApi {
   }
 
   /**
-   * Updates the clickwrap specified by clickwrapId
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
-   * @param clickwrapTransferRequest  (optional)
+   * Update a clickwrap by ID.
+   * Update a subset of properties on the clickwrap.  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
+   * @param clickwrapTransferRequest Data used to transfer a clickwrap from one user to another. (optional)
    * @return ClickwrapVersionSummaryResponse
    * @throws ApiException if fails to make API call
    */
@@ -1870,12 +1936,12 @@ public class AccountsApi {
   }
 
   /**
-   * Updates the clickwrap version specified by versionId.
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
-   * @param versionId  (required)
-   * @param clickwrapRequest  (optional)
+   * Updates clickwrap version status and ownership..
+   * Updates the clickwrap version status and ownership by transferring from previous user ID to new user ID.  **Note:** This endpoint requires the version ID (a GUID), not the version number (an integer).  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
+   * @param versionId The ID of the clickwrap version. (required)
+   * @param clickwrapRequest Request body for working with clickwrap. (optional)
    * @return ClickwrapVersionSummaryResponse
    * @throws ApiException if fails to make API call
    */
@@ -1885,12 +1951,12 @@ public class AccountsApi {
   }
 
   /**
-   * Updates the clickwrap version specified by versionId
-   * 
-   * @param accountId  (required)
-   * @param clickwrapId  (required)
-   * @param versionId  (required)
-   * @param clickwrapRequest  (optional)
+   * Updates clickwrap version status and ownership.
+   * Updates the clickwrap version status and ownership by transferring from previous user ID to new user ID.  **Note:** This endpoint requires the version ID (a GUID), not the version number (an integer).  [Required authentication scopes](/docs/click-api/click101/auth/): &#x60;click.manage&#x60;.
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param clickwrapId The ID of the clickwrap. (required)
+   * @param versionId The ID of the clickwrap version. (required)
+   * @param clickwrapRequest Request body for working with clickwrap. (optional)
    * @return ClickwrapVersionSummaryResponse
    * @throws ApiException if fails to make API call
    */

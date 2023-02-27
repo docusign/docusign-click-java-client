@@ -43,10 +43,10 @@ public class ClickwrapsDeleteResponse {
   }
 
   /**
-   * .
+   * An array of clickwrap deletion results..
    * @return clickwraps
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "An array of clickwrap deletion results.")
   public java.util.List<ClickwrapDeleteResponse> getClickwraps() {
     return clickwraps;
   }

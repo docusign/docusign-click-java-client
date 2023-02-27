@@ -9,9 +9,10 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ClickwrapDeleteResponse.
+ * The result of a clickwrap deletion request..
  *
  */
+@ApiModel(description = "The result of a clickwrap deletion request.")
 
 public class ClickwrapDeleteResponse {
   @JsonProperty("clickwrapId")
@@ -41,10 +42,10 @@ public class ClickwrapDeleteResponse {
   }
 
   /**
-   * .
+   * The ID of the clickwrap..
    * @return clickwrapId
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the clickwrap.")
   public String getClickwrapId() {
     return clickwrapId;
   }
@@ -68,10 +69,10 @@ public class ClickwrapDeleteResponse {
   }
 
   /**
-   * .
+   * The name of the clickwrap..
    * @return clickwrapName
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The name of the clickwrap.")
   public String getClickwrapName() {
     return clickwrapName;
   }
@@ -95,10 +96,10 @@ public class ClickwrapDeleteResponse {
   }
 
   /**
-   * .
+   * A message describing the result of deletion request. One of:  - `alreadyDeleted`: Clickwrap is already deleted. - `deletionSuccess`: Successfully deleted the clickwrap. - `deletionFailure`: Failed to delete the clickwrap. - `cannotDelete`: Active clickwrap version cannot be deleted..
    * @return deletionMessage
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A message describing the result of deletion request. One of:  - `alreadyDeleted`: Clickwrap is already deleted. - `deletionSuccess`: Successfully deleted the clickwrap. - `deletionFailure`: Failed to delete the clickwrap. - `cannotDelete`: Active clickwrap version cannot be deleted.")
   public String getDeletionMessage() {
     return deletionMessage;
   }
@@ -122,10 +123,10 @@ public class ClickwrapDeleteResponse {
   }
 
   /**
-   * .
+   * **True** if the clickwrap was deleted successfully. **False** otherwise..
    * @return deletionSuccess
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "**True** if the clickwrap was deleted successfully. **False** otherwise.")
   public Boolean isDeletionSuccess() {
     return deletionSuccess;
   }
@@ -149,10 +150,10 @@ public class ClickwrapDeleteResponse {
   }
 
   /**
-   * .
+   * Clickwrap status. Possible values:  - `active` - `inactive` - `deleted`.
    * @return status
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Clickwrap status. Possible values:  - `active` - `inactive` - `deleted`")
   public String getStatus() {
     return status;
   }

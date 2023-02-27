@@ -42,10 +42,10 @@ public class ClickwrapAgreementsResponse {
   }
 
   /**
-   * .
+   * User agreements from this datetime..
    * @return beginCreatedOn
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "User agreements from this datetime.")
   public Object getBeginCreatedOn() {
     return beginCreatedOn;
   }
@@ -69,10 +69,10 @@ public class ClickwrapAgreementsResponse {
   }
 
   /**
-   * .
+   * Number of pages remaining in the response..
    * @return minimumPagesRemaining
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of pages remaining in the response.")
   public Integer getMinimumPagesRemaining() {
     return minimumPagesRemaining;
   }
@@ -96,10 +96,10 @@ public class ClickwrapAgreementsResponse {
   }
 
   /**
-   * .
+   * The number of the current page..
    * @return page
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The number of the current page.")
   public Integer getPage() {
     return page;
   }
@@ -123,10 +123,10 @@ public class ClickwrapAgreementsResponse {
   }
 
   /**
-   * .
+   * The number of items per page..
    * @return pageSize
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The number of items per page.")
   public Integer getPageSize() {
     return pageSize;
   }
@@ -163,10 +163,10 @@ public class ClickwrapAgreementsResponse {
   }
 
   /**
-   * .
+   * An array of user agreements..
    * @return userAgreements
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "An array of user agreements.")
   public java.util.List<UserAgreementResponse> getUserAgreements() {
     return userAgreements;
   }

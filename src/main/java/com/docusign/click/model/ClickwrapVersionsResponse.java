@@ -10,9 +10,10 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ClickwrapVersionsResponse.
+ * The results are paginated. Use the following properties to navigate the pages. Use the &#x60;page_number&#x60; query parameter to specify a page.  - &#x60;page&#x60;: The page number of the current results. - &#x60;pageSize&#x60;: The number of results in the current page. - &#x60;minimumPagesRemaining&#x60;: The number of pages that follow this one. .
  *
  */
+@ApiModel(description = "The results are paginated. Use the following properties to navigate the pages. Use the `page_number` query parameter to specify a page.  - `page`: The page number of the current results. - `pageSize`: The number of results in the current page. - `minimumPagesRemaining`: The number of pages that follow this one. ")
 
 public class ClickwrapVersionsResponse {
   @JsonProperty("clickwraps")
@@ -52,10 +53,10 @@ public class ClickwrapVersionsResponse {
   }
 
   /**
-   * .
+   * An array of `clickwrapVersionSummaryResponse` objects..
    * @return clickwraps
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "An array of `clickwrapVersionSummaryResponse` objects.")
   public java.util.List<ClickwrapVersionSummaryResponse> getClickwraps() {
     return clickwraps;
   }
@@ -79,10 +80,10 @@ public class ClickwrapVersionsResponse {
   }
 
   /**
-   * .
+   * Number of pages remaining in the response..
    * @return minimumPagesRemaining
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Number of pages remaining in the response.")
   public Integer getMinimumPagesRemaining() {
     return minimumPagesRemaining;
   }
@@ -106,10 +107,10 @@ public class ClickwrapVersionsResponse {
   }
 
   /**
-   * .
+   * The number of the current page..
    * @return page
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The number of the current page.")
   public Integer getPage() {
     return page;
   }
@@ -133,10 +134,10 @@ public class ClickwrapVersionsResponse {
   }
 
   /**
-   * .
+   * The number of items per page..
    * @return pageSize
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The number of items per page.")
   public Integer getPageSize() {
     return pageSize;
   }
