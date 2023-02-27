@@ -9,9 +9,10 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ErrorDetails.
+ * Error details..
  *
  */
+@ApiModel(description = "Error details.")
 
 public class ErrorDetails {
   @JsonProperty("errorCode")
@@ -32,10 +33,10 @@ public class ErrorDetails {
   }
 
   /**
-   * .
+   * The error code..
    * @return errorCode
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The error code.")
   public String getErrorCode() {
     return errorCode;
   }
@@ -59,10 +60,10 @@ public class ErrorDetails {
   }
 
   /**
-   * .
+   * The error message..
    * @return message
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The error message.")
   public String getMessage() {
     return message;
   }

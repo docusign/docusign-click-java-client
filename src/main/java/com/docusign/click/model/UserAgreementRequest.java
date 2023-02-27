@@ -9,9 +9,10 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * UserAgreementRequest.
+ * Data used to create the agreement..
  *
  */
+@ApiModel(description = "Data used to create the agreement.")
 
 public class UserAgreementRequest {
   @JsonProperty("clientUserId")
@@ -22,6 +23,9 @@ public class UserAgreementRequest {
 
   @JsonProperty("metadata")
   private String metadata = null;
+
+  @JsonProperty("returnUrl")
+  private String returnUrl = null;
 
 
   /**
@@ -35,10 +39,10 @@ public class UserAgreementRequest {
   }
 
   /**
-   * .
+   * A unique value that identifies a user. You can use anything that your system uses to identify unique users, such as employee IDs, email addresses, and surrogate keys as the value of `clientUserId`.  A clickwrap with a specific `clientUserId` will not appear again once it has been accepted. .
    * @return clientUserId
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A unique value that identifies a user. You can use anything that your system uses to identify unique users, such as employee IDs, email addresses, and surrogate keys as the value of `clientUserId`.  A clickwrap with a specific `clientUserId` will not appear again once it has been accepted. ")
   public String getClientUserId() {
     return clientUserId;
   }
@@ -75,10 +79,10 @@ public class UserAgreementRequest {
   }
 
   /**
-   * .
+   * This property specifies the data used to create a clickwrap with [dynamic content][].    [dynamic content]: /docs/click-api/click101/customize-clickwrap-fields/#embed-clickwraps-that-contain-dynamic-content .
    * @return documentData
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "This property specifies the data used to create a clickwrap with [dynamic content][].    [dynamic content]: /docs/click-api/click101/customize-clickwrap-fields/#embed-clickwraps-that-contain-dynamic-content ")
   public java.util.Map<String, String> getDocumentData() {
     return documentData;
   }
@@ -102,10 +106,10 @@ public class UserAgreementRequest {
   }
 
   /**
-   * .
+   * A customer-defined string you can use in requests. This string will appear in the corresponding response..
    * @return metadata
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A customer-defined string you can use in requests. This string will appear in the corresponding response.")
   public String getMetadata() {
     return metadata;
   }
@@ -115,6 +119,33 @@ public class UserAgreementRequest {
    **/
   public void setMetadata(String metadata) {
     this.metadata = metadata;
+  }
+
+
+  /**
+   * returnUrl.
+   *
+   * @return UserAgreementRequest
+   **/
+  public UserAgreementRequest returnUrl(String returnUrl) {
+    this.returnUrl = returnUrl;
+    return this;
+  }
+
+  /**
+   * The URL to redirect to after the agreement is complete when the agreement is not rendered in an iframe..
+   * @return returnUrl
+   **/
+  @ApiModelProperty(value = "The URL to redirect to after the agreement is complete when the agreement is not rendered in an iframe.")
+  public String getReturnUrl() {
+    return returnUrl;
+  }
+
+  /**
+   * setReturnUrl.
+   **/
+  public void setReturnUrl(String returnUrl) {
+    this.returnUrl = returnUrl;
   }
 
 
@@ -134,7 +165,8 @@ public class UserAgreementRequest {
     UserAgreementRequest userAgreementRequest = (UserAgreementRequest) o;
     return Objects.equals(this.clientUserId, userAgreementRequest.clientUserId) &&
         Objects.equals(this.documentData, userAgreementRequest.documentData) &&
-        Objects.equals(this.metadata, userAgreementRequest.metadata);
+        Objects.equals(this.metadata, userAgreementRequest.metadata) &&
+        Objects.equals(this.returnUrl, userAgreementRequest.returnUrl);
   }
 
   /**
@@ -142,7 +174,7 @@ public class UserAgreementRequest {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(clientUserId, documentData, metadata);
+    return Objects.hash(clientUserId, documentData, metadata, returnUrl);
   }
 
 
@@ -157,6 +189,7 @@ public class UserAgreementRequest {
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
     sb.append("    documentData: ").append(toIndentedString(documentData)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
+    sb.append("    returnUrl: ").append(toIndentedString(returnUrl)).append("\n");
     sb.append("}");
     return sb.toString();
   }

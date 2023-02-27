@@ -2,6 +2,7 @@ package com.docusign.click.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.click.model.DataField;
 import com.docusign.click.model.DisplaySettings;
 import com.docusign.click.model.Document;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -43,6 +44,9 @@ public class UserAgreementResponse {
   @JsonProperty("createdOn")
   private Object createdOn = null;
 
+  @JsonProperty("dataFields")
+  private java.util.List<DataField> dataFields = null;
+
   @JsonProperty("declinedOn")
   private Object declinedOn = null;
 
@@ -54,6 +58,9 @@ public class UserAgreementResponse {
 
   @JsonProperty("metadata")
   private String metadata = null;
+
+  @JsonProperty("returnUrl")
+  private String returnUrl = null;
 
   @JsonProperty("settings")
   private DisplaySettings settings = null;
@@ -85,10 +92,10 @@ public class UserAgreementResponse {
   }
 
   /**
-   * .
+   * The external account number (int) or account ID GUID..
    * @return accountId
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The external account number (int) or account ID GUID.")
   public String getAccountId() {
     return accountId;
   }
@@ -112,10 +119,10 @@ public class UserAgreementResponse {
   }
 
   /**
-   * .
+   * Date that the client last completed the agreement.  This property is null if `agreementUrl` is not null and `status` is not  `agreed`..
    * @return agreedOn
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Date that the client last completed the agreement.  This property is null if `agreementUrl` is not null and `status` is not  `agreed`.")
   public Object getAgreedOn() {
     return agreedOn;
   }
@@ -139,10 +146,10 @@ public class UserAgreementResponse {
   }
 
   /**
-   * .
+   * The agreement ID..
    * @return agreementId
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The agreement ID.")
   public String getAgreementId() {
     return agreementId;
   }
@@ -166,10 +173,10 @@ public class UserAgreementResponse {
   }
 
   /**
-   * .
+   * When not null, an agreement is required for user specified by  `clientUserId`.  When missing the user specified by `clientUserId` has already agreed and does not require a new acceptance.  Use this URL to render the agreement in a web page.  <!-- or redirected to when providing redirect_url as a query parameter. --> .
    * @return agreementUrl
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "When not null, an agreement is required for user specified by  `clientUserId`.  When missing the user specified by `clientUserId` has already agreed and does not require a new acceptance.  Use this URL to render the agreement in a web page.  <!-- or redirected to when providing redirect_url as a query parameter. --> ")
   public String getAgreementUrl() {
     return agreementUrl;
   }
@@ -193,10 +200,10 @@ public class UserAgreementResponse {
   }
 
   /**
-   * .
+   * The ID of the clickwrap..
    * @return clickwrapId
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the clickwrap.")
   public String getClickwrapId() {
     return clickwrapId;
   }
@@ -220,10 +227,10 @@ public class UserAgreementResponse {
   }
 
   /**
-   * .
+   * A unique value that identifies a user.\\nYou can use anything that your system uses\\nto identify unique users, such as\\nemployee IDs, email addresses, and surrogate keys as the value of `clientUserId`.\\n\\nA clickwrap with a specific `clientUserId` will not appear again\\nonce it has been accepted.\\n\".
    * @return clientUserId
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A unique value that identifies a user.\\nYou can use anything that your system uses\\nto identify unique users, such as\\nemployee IDs, email addresses, and surrogate keys as the value of `clientUserId`.\\n\\nA clickwrap with a specific `clientUserId` will not appear again\\nonce it has been accepted.\\n\"")
   public String getClientUserId() {
     return clientUserId;
   }
@@ -247,10 +254,10 @@ public class UserAgreementResponse {
   }
 
   /**
-   * .
+   * **True** if consumer disclosure was required by this agreement..
    * @return consumerDisclosureEnabled
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "**True** if consumer disclosure was required by this agreement.")
   public Boolean isConsumerDisclosureEnabled() {
     return consumerDisclosureEnabled;
   }
@@ -274,10 +281,10 @@ public class UserAgreementResponse {
   }
 
   /**
-   * .
+   * The customer-branded HTML with the Electronic Record and Signature Disclosure information.
    * @return consumerDisclosureHtml
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The customer-branded HTML with the Electronic Record and Signature Disclosure information")
   public String getConsumerDisclosureHtml() {
     return consumerDisclosureHtml;
   }
@@ -301,10 +308,10 @@ public class UserAgreementResponse {
   }
 
   /**
-   * .
+   * The date when the clickwrap was created. May be null..
    * @return createdOn
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The date when the clickwrap was created. May be null.")
   public Object getCreatedOn() {
     return createdOn;
   }
@@ -314,6 +321,46 @@ public class UserAgreementResponse {
    **/
   public void setCreatedOn(Object createdOn) {
     this.createdOn = createdOn;
+  }
+
+
+  /**
+   * dataFields.
+   *
+   * @return UserAgreementResponse
+   **/
+  public UserAgreementResponse dataFields(java.util.List<DataField> dataFields) {
+    this.dataFields = dataFields;
+    return this;
+  }
+  
+  /**
+   * addDataFieldsItem.
+   *
+   * @return UserAgreementResponse
+   **/
+  public UserAgreementResponse addDataFieldsItem(DataField dataFieldsItem) {
+    if (this.dataFields == null) {
+      this.dataFields = new java.util.ArrayList<>();
+    }
+    this.dataFields.add(dataFieldsItem);
+    return this;
+  }
+
+  /**
+   * The list of all the data fields available for the clickwrap (custom fields and standard fields)..
+   * @return dataFields
+   **/
+  @ApiModelProperty(value = "The list of all the data fields available for the clickwrap (custom fields and standard fields).")
+  public java.util.List<DataField> getDataFields() {
+    return dataFields;
+  }
+
+  /**
+   * setDataFields.
+   **/
+  public void setDataFields(java.util.List<DataField> dataFields) {
+    this.dataFields = dataFields;
   }
 
 
@@ -328,10 +375,10 @@ public class UserAgreementResponse {
   }
 
   /**
-   * .
+   * The date when the user declined the most recent required agreement.  This property is valid only when `status` is `declined`. Otherwise it is null..
    * @return declinedOn
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The date when the user declined the most recent required agreement.  This property is valid only when `status` is `declined`. Otherwise it is null.")
   public Object getDeclinedOn() {
     return declinedOn;
   }
@@ -368,10 +415,10 @@ public class UserAgreementResponse {
   }
 
   /**
-   * .
+   * This property specifies the data used to create a clickwrap with [dynamic content][].    [dynamic content]: /docs/click-api/click101/customize-clickwrap-fields/#embed-clickwraps-that-contain-dynamic-content .
    * @return documentData
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "This property specifies the data used to create a clickwrap with [dynamic content][].    [dynamic content]: /docs/click-api/click101/customize-clickwrap-fields/#embed-clickwraps-that-contain-dynamic-content ")
   public java.util.Map<String, String> getDocumentData() {
     return documentData;
   }
@@ -408,10 +455,10 @@ public class UserAgreementResponse {
   }
 
   /**
-   * .
+   * An array of documents..
    * @return documents
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "An array of documents.")
   public java.util.List<Document> getDocuments() {
     return documents;
   }
@@ -435,10 +482,10 @@ public class UserAgreementResponse {
   }
 
   /**
-   * .
+   * A customer-defined string you can use in requests. This string will appear in the corresponding response..
    * @return metadata
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A customer-defined string you can use in requests. This string will appear in the corresponding response.")
   public String getMetadata() {
     return metadata;
   }
@@ -448,6 +495,33 @@ public class UserAgreementResponse {
    **/
   public void setMetadata(String metadata) {
     this.metadata = metadata;
+  }
+
+
+  /**
+   * returnUrl.
+   *
+   * @return UserAgreementResponse
+   **/
+  public UserAgreementResponse returnUrl(String returnUrl) {
+    this.returnUrl = returnUrl;
+    return this;
+  }
+
+  /**
+   * The URL redirected to after the agreement was completed..
+   * @return returnUrl
+   **/
+  @ApiModelProperty(value = "The URL redirected to after the agreement was completed.")
+  public String getReturnUrl() {
+    return returnUrl;
+  }
+
+  /**
+   * setReturnUrl.
+   **/
+  public void setReturnUrl(String returnUrl) {
+    this.returnUrl = returnUrl;
   }
 
 
@@ -462,10 +536,10 @@ public class UserAgreementResponse {
   }
 
   /**
-   * Get settings.
+   * The display settings for this agreement..
    * @return settings
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The display settings for this agreement.")
   public DisplaySettings getSettings() {
     return settings;
   }
@@ -489,10 +563,10 @@ public class UserAgreementResponse {
   }
 
   /**
-   * .
+   * User agreement status. One of:  - `created` - `agreed` - `declined`.
    * @return status
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "User agreement status. One of:  - `created` - `agreed` - `declined`")
   public String getStatus() {
     return status;
   }
@@ -529,10 +603,10 @@ public class UserAgreementResponse {
   }
 
   /**
-   * .
+   * This property specifies the custom style provided when the agreement was created by [customizing the template appearance][].    [customizing the template appearance]: /docs/click-api/click101/customize-elastic-template-appearance/ .
    * @return style
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "This property specifies the custom style provided when the agreement was created by [customizing the template appearance][].    [customizing the template appearance]: /docs/click-api/click101/customize-elastic-template-appearance/ ")
   public java.util.Map<String, String> getStyle() {
     return style;
   }
@@ -556,10 +630,10 @@ public class UserAgreementResponse {
   }
 
   /**
-   * .
+   * The human-readable semver version string..
    * @return version
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The human-readable semver version string.")
   public String getVersion() {
     return version;
   }
@@ -583,10 +657,10 @@ public class UserAgreementResponse {
   }
 
   /**
-   * .
+   * The ID of the version..
    * @return versionId
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the version.")
   public String getVersionId() {
     return versionId;
   }
@@ -610,10 +684,10 @@ public class UserAgreementResponse {
   }
 
   /**
-   * .
+   * Version of the clickwrap..
    * @return versionNumber
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Version of the clickwrap.")
   public Integer getVersionNumber() {
     return versionNumber;
   }
@@ -649,10 +723,12 @@ public class UserAgreementResponse {
         Objects.equals(this.consumerDisclosureEnabled, userAgreementResponse.consumerDisclosureEnabled) &&
         Objects.equals(this.consumerDisclosureHtml, userAgreementResponse.consumerDisclosureHtml) &&
         Objects.equals(this.createdOn, userAgreementResponse.createdOn) &&
+        Objects.equals(this.dataFields, userAgreementResponse.dataFields) &&
         Objects.equals(this.declinedOn, userAgreementResponse.declinedOn) &&
         Objects.equals(this.documentData, userAgreementResponse.documentData) &&
         Objects.equals(this.documents, userAgreementResponse.documents) &&
         Objects.equals(this.metadata, userAgreementResponse.metadata) &&
+        Objects.equals(this.returnUrl, userAgreementResponse.returnUrl) &&
         Objects.equals(this.settings, userAgreementResponse.settings) &&
         Objects.equals(this.status, userAgreementResponse.status) &&
         Objects.equals(this.style, userAgreementResponse.style) &&
@@ -666,7 +742,7 @@ public class UserAgreementResponse {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, agreedOn, agreementId, agreementUrl, clickwrapId, clientUserId, consumerDisclosureEnabled, consumerDisclosureHtml, createdOn, declinedOn, documentData, documents, metadata, settings, status, style, version, versionId, versionNumber);
+    return Objects.hash(accountId, agreedOn, agreementId, agreementUrl, clickwrapId, clientUserId, consumerDisclosureEnabled, consumerDisclosureHtml, createdOn, dataFields, declinedOn, documentData, documents, metadata, returnUrl, settings, status, style, version, versionId, versionNumber);
   }
 
 
@@ -687,10 +763,12 @@ public class UserAgreementResponse {
     sb.append("    consumerDisclosureEnabled: ").append(toIndentedString(consumerDisclosureEnabled)).append("\n");
     sb.append("    consumerDisclosureHtml: ").append(toIndentedString(consumerDisclosureHtml)).append("\n");
     sb.append("    createdOn: ").append(toIndentedString(createdOn)).append("\n");
+    sb.append("    dataFields: ").append(toIndentedString(dataFields)).append("\n");
     sb.append("    declinedOn: ").append(toIndentedString(declinedOn)).append("\n");
     sb.append("    documentData: ").append(toIndentedString(documentData)).append("\n");
     sb.append("    documents: ").append(toIndentedString(documents)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
+    sb.append("    returnUrl: ").append(toIndentedString(returnUrl)).append("\n");
     sb.append("    settings: ").append(toIndentedString(settings)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    style: ").append(toIndentedString(style)).append("\n");

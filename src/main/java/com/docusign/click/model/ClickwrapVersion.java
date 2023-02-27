@@ -64,10 +64,10 @@ public class ClickwrapVersion {
   }
 
   /**
-   * .
+   * The unique version ID, a GUID, of this clickwrap version..
    * @return clickwrapVersionId
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The unique version ID, a GUID, of this clickwrap version.")
   public String getClickwrapVersionId() {
     return clickwrapVersionId;
   }
@@ -91,10 +91,10 @@ public class ClickwrapVersion {
   }
 
   /**
-   * .
+   * The time that the clickwrap was created..
    * @return createdTime
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The time that the clickwrap was created.")
   public Object getCreatedTime() {
     return createdTime;
   }
@@ -131,10 +131,10 @@ public class ClickwrapVersion {
   }
 
   /**
-   * .
+   * The list of all the data fields available for the clickwrap (custom fields and standard fields)..
    * @return dataFields
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The list of all the data fields available for the clickwrap (custom fields and standard fields).")
   public java.util.List<DataField> getDataFields() {
     return dataFields;
   }
@@ -158,10 +158,10 @@ public class ClickwrapVersion {
   }
 
   /**
-   * .
+   * The time that the clickwrap was last modified..
    * @return lastModified
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The time that the clickwrap was last modified.")
   public Object getLastModified() {
     return lastModified;
   }
@@ -185,10 +185,10 @@ public class ClickwrapVersion {
   }
 
   /**
-   * .
+   * The user ID of the last user who modified this clickwrap..
    * @return lastModifiedBy
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The user ID of the last user who modified this clickwrap.")
   public String getLastModifiedBy() {
     return lastModifiedBy;
   }
@@ -212,10 +212,10 @@ public class ClickwrapVersion {
   }
 
   /**
-   * .
+   * The user ID of the owner of this clickwrap..
    * @return ownerUserId
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The user ID of the owner of this clickwrap.")
   public String getOwnerUserId() {
     return ownerUserId;
   }
@@ -239,10 +239,10 @@ public class ClickwrapVersion {
   }
 
   /**
-   * .
+   * When **true,** requires signers who have previously agreed to this clickwrap to sign again. The version number is incremented..
    * @return requireReacceptance
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "When **true,** requires signers who have previously agreed to this clickwrap to sign again. The version number is incremented.")
   public Boolean isRequireReacceptance() {
     return requireReacceptance;
   }
@@ -266,10 +266,10 @@ public class ClickwrapVersion {
   }
 
   /**
-   * .
+   * The time and date when this clickwrap is activated..
    * @return scheduledDate
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The time and date when this clickwrap is activated.")
   public Object getScheduledDate() {
     return scheduledDate;
   }
@@ -293,10 +293,10 @@ public class ClickwrapVersion {
   }
 
   /**
-   * Get scheduledReacceptance.
+   * Specifies the interval between reacceptances in days, weeks, months, or years..
    * @return scheduledReacceptance
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Specifies the interval between reacceptances in days, weeks, months, or years.")
   public ClickwrapScheduledReacceptance getScheduledReacceptance() {
     return scheduledReacceptance;
   }
@@ -320,10 +320,10 @@ public class ClickwrapVersion {
   }
 
   /**
-   * .
+   * Clickwrap status. Possible values:  - `active` - `inactive` - `deleted`.
    * @return status
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Clickwrap status. Possible values:  - `active` - `inactive` - `deleted`")
   public String getStatus() {
     return status;
   }
@@ -347,10 +347,10 @@ public class ClickwrapVersion {
   }
 
   /**
-   * .
+   * The ID of the version..
    * @return versionId
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the version.")
   public String getVersionId() {
     return versionId;
   }
@@ -374,10 +374,10 @@ public class ClickwrapVersion {
   }
 
   /**
-   * .
+   * Version of the clickwrap..
    * @return versionNumber
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Version of the clickwrap.")
   public String getVersionNumber() {
     return versionNumber;
   }
