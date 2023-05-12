@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ConversionDocument
@@ -31,7 +30,7 @@ public class ConversionDocument {
    * 
    * @return base64
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getBase64() {
     return base64;
   }
@@ -49,7 +48,7 @@ public class ConversionDocument {
    * 
    * @return fileExtension
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFileExtension() {
     return fileExtension;
   }
@@ -67,7 +66,7 @@ public class ConversionDocument {
    * 
    * @return fileName
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFileName() {
     return fileName;
   }

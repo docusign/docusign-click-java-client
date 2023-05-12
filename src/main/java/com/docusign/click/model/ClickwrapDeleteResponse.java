@@ -5,14 +5,13 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * The result of a clickwrap deletion request..
  *
  */
-@ApiModel(description = "The result of a clickwrap deletion request.")
+@Schema(description = "The result of a clickwrap deletion request.")
 
 public class ClickwrapDeleteResponse {
   @JsonProperty("clickwrapId")
@@ -45,7 +44,7 @@ public class ClickwrapDeleteResponse {
    * The ID of the clickwrap..
    * @return clickwrapId
    **/
-  @ApiModelProperty(value = "The ID of the clickwrap.")
+  @Schema(description = "The ID of the clickwrap.")
   public String getClickwrapId() {
     return clickwrapId;
   }
@@ -72,7 +71,7 @@ public class ClickwrapDeleteResponse {
    * The name of the clickwrap..
    * @return clickwrapName
    **/
-  @ApiModelProperty(value = "The name of the clickwrap.")
+  @Schema(description = "The name of the clickwrap.")
   public String getClickwrapName() {
     return clickwrapName;
   }
@@ -99,7 +98,7 @@ public class ClickwrapDeleteResponse {
    * A message describing the result of deletion request. One of:  - `alreadyDeleted`: Clickwrap is already deleted. - `deletionSuccess`: Successfully deleted the clickwrap. - `deletionFailure`: Failed to delete the clickwrap. - `cannotDelete`: Active clickwrap version cannot be deleted..
    * @return deletionMessage
    **/
-  @ApiModelProperty(value = "A message describing the result of deletion request. One of:  - `alreadyDeleted`: Clickwrap is already deleted. - `deletionSuccess`: Successfully deleted the clickwrap. - `deletionFailure`: Failed to delete the clickwrap. - `cannotDelete`: Active clickwrap version cannot be deleted.")
+  @Schema(description = "A message describing the result of deletion request. One of:  - `alreadyDeleted`: Clickwrap is already deleted. - `deletionSuccess`: Successfully deleted the clickwrap. - `deletionFailure`: Failed to delete the clickwrap. - `cannotDelete`: Active clickwrap version cannot be deleted.")
   public String getDeletionMessage() {
     return deletionMessage;
   }
@@ -126,7 +125,7 @@ public class ClickwrapDeleteResponse {
    * **True** if the clickwrap was deleted successfully. **False** otherwise..
    * @return deletionSuccess
    **/
-  @ApiModelProperty(value = "**True** if the clickwrap was deleted successfully. **False** otherwise.")
+  @Schema(description = "**True** if the clickwrap was deleted successfully. **False** otherwise.")
   public Boolean isDeletionSuccess() {
     return deletionSuccess;
   }
@@ -153,7 +152,7 @@ public class ClickwrapDeleteResponse {
    * Clickwrap status. Possible values:  - `active` - `inactive` - `deleted`.
    * @return status
    **/
-  @ApiModelProperty(value = "Clickwrap status. Possible values:  - `active` - `inactive` - `deleted`")
+  @Schema(description = "Clickwrap status. Possible values:  - `active` - `inactive` - `deleted`")
   public String getStatus() {
     return status;
   }

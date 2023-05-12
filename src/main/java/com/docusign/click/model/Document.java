@@ -5,14 +5,13 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Information about a document..
  *
  */
-@ApiModel(description = "Information about a document.")
+@Schema(description = "Information about a document.")
 
 public class Document {
   @JsonProperty("documentBase64")
@@ -54,7 +53,7 @@ public class Document {
    * The base64-encoded contents of the document..
    * @return documentBase64
    **/
-  @ApiModelProperty(value = "The base64-encoded contents of the document.")
+  @Schema(description = "The base64-encoded contents of the document.")
   public String getDocumentBase64() {
     return documentBase64;
   }
@@ -81,7 +80,7 @@ public class Document {
    * Display type: link, document or pdf.
    * @return documentDisplay
    **/
-  @ApiModelProperty(value = "Display type: link, document or pdf")
+  @Schema(description = "Display type: link, document or pdf")
   public String getDocumentDisplay() {
     return documentDisplay;
   }
@@ -108,7 +107,7 @@ public class Document {
    * The HTML representation of the document..
    * @return documentHtml
    **/
-  @ApiModelProperty(value = "The HTML representation of the document.")
+  @Schema(description = "The HTML representation of the document.")
   public String getDocumentHtml() {
     return documentHtml;
   }
@@ -135,7 +134,7 @@ public class Document {
    * The name of the document..
    * @return documentName
    **/
-  @ApiModelProperty(value = "The name of the document.")
+  @Schema(description = "The name of the document.")
   public String getDocumentName() {
     return documentName;
   }
@@ -162,7 +161,7 @@ public class Document {
    * The file extension of the document..
    * @return fileExtension
    **/
-  @ApiModelProperty(value = "The file extension of the document.")
+  @Schema(description = "The file extension of the document.")
   public String getFileExtension() {
     return fileExtension;
   }
@@ -189,7 +188,7 @@ public class Document {
    * **True** if the user needs to scroll to the end of the document..
    * @return mustRead
    **/
-  @ApiModelProperty(value = "**True** if the user needs to scroll to the end of the document.")
+  @Schema(description = "**True** if the user needs to scroll to the end of the document.")
   public Boolean isMustRead() {
     return mustRead;
   }
@@ -216,7 +215,7 @@ public class Document {
    * **True** if the user must view the document..
    * @return mustView
    **/
-  @ApiModelProperty(value = "**True** if the user must view the document.")
+  @Schema(description = "**True** if the user must view the document.")
   public Boolean isMustView() {
     return mustView;
   }
@@ -243,7 +242,7 @@ public class Document {
    * The order of document layout..
    * @return order
    **/
-  @ApiModelProperty(value = "The order of document layout.")
+  @Schema(description = "The order of document layout.")
   public Integer getOrder() {
     return order;
   }

@@ -6,14 +6,13 @@ import com.docusign.click.model.ClickwrapVersion;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * The results are paginated. Use the following properties to navigate the pages.  - &#x60;page&#x60;: The page number of the current results. - &#x60;pageSize&#x60;: The number of results in the current page. - &#x60;minimumPagesRemaining&#x60;: The number of pages that follow this one.  .
  *
  */
-@ApiModel(description = "The results are paginated. Use the following properties to navigate the pages.  - `page`: The page number of the current results. - `pageSize`: The number of results in the current page. - `minimumPagesRemaining`: The number of pages that follow this one.  ")
+@Schema(description = "The results are paginated. Use the following properties to navigate the pages.  - `page`: The page number of the current results. - `pageSize`: The number of results in the current page. - `minimumPagesRemaining`: The number of pages that follow this one.  ")
 
 public class ClickwrapVersionsPagedResponse {
   @JsonProperty("accountId")
@@ -52,7 +51,7 @@ public class ClickwrapVersionsPagedResponse {
    * The external account number (int) or account ID GUID..
    * @return accountId
    **/
-  @ApiModelProperty(value = "The external account number (int) or account ID GUID.")
+  @Schema(description = "The external account number (int) or account ID GUID.")
   public String getAccountId() {
     return accountId;
   }
@@ -79,7 +78,7 @@ public class ClickwrapVersionsPagedResponse {
    * The ID of the clickwrap..
    * @return clickwrapId
    **/
-  @ApiModelProperty(value = "The ID of the clickwrap.")
+  @Schema(description = "The ID of the clickwrap.")
   public String getClickwrapId() {
     return clickwrapId;
   }
@@ -106,7 +105,7 @@ public class ClickwrapVersionsPagedResponse {
    * The name of the clickwrap..
    * @return clickwrapName
    **/
-  @ApiModelProperty(value = "The name of the clickwrap.")
+  @Schema(description = "The name of the clickwrap.")
   public String getClickwrapName() {
     return clickwrapName;
   }
@@ -133,7 +132,7 @@ public class ClickwrapVersionsPagedResponse {
    * An array of clickwrap versions..
    * @return minimumPagesRemaining
    **/
-  @ApiModelProperty(value = "An array of clickwrap versions.")
+  @Schema(description = "An array of clickwrap versions.")
   public Integer getMinimumPagesRemaining() {
     return minimumPagesRemaining;
   }
@@ -160,7 +159,7 @@ public class ClickwrapVersionsPagedResponse {
    * The number of the current page..
    * @return page
    **/
-  @ApiModelProperty(value = "The number of the current page.")
+  @Schema(description = "The number of the current page.")
   public Integer getPage() {
     return page;
   }
@@ -187,7 +186,7 @@ public class ClickwrapVersionsPagedResponse {
    * The number of items per page..
    * @return pageSize
    **/
-  @ApiModelProperty(value = "The number of items per page.")
+  @Schema(description = "The number of items per page.")
   public Integer getPageSize() {
     return pageSize;
   }
@@ -227,7 +226,7 @@ public class ClickwrapVersionsPagedResponse {
    * An array of clickwrap versions..
    * @return versions
    **/
-  @ApiModelProperty(value = "An array of clickwrap versions.")
+  @Schema(description = "An array of clickwrap versions.")
   public java.util.List<ClickwrapVersion> getVersions() {
     return versions;
   }

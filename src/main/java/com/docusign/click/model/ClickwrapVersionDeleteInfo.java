@@ -6,8 +6,7 @@ import com.docusign.click.model.ClickwrapScheduledReacceptance;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ClickwrapVersionDeleteInfo
@@ -59,7 +58,7 @@ public class ClickwrapVersionDeleteInfo {
    * 
    * @return createdTime
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Object getCreatedTime() {
     return createdTime;
   }
@@ -77,7 +76,7 @@ public class ClickwrapVersionDeleteInfo {
    * 
    * @return deletionMessage
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDeletionMessage() {
     return deletionMessage;
   }
@@ -95,7 +94,7 @@ public class ClickwrapVersionDeleteInfo {
    * 
    * @return deletionSuccess
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isDeletionSuccess() {
     return deletionSuccess;
   }
@@ -113,7 +112,7 @@ public class ClickwrapVersionDeleteInfo {
    * 
    * @return lastModified
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Object getLastModified() {
     return lastModified;
   }
@@ -131,7 +130,7 @@ public class ClickwrapVersionDeleteInfo {
    * 
    * @return lastModifiedBy
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLastModifiedBy() {
     return lastModifiedBy;
   }
@@ -149,7 +148,7 @@ public class ClickwrapVersionDeleteInfo {
    * 
    * @return ownerUserId
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOwnerUserId() {
     return ownerUserId;
   }
@@ -167,7 +166,7 @@ public class ClickwrapVersionDeleteInfo {
    * 
    * @return requireReacceptance
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isRequireReacceptance() {
     return requireReacceptance;
   }
@@ -185,7 +184,7 @@ public class ClickwrapVersionDeleteInfo {
    * 
    * @return scheduledDate
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Object getScheduledDate() {
     return scheduledDate;
   }
@@ -203,7 +202,7 @@ public class ClickwrapVersionDeleteInfo {
    * Get scheduledReacceptance
    * @return scheduledReacceptance
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public ClickwrapScheduledReacceptance getScheduledReacceptance() {
     return scheduledReacceptance;
   }
@@ -221,7 +220,7 @@ public class ClickwrapVersionDeleteInfo {
    * 
    * @return status
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getStatus() {
     return status;
   }
@@ -239,7 +238,7 @@ public class ClickwrapVersionDeleteInfo {
    * 
    * @return versionId
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getVersionId() {
     return versionId;
   }
@@ -257,7 +256,7 @@ public class ClickwrapVersionDeleteInfo {
    * 
    * @return versionNumber
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getVersionNumber() {
     return versionNumber;
   }

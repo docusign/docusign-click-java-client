@@ -5,14 +5,13 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Error details..
  *
  */
-@ApiModel(description = "Error details.")
+@Schema(description = "Error details.")
 
 public class ErrorDetails {
   @JsonProperty("errorCode")
@@ -36,7 +35,7 @@ public class ErrorDetails {
    * The error code..
    * @return errorCode
    **/
-  @ApiModelProperty(value = "The error code.")
+  @Schema(description = "The error code.")
   public String getErrorCode() {
     return errorCode;
   }
@@ -63,7 +62,7 @@ public class ErrorDetails {
    * The error message..
    * @return message
    **/
-  @ApiModelProperty(value = "The error message.")
+  @Schema(description = "The error message.")
   public String getMessage() {
     return message;
   }

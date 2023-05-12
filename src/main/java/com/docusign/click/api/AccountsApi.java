@@ -1,7 +1,7 @@
 
 package com.docusign.click.api;
 
-import javax.ws.rs.core.GenericType;
+import jakarta.ws.rs.core.GenericType;
 
 import com.docusign.click.client.ApiException;
 import com.docusign.click.client.ApiClient;

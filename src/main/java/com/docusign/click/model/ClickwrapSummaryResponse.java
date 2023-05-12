@@ -6,8 +6,7 @@ import com.docusign.click.model.ClickwrapScheduledReacceptance;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ClickwrapSummaryResponse
@@ -62,7 +61,7 @@ public class ClickwrapSummaryResponse {
    * 
    * @return accountId
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAccountId() {
     return accountId;
   }
@@ -80,7 +79,7 @@ public class ClickwrapSummaryResponse {
    * 
    * @return clickwrapId
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getClickwrapId() {
     return clickwrapId;
   }
@@ -98,7 +97,7 @@ public class ClickwrapSummaryResponse {
    * 
    * @return clickwrapName
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getClickwrapName() {
     return clickwrapName;
   }
@@ -116,7 +115,7 @@ public class ClickwrapSummaryResponse {
    * 
    * @return createdTime
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Object getCreatedTime() {
     return createdTime;
   }
@@ -134,7 +133,7 @@ public class ClickwrapSummaryResponse {
    * 
    * @return lastModified
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Object getLastModified() {
     return lastModified;
   }
@@ -152,7 +151,7 @@ public class ClickwrapSummaryResponse {
    * 
    * @return lastModifiedBy
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLastModifiedBy() {
     return lastModifiedBy;
   }
@@ -170,7 +169,7 @@ public class ClickwrapSummaryResponse {
    * 
    * @return ownerUserId
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOwnerUserId() {
     return ownerUserId;
   }
@@ -188,7 +187,7 @@ public class ClickwrapSummaryResponse {
    * 
    * @return requireReacceptance
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isRequireReacceptance() {
     return requireReacceptance;
   }
@@ -206,7 +205,7 @@ public class ClickwrapSummaryResponse {
    * 
    * @return scheduledDate
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Object getScheduledDate() {
     return scheduledDate;
   }
@@ -224,7 +223,7 @@ public class ClickwrapSummaryResponse {
    * Get scheduledReacceptance
    * @return scheduledReacceptance
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public ClickwrapScheduledReacceptance getScheduledReacceptance() {
     return scheduledReacceptance;
   }
@@ -242,7 +241,7 @@ public class ClickwrapSummaryResponse {
    * 
    * @return status
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getStatus() {
     return status;
   }
@@ -260,7 +259,7 @@ public class ClickwrapSummaryResponse {
    * 
    * @return versionId
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getVersionId() {
     return versionId;
   }
@@ -278,7 +277,7 @@ public class ClickwrapSummaryResponse {
    * 
    * @return versionNumber
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getVersionNumber() {
     return versionNumber;
   }
