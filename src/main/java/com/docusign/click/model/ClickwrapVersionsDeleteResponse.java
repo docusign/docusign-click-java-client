@@ -6,8 +6,7 @@ import com.docusign.click.model.ClickwrapVersionDeleteResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ClickwrapVersionsDeleteResponse.
@@ -39,7 +38,7 @@ public class ClickwrapVersionsDeleteResponse {
    * The ID of the clickwrap..
    * @return clickwrapId
    **/
-  @ApiModelProperty(value = "The ID of the clickwrap.")
+  @Schema(description = "The ID of the clickwrap.")
   public String getClickwrapId() {
     return clickwrapId;
   }
@@ -66,7 +65,7 @@ public class ClickwrapVersionsDeleteResponse {
    * The name of the clickwrap..
    * @return clickwrapName
    **/
-  @ApiModelProperty(value = "The name of the clickwrap.")
+  @Schema(description = "The name of the clickwrap.")
   public String getClickwrapName() {
     return clickwrapName;
   }
@@ -106,7 +105,7 @@ public class ClickwrapVersionsDeleteResponse {
    * An array of delete responses..
    * @return versions
    **/
-  @ApiModelProperty(value = "An array of delete responses.")
+  @Schema(description = "An array of delete responses.")
   public java.util.List<ClickwrapVersionDeleteResponse> getVersions() {
     return versions;
   }

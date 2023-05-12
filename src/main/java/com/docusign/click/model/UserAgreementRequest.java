@@ -5,14 +5,13 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Data used to create the agreement..
  *
  */
-@ApiModel(description = "Data used to create the agreement.")
+@Schema(description = "Data used to create the agreement.")
 
 public class UserAgreementRequest {
   @JsonProperty("clientUserId")
@@ -42,7 +41,7 @@ public class UserAgreementRequest {
    * A unique value that identifies a user. You can use anything that your system uses to identify unique users, such as employee IDs, email addresses, and surrogate keys as the value of `clientUserId`.  A clickwrap with a specific `clientUserId` will not appear again once it has been accepted. .
    * @return clientUserId
    **/
-  @ApiModelProperty(value = "A unique value that identifies a user. You can use anything that your system uses to identify unique users, such as employee IDs, email addresses, and surrogate keys as the value of `clientUserId`.  A clickwrap with a specific `clientUserId` will not appear again once it has been accepted. ")
+  @Schema(description = "A unique value that identifies a user. You can use anything that your system uses to identify unique users, such as employee IDs, email addresses, and surrogate keys as the value of `clientUserId`.  A clickwrap with a specific `clientUserId` will not appear again once it has been accepted. ")
   public String getClientUserId() {
     return clientUserId;
   }
@@ -82,7 +81,7 @@ public class UserAgreementRequest {
    * This property specifies the data used to create a clickwrap with [dynamic content][].    [dynamic content]: /docs/click-api/click101/customize-clickwrap-fields/#embed-clickwraps-that-contain-dynamic-content .
    * @return documentData
    **/
-  @ApiModelProperty(value = "This property specifies the data used to create a clickwrap with [dynamic content][].    [dynamic content]: /docs/click-api/click101/customize-clickwrap-fields/#embed-clickwraps-that-contain-dynamic-content ")
+  @Schema(description = "This property specifies the data used to create a clickwrap with [dynamic content][].    [dynamic content]: /docs/click-api/click101/customize-clickwrap-fields/#embed-clickwraps-that-contain-dynamic-content ")
   public java.util.Map<String, String> getDocumentData() {
     return documentData;
   }
@@ -109,7 +108,7 @@ public class UserAgreementRequest {
    * A customer-defined string you can use in requests. This string will appear in the corresponding response..
    * @return metadata
    **/
-  @ApiModelProperty(value = "A customer-defined string you can use in requests. This string will appear in the corresponding response.")
+  @Schema(description = "A customer-defined string you can use in requests. This string will appear in the corresponding response.")
   public String getMetadata() {
     return metadata;
   }
@@ -136,7 +135,7 @@ public class UserAgreementRequest {
    * The URL to redirect to after the agreement is complete when the agreement is not rendered in an iframe..
    * @return returnUrl
    **/
-  @ApiModelProperty(value = "The URL to redirect to after the agreement is complete when the agreement is not rendered in an iframe.")
+  @Schema(description = "The URL to redirect to after the agreement is complete when the agreement is not rendered in an iframe.")
   public String getReturnUrl() {
     return returnUrl;
   }

@@ -6,8 +6,7 @@ import com.docusign.click.model.ClickwrapSummaryResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ClickwrapsResponse
@@ -43,7 +42,7 @@ public class ClickwrapsResponse {
    * 
    * @return clickwraps
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<ClickwrapSummaryResponse> getClickwraps() {
     return clickwraps;
   }
@@ -61,7 +60,7 @@ public class ClickwrapsResponse {
    * 
    * @return minimumPagesRemaining
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getMinimumPagesRemaining() {
     return minimumPagesRemaining;
   }
@@ -79,7 +78,7 @@ public class ClickwrapsResponse {
    * 
    * @return page
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getPage() {
     return page;
   }
@@ -97,7 +96,7 @@ public class ClickwrapsResponse {
    * 
    * @return pageSize
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getPageSize() {
     return pageSize;
   }

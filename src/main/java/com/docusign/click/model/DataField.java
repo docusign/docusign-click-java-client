@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * DataField.
@@ -38,7 +37,7 @@ public class DataField {
    * .
    * @return label
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLabel() {
     return label;
   }
@@ -65,7 +64,7 @@ public class DataField {
    * .
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -92,7 +91,7 @@ public class DataField {
    * .
    * @return type
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getType() {
     return type;
   }

@@ -6,8 +6,7 @@ import com.docusign.click.model.UserAgreementResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ClickwrapAgreementsResponse.
@@ -45,7 +44,7 @@ public class ClickwrapAgreementsResponse {
    * User agreements from this datetime..
    * @return beginCreatedOn
    **/
-  @ApiModelProperty(value = "User agreements from this datetime.")
+  @Schema(description = "User agreements from this datetime.")
   public Object getBeginCreatedOn() {
     return beginCreatedOn;
   }
@@ -72,7 +71,7 @@ public class ClickwrapAgreementsResponse {
    * Number of pages remaining in the response..
    * @return minimumPagesRemaining
    **/
-  @ApiModelProperty(value = "Number of pages remaining in the response.")
+  @Schema(description = "Number of pages remaining in the response.")
   public Integer getMinimumPagesRemaining() {
     return minimumPagesRemaining;
   }
@@ -99,7 +98,7 @@ public class ClickwrapAgreementsResponse {
    * The number of the current page..
    * @return page
    **/
-  @ApiModelProperty(value = "The number of the current page.")
+  @Schema(description = "The number of the current page.")
   public Integer getPage() {
     return page;
   }
@@ -126,7 +125,7 @@ public class ClickwrapAgreementsResponse {
    * The number of items per page..
    * @return pageSize
    **/
-  @ApiModelProperty(value = "The number of items per page.")
+  @Schema(description = "The number of items per page.")
   public Integer getPageSize() {
     return pageSize;
   }
@@ -166,7 +165,7 @@ public class ClickwrapAgreementsResponse {
    * An array of user agreements..
    * @return userAgreements
    **/
-  @ApiModelProperty(value = "An array of user agreements.")
+  @Schema(description = "An array of user agreements.")
   public java.util.List<UserAgreementResponse> getUserAgreements() {
     return userAgreements;
   }

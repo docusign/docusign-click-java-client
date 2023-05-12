@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ClickwrapScheduledReacceptance.
@@ -38,7 +37,7 @@ public class ClickwrapScheduledReacceptance {
    * The time between recurrences specified in `recurrenceIntervalType` units.  The minimum and maximum values depend on `recurrenceIntervalType`:  - `days`: 1 - 365 - `weeks`: 1 - 52 - `months`: 1 - 12 - `years`: 1.
    * @return recurrenceInterval
    **/
-  @ApiModelProperty(value = "The time between recurrences specified in `recurrenceIntervalType` units.  The minimum and maximum values depend on `recurrenceIntervalType`:  - `days`: 1 - 365 - `weeks`: 1 - 52 - `months`: 1 - 12 - `years`: 1")
+  @Schema(description = "The time between recurrences specified in `recurrenceIntervalType` units.  The minimum and maximum values depend on `recurrenceIntervalType`:  - `days`: 1 - 365 - `weeks`: 1 - 52 - `months`: 1 - 12 - `years`: 1")
   public Integer getRecurrenceInterval() {
     return recurrenceInterval;
   }
@@ -65,7 +64,7 @@ public class ClickwrapScheduledReacceptance {
    * The units of the `recurrenceInterval`. Must be one of:  - `days` - `weeks` - `month` - `years` .
    * @return recurrenceIntervalType
    **/
-  @ApiModelProperty(value = "The units of the `recurrenceInterval`. Must be one of:  - `days` - `weeks` - `month` - `years` ")
+  @Schema(description = "The units of the `recurrenceInterval`. Must be one of:  - `days` - `weeks` - `month` - `years` ")
   public String getRecurrenceIntervalType() {
     return recurrenceIntervalType;
   }
@@ -92,7 +91,7 @@ public class ClickwrapScheduledReacceptance {
    * The date when the recurrence interval starts..
    * @return startDateTime
    **/
-  @ApiModelProperty(value = "The date when the recurrence interval starts.")
+  @Schema(description = "The date when the recurrence interval starts.")
   public Object getStartDateTime() {
     return startDateTime;
   }

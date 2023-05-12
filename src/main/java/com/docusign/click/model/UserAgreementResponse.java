@@ -8,8 +8,7 @@ import com.docusign.click.model.Document;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * UserAgreementResponse.
@@ -95,7 +94,7 @@ public class UserAgreementResponse {
    * The external account number (int) or account ID GUID..
    * @return accountId
    **/
-  @ApiModelProperty(value = "The external account number (int) or account ID GUID.")
+  @Schema(description = "The external account number (int) or account ID GUID.")
   public String getAccountId() {
     return accountId;
   }
@@ -122,7 +121,7 @@ public class UserAgreementResponse {
    * Date that the client last completed the agreement.  This property is null if `agreementUrl` is not null and `status` is not  `agreed`..
    * @return agreedOn
    **/
-  @ApiModelProperty(value = "Date that the client last completed the agreement.  This property is null if `agreementUrl` is not null and `status` is not  `agreed`.")
+  @Schema(description = "Date that the client last completed the agreement.  This property is null if `agreementUrl` is not null and `status` is not  `agreed`.")
   public Object getAgreedOn() {
     return agreedOn;
   }
@@ -149,7 +148,7 @@ public class UserAgreementResponse {
    * The agreement ID..
    * @return agreementId
    **/
-  @ApiModelProperty(value = "The agreement ID.")
+  @Schema(description = "The agreement ID.")
   public String getAgreementId() {
     return agreementId;
   }
@@ -176,7 +175,7 @@ public class UserAgreementResponse {
    * When not null, an agreement is required for user specified by  `clientUserId`.  When missing the user specified by `clientUserId` has already agreed and does not require a new acceptance.  Use this URL to render the agreement in a web page.  <!-- or redirected to when providing redirect_url as a query parameter. --> .
    * @return agreementUrl
    **/
-  @ApiModelProperty(value = "When not null, an agreement is required for user specified by  `clientUserId`.  When missing the user specified by `clientUserId` has already agreed and does not require a new acceptance.  Use this URL to render the agreement in a web page.  <!-- or redirected to when providing redirect_url as a query parameter. --> ")
+  @Schema(description = "When not null, an agreement is required for user specified by  `clientUserId`.  When missing the user specified by `clientUserId` has already agreed and does not require a new acceptance.  Use this URL to render the agreement in a web page.  <!-- or redirected to when providing redirect_url as a query parameter. --> ")
   public String getAgreementUrl() {
     return agreementUrl;
   }
@@ -203,7 +202,7 @@ public class UserAgreementResponse {
    * The ID of the clickwrap..
    * @return clickwrapId
    **/
-  @ApiModelProperty(value = "The ID of the clickwrap.")
+  @Schema(description = "The ID of the clickwrap.")
   public String getClickwrapId() {
     return clickwrapId;
   }
@@ -230,7 +229,7 @@ public class UserAgreementResponse {
    * A unique value that identifies a user.\\nYou can use anything that your system uses\\nto identify unique users, such as\\nemployee IDs, email addresses, and surrogate keys as the value of `clientUserId`.\\n\\nA clickwrap with a specific `clientUserId` will not appear again\\nonce it has been accepted.\\n\".
    * @return clientUserId
    **/
-  @ApiModelProperty(value = "A unique value that identifies a user.\\nYou can use anything that your system uses\\nto identify unique users, such as\\nemployee IDs, email addresses, and surrogate keys as the value of `clientUserId`.\\n\\nA clickwrap with a specific `clientUserId` will not appear again\\nonce it has been accepted.\\n\"")
+  @Schema(description = "A unique value that identifies a user.\\nYou can use anything that your system uses\\nto identify unique users, such as\\nemployee IDs, email addresses, and surrogate keys as the value of `clientUserId`.\\n\\nA clickwrap with a specific `clientUserId` will not appear again\\nonce it has been accepted.\\n\"")
   public String getClientUserId() {
     return clientUserId;
   }
@@ -257,7 +256,7 @@ public class UserAgreementResponse {
    * **True** if consumer disclosure was required by this agreement..
    * @return consumerDisclosureEnabled
    **/
-  @ApiModelProperty(value = "**True** if consumer disclosure was required by this agreement.")
+  @Schema(description = "**True** if consumer disclosure was required by this agreement.")
   public Boolean isConsumerDisclosureEnabled() {
     return consumerDisclosureEnabled;
   }
@@ -284,7 +283,7 @@ public class UserAgreementResponse {
    * The customer-branded HTML with the Electronic Record and Signature Disclosure information.
    * @return consumerDisclosureHtml
    **/
-  @ApiModelProperty(value = "The customer-branded HTML with the Electronic Record and Signature Disclosure information")
+  @Schema(description = "The customer-branded HTML with the Electronic Record and Signature Disclosure information")
   public String getConsumerDisclosureHtml() {
     return consumerDisclosureHtml;
   }
@@ -311,7 +310,7 @@ public class UserAgreementResponse {
    * The date when the clickwrap was created. May be null..
    * @return createdOn
    **/
-  @ApiModelProperty(value = "The date when the clickwrap was created. May be null.")
+  @Schema(description = "The date when the clickwrap was created. May be null.")
   public Object getCreatedOn() {
     return createdOn;
   }
@@ -351,7 +350,7 @@ public class UserAgreementResponse {
    * The list of all the data fields available for the clickwrap (custom fields and standard fields)..
    * @return dataFields
    **/
-  @ApiModelProperty(value = "The list of all the data fields available for the clickwrap (custom fields and standard fields).")
+  @Schema(description = "The list of all the data fields available for the clickwrap (custom fields and standard fields).")
   public java.util.List<DataField> getDataFields() {
     return dataFields;
   }
@@ -378,7 +377,7 @@ public class UserAgreementResponse {
    * The date when the user declined the most recent required agreement.  This property is valid only when `status` is `declined`. Otherwise it is null..
    * @return declinedOn
    **/
-  @ApiModelProperty(value = "The date when the user declined the most recent required agreement.  This property is valid only when `status` is `declined`. Otherwise it is null.")
+  @Schema(description = "The date when the user declined the most recent required agreement.  This property is valid only when `status` is `declined`. Otherwise it is null.")
   public Object getDeclinedOn() {
     return declinedOn;
   }
@@ -418,7 +417,7 @@ public class UserAgreementResponse {
    * This property specifies the data used to create a clickwrap with [dynamic content][].    [dynamic content]: /docs/click-api/click101/customize-clickwrap-fields/#embed-clickwraps-that-contain-dynamic-content .
    * @return documentData
    **/
-  @ApiModelProperty(value = "This property specifies the data used to create a clickwrap with [dynamic content][].    [dynamic content]: /docs/click-api/click101/customize-clickwrap-fields/#embed-clickwraps-that-contain-dynamic-content ")
+  @Schema(description = "This property specifies the data used to create a clickwrap with [dynamic content][].    [dynamic content]: /docs/click-api/click101/customize-clickwrap-fields/#embed-clickwraps-that-contain-dynamic-content ")
   public java.util.Map<String, String> getDocumentData() {
     return documentData;
   }
@@ -458,7 +457,7 @@ public class UserAgreementResponse {
    * An array of documents..
    * @return documents
    **/
-  @ApiModelProperty(value = "An array of documents.")
+  @Schema(description = "An array of documents.")
   public java.util.List<Document> getDocuments() {
     return documents;
   }
@@ -485,7 +484,7 @@ public class UserAgreementResponse {
    * A customer-defined string you can use in requests. This string will appear in the corresponding response..
    * @return metadata
    **/
-  @ApiModelProperty(value = "A customer-defined string you can use in requests. This string will appear in the corresponding response.")
+  @Schema(description = "A customer-defined string you can use in requests. This string will appear in the corresponding response.")
   public String getMetadata() {
     return metadata;
   }
@@ -512,7 +511,7 @@ public class UserAgreementResponse {
    * The URL redirected to after the agreement was completed..
    * @return returnUrl
    **/
-  @ApiModelProperty(value = "The URL redirected to after the agreement was completed.")
+  @Schema(description = "The URL redirected to after the agreement was completed.")
   public String getReturnUrl() {
     return returnUrl;
   }
@@ -539,7 +538,7 @@ public class UserAgreementResponse {
    * The display settings for this agreement..
    * @return settings
    **/
-  @ApiModelProperty(value = "The display settings for this agreement.")
+  @Schema(description = "The display settings for this agreement.")
   public DisplaySettings getSettings() {
     return settings;
   }
@@ -566,7 +565,7 @@ public class UserAgreementResponse {
    * User agreement status. One of:  - `created` - `agreed` - `declined`.
    * @return status
    **/
-  @ApiModelProperty(value = "User agreement status. One of:  - `created` - `agreed` - `declined`")
+  @Schema(description = "User agreement status. One of:  - `created` - `agreed` - `declined`")
   public String getStatus() {
     return status;
   }
@@ -606,7 +605,7 @@ public class UserAgreementResponse {
    * This property specifies the custom style provided when the agreement was created by [customizing the template appearance][].    [customizing the template appearance]: /docs/click-api/click101/customize-elastic-template-appearance/ .
    * @return style
    **/
-  @ApiModelProperty(value = "This property specifies the custom style provided when the agreement was created by [customizing the template appearance][].    [customizing the template appearance]: /docs/click-api/click101/customize-elastic-template-appearance/ ")
+  @Schema(description = "This property specifies the custom style provided when the agreement was created by [customizing the template appearance][].    [customizing the template appearance]: /docs/click-api/click101/customize-elastic-template-appearance/ ")
   public java.util.Map<String, String> getStyle() {
     return style;
   }
@@ -633,7 +632,7 @@ public class UserAgreementResponse {
    * The human-readable semver version string..
    * @return version
    **/
-  @ApiModelProperty(value = "The human-readable semver version string.")
+  @Schema(description = "The human-readable semver version string.")
   public String getVersion() {
     return version;
   }
@@ -660,7 +659,7 @@ public class UserAgreementResponse {
    * The ID of the version..
    * @return versionId
    **/
-  @ApiModelProperty(value = "The ID of the version.")
+  @Schema(description = "The ID of the version.")
   public String getVersionId() {
     return versionId;
   }
@@ -687,7 +686,7 @@ public class UserAgreementResponse {
    * Version of the clickwrap..
    * @return versionNumber
    **/
-  @ApiModelProperty(value = "Version of the clickwrap.")
+  @Schema(description = "Version of the clickwrap.")
   public Integer getVersionNumber() {
     return versionNumber;
   }

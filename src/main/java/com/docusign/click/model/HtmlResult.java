@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * HtmlResult
@@ -28,7 +27,7 @@ public class HtmlResult {
    * 
    * @return fileName
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFileName() {
     return fileName;
   }
@@ -46,7 +45,7 @@ public class HtmlResult {
    * 
    * @return html
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getHtml() {
     return html;
   }

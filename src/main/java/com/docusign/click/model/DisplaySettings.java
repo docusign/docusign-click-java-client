@@ -5,14 +5,13 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Information about how an agreement is displayed..
  *
  */
-@ApiModel(description = "Information about how an agreement is displayed.")
+@Schema(description = "Information about how an agreement is displayed.")
 
 public class DisplaySettings {
   @JsonProperty("actionButtonAlignment")
@@ -84,7 +83,7 @@ public class DisplaySettings {
    * Position of the Accept button in the agreement. One of   - `right` - `left` .
    * @return actionButtonAlignment
    **/
-  @ApiModelProperty(value = "Position of the Accept button in the agreement. One of   - `right` - `left` ")
+  @Schema(description = "Position of the Accept button in the agreement. One of   - `right` - `left` ")
   public String getActionButtonAlignment() {
     return actionButtonAlignment;
   }
@@ -111,7 +110,7 @@ public class DisplaySettings {
    * When **true,** this agreement can be be used in client-only integrations..
    * @return allowClientOnly
    **/
-  @ApiModelProperty(value = "When **true,** this agreement can be be used in client-only integrations.")
+  @Schema(description = "When **true,** this agreement can be be used in client-only integrations.")
   public Boolean isAllowClientOnly() {
     return allowClientOnly;
   }
@@ -151,7 +150,7 @@ public class DisplaySettings {
    * Hosts that can host the clickwrap.  It is an error if the clickwrap didn't come from one of these hosts. .
    * @return allowedHosts
    **/
-  @ApiModelProperty(value = "Hosts that can host the clickwrap.  It is an error if the clickwrap didn't come from one of these hosts. ")
+  @Schema(description = "Hosts that can host the clickwrap.  It is an error if the clickwrap didn't come from one of these hosts. ")
   public java.util.List<String> getAllowedHosts() {
     return allowedHosts;
   }
@@ -178,7 +177,7 @@ public class DisplaySettings {
    * The signing brand ID..
    * @return brandId
    **/
-  @ApiModelProperty(value = "The signing brand ID.")
+  @Schema(description = "The signing brand ID.")
   public String getBrandId() {
     return brandId;
   }
@@ -205,7 +204,7 @@ public class DisplaySettings {
    * Text on the agree button..
    * @return consentButtonText
    **/
-  @ApiModelProperty(value = "Text on the agree button.")
+  @Schema(description = "Text on the agree button.")
   public String getConsentButtonText() {
     return consentButtonText;
   }
@@ -232,7 +231,7 @@ public class DisplaySettings {
    * The statement prefixing the Electronic Record and Signature Disclosure agreement..
    * @return consentText
    **/
-  @ApiModelProperty(value = "The statement prefixing the Electronic Record and Signature Disclosure agreement.")
+  @Schema(description = "The statement prefixing the Electronic Record and Signature Disclosure agreement.")
   public String getConsentText() {
     return consentText;
   }
@@ -259,7 +258,7 @@ public class DisplaySettings {
    * The text on the decline button..
    * @return declineButtonText
    **/
-  @ApiModelProperty(value = "The text on the decline button.")
+  @Schema(description = "The text on the decline button.")
   public String getDeclineButtonText() {
     return declineButtonText;
   }
@@ -286,7 +285,7 @@ public class DisplaySettings {
    * The display name of the user agreement..
    * @return displayName
    **/
-  @ApiModelProperty(value = "The display name of the user agreement.")
+  @Schema(description = "The display name of the user agreement.")
   public String getDisplayName() {
     return displayName;
   }
@@ -313,7 +312,7 @@ public class DisplaySettings {
    * Display type: link, document or pdf.
    * @return documentDisplay
    **/
-  @ApiModelProperty(value = "Display type: link, document or pdf")
+  @Schema(description = "Display type: link, document or pdf")
   public String getDocumentDisplay() {
     return documentDisplay;
   }
@@ -340,7 +339,7 @@ public class DisplaySettings {
    * **True** if the agreement is downloadable..
    * @return downloadable
    **/
-  @ApiModelProperty(value = "**True** if the agreement is downloadable.")
+  @Schema(description = "**True** if the agreement is downloadable.")
   public Boolean isDownloadable() {
     return downloadable;
   }
@@ -367,7 +366,7 @@ public class DisplaySettings {
    * Display format: inline or modal..
    * @return format
    **/
-  @ApiModelProperty(value = "Display format: inline or modal.")
+  @Schema(description = "Display format: inline or modal.")
   public String getFormat() {
     return format;
   }
@@ -394,7 +393,7 @@ public class DisplaySettings {
    * **True** if the agreement has a decline button..
    * @return hasDeclineButton
    **/
-  @ApiModelProperty(value = "**True** if the agreement has a decline button.")
+  @Schema(description = "**True** if the agreement has a decline button.")
   public Boolean isHasDeclineButton() {
     return hasDeclineButton;
   }
@@ -421,7 +420,7 @@ public class DisplaySettings {
    * **True** if the user needs to scroll to the end of the document..
    * @return mustRead
    **/
-  @ApiModelProperty(value = "**True** if the user needs to scroll to the end of the document.")
+  @Schema(description = "**True** if the user needs to scroll to the end of the document.")
   public Boolean isMustRead() {
     return mustRead;
   }
@@ -448,7 +447,7 @@ public class DisplaySettings {
    * **True** if the user must view the document..
    * @return mustView
    **/
-  @ApiModelProperty(value = "**True** if the user must view the document.")
+  @Schema(description = "**True** if the user must view the document.")
   public Boolean isMustView() {
     return mustView;
   }
@@ -475,7 +474,7 @@ public class DisplaySettings {
    * When **true,** this agreement records decline actions..
    * @return recordDeclineResponses
    **/
-  @ApiModelProperty(value = "When **true,** this agreement records decline actions.")
+  @Schema(description = "When **true,** this agreement records decline actions.")
   public Boolean isRecordDeclineResponses() {
     return recordDeclineResponses;
   }
@@ -502,7 +501,7 @@ public class DisplaySettings {
    * **True** if a checkbox is required to accept..
    * @return requireAccept
    **/
-  @ApiModelProperty(value = "**True** if a checkbox is required to accept.")
+  @Schema(description = "**True** if a checkbox is required to accept.")
   public Boolean isRequireAccept() {
     return requireAccept;
   }
@@ -529,7 +528,7 @@ public class DisplaySettings {
    * **True** if send to email is applicable..
    * @return sendToEmail
    **/
-  @ApiModelProperty(value = "**True** if send to email is applicable.")
+  @Schema(description = "**True** if send to email is applicable.")
   public Boolean isSendToEmail() {
     return sendToEmail;
   }
@@ -556,7 +555,7 @@ public class DisplaySettings {
    * Position of the agreement statement. One of   - `top` - `bottom` .
    * @return statementAlignment
    **/
-  @ApiModelProperty(value = "Position of the agreement statement. One of   - `top` - `bottom` ")
+  @Schema(description = "Position of the agreement statement. One of   - `top` - `bottom` ")
   public String getStatementAlignment() {
     return statementAlignment;
   }

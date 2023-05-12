@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ServiceVersion.
@@ -35,7 +34,7 @@ public class ServiceVersion {
    * The human-readable semver version string..
    * @return version
    **/
-  @ApiModelProperty(value = "The human-readable semver version string.")
+  @Schema(description = "The human-readable semver version string.")
   public String getVersion() {
     return version;
   }
@@ -62,7 +61,7 @@ public class ServiceVersion {
    * The URL where this version of the API can be found..
    * @return versionUrl
    **/
-  @ApiModelProperty(value = "The URL where this version of the API can be found.")
+  @Schema(description = "The URL where this version of the API can be found.")
   public String getVersionUrl() {
     return versionUrl;
   }

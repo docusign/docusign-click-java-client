@@ -5,14 +5,13 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Data used to start a bulk agreements export..
  *
  */
-@ApiModel(description = "Data used to start a bulk agreements export.")
+@Schema(description = "Data used to start a bulk agreements export.")
 
 public class BulkClickwrapRequest {
   @JsonProperty("fromDate")
@@ -39,7 +38,7 @@ public class BulkClickwrapRequest {
    * The earliest date to return agreements from..
    * @return fromDate
    **/
-  @ApiModelProperty(value = "The earliest date to return agreements from.")
+  @Schema(description = "The earliest date to return agreements from.")
   public Object getFromDate() {
     return fromDate;
   }
@@ -66,7 +65,7 @@ public class BulkClickwrapRequest {
    * User agreement status. One of:  - `agreed` - `declined`.
    * @return status
    **/
-  @ApiModelProperty(value = "User agreement status. One of:  - `agreed` - `declined`")
+  @Schema(description = "User agreement status. One of:  - `agreed` - `declined`")
   public String getStatus() {
     return status;
   }
@@ -93,7 +92,7 @@ public class BulkClickwrapRequest {
    * The latest date to return agreements from..
    * @return toDate
    **/
-  @ApiModelProperty(value = "The latest date to return agreements from.")
+  @Schema(description = "The latest date to return agreements from.")
   public Object getToDate() {
     return toDate;
   }

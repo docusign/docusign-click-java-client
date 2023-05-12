@@ -6,14 +6,13 @@ import com.docusign.click.model.ClickwrapVersionSummaryResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * The results are paginated. Use the following properties to navigate the pages. Use the &#x60;page_number&#x60; query parameter to specify a page.  - &#x60;page&#x60;: The page number of the current results. - &#x60;pageSize&#x60;: The number of results in the current page. - &#x60;minimumPagesRemaining&#x60;: The number of pages that follow this one. .
  *
  */
-@ApiModel(description = "The results are paginated. Use the following properties to navigate the pages. Use the `page_number` query parameter to specify a page.  - `page`: The page number of the current results. - `pageSize`: The number of results in the current page. - `minimumPagesRemaining`: The number of pages that follow this one. ")
+@Schema(description = "The results are paginated. Use the following properties to navigate the pages. Use the `page_number` query parameter to specify a page.  - `page`: The page number of the current results. - `pageSize`: The number of results in the current page. - `minimumPagesRemaining`: The number of pages that follow this one. ")
 
 public class ClickwrapVersionsResponse {
   @JsonProperty("clickwraps")
@@ -56,7 +55,7 @@ public class ClickwrapVersionsResponse {
    * An array of `clickwrapVersionSummaryResponse` objects..
    * @return clickwraps
    **/
-  @ApiModelProperty(value = "An array of `clickwrapVersionSummaryResponse` objects.")
+  @Schema(description = "An array of `clickwrapVersionSummaryResponse` objects.")
   public java.util.List<ClickwrapVersionSummaryResponse> getClickwraps() {
     return clickwraps;
   }
@@ -83,7 +82,7 @@ public class ClickwrapVersionsResponse {
    * Number of pages remaining in the response..
    * @return minimumPagesRemaining
    **/
-  @ApiModelProperty(value = "Number of pages remaining in the response.")
+  @Schema(description = "Number of pages remaining in the response.")
   public Integer getMinimumPagesRemaining() {
     return minimumPagesRemaining;
   }
@@ -110,7 +109,7 @@ public class ClickwrapVersionsResponse {
    * The number of the current page..
    * @return page
    **/
-  @ApiModelProperty(value = "The number of the current page.")
+  @Schema(description = "The number of the current page.")
   public Integer getPage() {
     return page;
   }
@@ -137,7 +136,7 @@ public class ClickwrapVersionsResponse {
    * The number of items per page..
    * @return pageSize
    **/
-  @ApiModelProperty(value = "The number of items per page.")
+  @Schema(description = "The number of items per page.")
   public Integer getPageSize() {
     return pageSize;
   }

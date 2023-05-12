@@ -5,14 +5,13 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * The object of data to be merged with the clickwrap document. A merged document must be created from Click&#39;s web editor and supports fullName, email, company, title and date..
  *
  */
-@ApiModel(description = "The object of data to be merged with the clickwrap document. A merged document must be created from Click's web editor and supports fullName, email, company, title and date.")
+@Schema(description = "The object of data to be merged with the clickwrap document. A merged document must be created from Click's web editor and supports fullName, email, company, title and date.")
 
 public class DocumentData {
   @JsonProperty("fullName")
@@ -45,7 +44,7 @@ public class DocumentData {
    * The full name of the signer. This field is created in the UI editor for a Clickwrap document. Only required if present in the document..
    * @return fullName
    **/
-  @ApiModelProperty(value = "The full name of the signer. This field is created in the UI editor for a Clickwrap document. Only required if present in the document.")
+  @Schema(description = "The full name of the signer. This field is created in the UI editor for a Clickwrap document. Only required if present in the document.")
   public String getFullName() {
     return fullName;
   }
@@ -72,7 +71,7 @@ public class DocumentData {
    * The email address of the signer. This field is created in the UI editor for a Clickwrap document. Only required if present in the document..
    * @return email
    **/
-  @ApiModelProperty(value = "The email address of the signer. This field is created in the UI editor for a Clickwrap document. Only required if present in the document.")
+  @Schema(description = "The email address of the signer. This field is created in the UI editor for a Clickwrap document. Only required if present in the document.")
   public String getEmail() {
     return email;
   }
@@ -99,7 +98,7 @@ public class DocumentData {
    * The company name of the signer. This field is created in the UI editor for a Clickwrap document. Only required if present in the document..
    * @return company
    **/
-  @ApiModelProperty(value = "The company name of the signer. This field is created in the UI editor for a Clickwrap document. Only required if present in the document.")
+  @Schema(description = "The company name of the signer. This field is created in the UI editor for a Clickwrap document. Only required if present in the document.")
   public String getCompany() {
     return company;
   }
@@ -126,7 +125,7 @@ public class DocumentData {
    * The job title of the signer. This field is created in the UI editor for a Clickwrap document. Only required if present in the document..
    * @return jobTitle
    **/
-  @ApiModelProperty(value = "The job title of the signer. This field is created in the UI editor for a Clickwrap document. Only required if present in the document.")
+  @Schema(description = "The job title of the signer. This field is created in the UI editor for a Clickwrap document. Only required if present in the document.")
   public String getJobTitle() {
     return jobTitle;
   }
@@ -153,7 +152,7 @@ public class DocumentData {
    * A custom date for the contract. This field is created in the UI editor for a Clickwrap document. Only required if present in the document..
    * @return date
    **/
-  @ApiModelProperty(value = "A custom date for the contract. This field is created in the UI editor for a Clickwrap document. Only required if present in the document.")
+  @Schema(description = "A custom date for the contract. This field is created in the UI editor for a Clickwrap document. Only required if present in the document.")
   public String getDate() {
     return date;
   }

@@ -6,8 +6,7 @@ import com.docusign.click.model.ClickwrapDeleteResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ClickwrapsDeleteResponse.
@@ -46,7 +45,7 @@ public class ClickwrapsDeleteResponse {
    * An array of clickwrap deletion results..
    * @return clickwraps
    **/
-  @ApiModelProperty(value = "An array of clickwrap deletion results.")
+  @Schema(description = "An array of clickwrap deletion results.")
   public java.util.List<ClickwrapDeleteResponse> getClickwraps() {
     return clickwraps;
   }

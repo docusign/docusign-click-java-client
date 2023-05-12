@@ -9,8 +9,7 @@ import com.docusign.click.model.Document;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ClickwrapVersionResponse.
@@ -84,7 +83,7 @@ public class ClickwrapVersionResponse {
    * The external account number (int) or account ID GUID..
    * @return accountId
    **/
-  @ApiModelProperty(value = "The external account number (int) or account ID GUID.")
+  @Schema(description = "The external account number (int) or account ID GUID.")
   public String getAccountId() {
     return accountId;
   }
@@ -111,7 +110,7 @@ public class ClickwrapVersionResponse {
    * The ID of the clickwrap..
    * @return clickwrapId
    **/
-  @ApiModelProperty(value = "The ID of the clickwrap.")
+  @Schema(description = "The ID of the clickwrap.")
   public String getClickwrapId() {
     return clickwrapId;
   }
@@ -138,7 +137,7 @@ public class ClickwrapVersionResponse {
    * The name of the clickwrap..
    * @return clickwrapName
    **/
-  @ApiModelProperty(value = "The name of the clickwrap.")
+  @Schema(description = "The name of the clickwrap.")
   public String getClickwrapName() {
     return clickwrapName;
   }
@@ -165,7 +164,7 @@ public class ClickwrapVersionResponse {
    * The unique version ID, a GUID, of this clickwrap version..
    * @return clickwrapVersionId
    **/
-  @ApiModelProperty(value = "The unique version ID, a GUID, of this clickwrap version.")
+  @Schema(description = "The unique version ID, a GUID, of this clickwrap version.")
   public String getClickwrapVersionId() {
     return clickwrapVersionId;
   }
@@ -192,7 +191,7 @@ public class ClickwrapVersionResponse {
    * The time that the clickwrap was created..
    * @return createdTime
    **/
-  @ApiModelProperty(value = "The time that the clickwrap was created.")
+  @Schema(description = "The time that the clickwrap was created.")
   public Object getCreatedTime() {
     return createdTime;
   }
@@ -232,7 +231,7 @@ public class ClickwrapVersionResponse {
    * The list of all the data fields available for the clickwrap (custom fields and standard fields)..
    * @return dataFields
    **/
-  @ApiModelProperty(value = "The list of all the data fields available for the clickwrap (custom fields and standard fields).")
+  @Schema(description = "The list of all the data fields available for the clickwrap (custom fields and standard fields).")
   public java.util.List<DataField> getDataFields() {
     return dataFields;
   }
@@ -259,7 +258,7 @@ public class ClickwrapVersionResponse {
    * Display settings for a clickwrap..
    * @return displaySettings
    **/
-  @ApiModelProperty(value = "Display settings for a clickwrap.")
+  @Schema(description = "Display settings for a clickwrap.")
   public DisplaySettings getDisplaySettings() {
     return displaySettings;
   }
@@ -299,7 +298,7 @@ public class ClickwrapVersionResponse {
    * An array of documents..
    * @return documents
    **/
-  @ApiModelProperty(value = "An array of documents.")
+  @Schema(description = "An array of documents.")
   public java.util.List<Document> getDocuments() {
     return documents;
   }
@@ -326,7 +325,7 @@ public class ClickwrapVersionResponse {
    * The time that the clickwrap was last modified..
    * @return lastModified
    **/
-  @ApiModelProperty(value = "The time that the clickwrap was last modified.")
+  @Schema(description = "The time that the clickwrap was last modified.")
   public Object getLastModified() {
     return lastModified;
   }
@@ -353,7 +352,7 @@ public class ClickwrapVersionResponse {
    * The user ID of the last user who modified this clickwrap..
    * @return lastModifiedBy
    **/
-  @ApiModelProperty(value = "The user ID of the last user who modified this clickwrap.")
+  @Schema(description = "The user ID of the last user who modified this clickwrap.")
   public String getLastModifiedBy() {
     return lastModifiedBy;
   }
@@ -380,7 +379,7 @@ public class ClickwrapVersionResponse {
    * The user ID of the owner of this clickwrap..
    * @return ownerUserId
    **/
-  @ApiModelProperty(value = "The user ID of the owner of this clickwrap.")
+  @Schema(description = "The user ID of the owner of this clickwrap.")
   public String getOwnerUserId() {
     return ownerUserId;
   }
@@ -407,7 +406,7 @@ public class ClickwrapVersionResponse {
    * When **true,** requires signers who have previously agreed to this clickwrap to sign again. The version number is incremented..
    * @return requireReacceptance
    **/
-  @ApiModelProperty(value = "When **true,** requires signers who have previously agreed to this clickwrap to sign again. The version number is incremented.")
+  @Schema(description = "When **true,** requires signers who have previously agreed to this clickwrap to sign again. The version number is incremented.")
   public Boolean isRequireReacceptance() {
     return requireReacceptance;
   }
@@ -434,7 +433,7 @@ public class ClickwrapVersionResponse {
    * The time and date when this clickwrap is activated..
    * @return scheduledDate
    **/
-  @ApiModelProperty(value = "The time and date when this clickwrap is activated.")
+  @Schema(description = "The time and date when this clickwrap is activated.")
   public Object getScheduledDate() {
     return scheduledDate;
   }
@@ -461,7 +460,7 @@ public class ClickwrapVersionResponse {
    * Specifies the interval between reacceptances in days, weeks, months, or years..
    * @return scheduledReacceptance
    **/
-  @ApiModelProperty(value = "Specifies the interval between reacceptances in days, weeks, months, or years.")
+  @Schema(description = "Specifies the interval between reacceptances in days, weeks, months, or years.")
   public ClickwrapScheduledReacceptance getScheduledReacceptance() {
     return scheduledReacceptance;
   }
@@ -488,7 +487,7 @@ public class ClickwrapVersionResponse {
    * Clickwrap status. Possible values:  - `active` - `inactive` - `deleted`.
    * @return status
    **/
-  @ApiModelProperty(value = "Clickwrap status. Possible values:  - `active` - `inactive` - `deleted`")
+  @Schema(description = "Clickwrap status. Possible values:  - `active` - `inactive` - `deleted`")
   public String getStatus() {
     return status;
   }
@@ -515,7 +514,7 @@ public class ClickwrapVersionResponse {
    * The ID of the version..
    * @return versionId
    **/
-  @ApiModelProperty(value = "The ID of the version.")
+  @Schema(description = "The ID of the version.")
   public String getVersionId() {
     return versionId;
   }
@@ -542,7 +541,7 @@ public class ClickwrapVersionResponse {
    * Version of the clickwrap..
    * @return versionNumber
    **/
-  @ApiModelProperty(value = "Version of the clickwrap.")
+  @Schema(description = "Version of the clickwrap.")
   public String getVersionNumber() {
     return versionNumber;
   }

@@ -9,14 +9,13 @@ import com.docusign.click.model.Document;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Request body for working with clickwrap..
  *
  */
-@ApiModel(description = "Request body for working with clickwrap.")
+@Schema(description = "Request body for working with clickwrap.")
 
 public class ClickwrapRequest {
   @JsonProperty("clickwrapName")
@@ -76,7 +75,7 @@ public class ClickwrapRequest {
    * The name of the clickwrap. This field is required..
    * @return clickwrapName
    **/
-  @ApiModelProperty(value = "The name of the clickwrap. This field is required.")
+  @Schema(description = "The name of the clickwrap. This field is required.")
   public String getClickwrapName() {
     return clickwrapName;
   }
@@ -116,7 +115,7 @@ public class ClickwrapRequest {
    * An array of data fields available to be inserted into the documents..
    * @return dataFields
    **/
-  @ApiModelProperty(value = "An array of data fields available to be inserted into the documents.")
+  @Schema(description = "An array of data fields available to be inserted into the documents.")
   public java.util.List<DataField> getDataFields() {
     return dataFields;
   }
@@ -143,7 +142,7 @@ public class ClickwrapRequest {
    * Display settings for the clickwrap. This object is required..
    * @return displaySettings
    **/
-  @ApiModelProperty(value = "Display settings for the clickwrap. This object is required.")
+  @Schema(description = "Display settings for the clickwrap. This object is required.")
   public DisplaySettings getDisplaySettings() {
     return displaySettings;
   }
@@ -183,7 +182,7 @@ public class ClickwrapRequest {
    * An array of documents. This object is required..
    * @return documents
    **/
-  @ApiModelProperty(value = "An array of documents. This object is required.")
+  @Schema(description = "An array of documents. This object is required.")
   public java.util.List<Document> getDocuments() {
     return documents;
   }
@@ -210,7 +209,7 @@ public class ClickwrapRequest {
    * Specifies whether `scheduledReacceptance` and `scheduledDate` should be cleared. May be one of:  - `\"scheduledReacceptance\"` - `\"scheduledDate\"` - `\"scheduledReacceptance,scheduledDate\"` .
    * @return fieldsToNull
    **/
-  @ApiModelProperty(value = "Specifies whether `scheduledReacceptance` and `scheduledDate` should be cleared. May be one of:  - `\"scheduledReacceptance\"` - `\"scheduledDate\"` - `\"scheduledReacceptance,scheduledDate\"` ")
+  @Schema(description = "Specifies whether `scheduledReacceptance` and `scheduledDate` should be cleared. May be one of:  - `\"scheduledReacceptance\"` - `\"scheduledDate\"` - `\"scheduledReacceptance,scheduledDate\"` ")
   public String getFieldsToNull() {
     return fieldsToNull;
   }
@@ -237,7 +236,7 @@ public class ClickwrapRequest {
    * Not used..
    * @return isMajorVersion
    **/
-  @ApiModelProperty(value = "Not used.")
+  @Schema(description = "Not used.")
   public Boolean isIsMajorVersion() {
     return isMajorVersion;
   }
@@ -264,7 +263,7 @@ public class ClickwrapRequest {
    * When **true,** indicates that the clickwrap is shared with one or more users in the account..
    * @return isShared
    **/
-  @ApiModelProperty(value = "When **true,** indicates that the clickwrap is shared with one or more users in the account.")
+  @Schema(description = "When **true,** indicates that the clickwrap is shared with one or more users in the account.")
   public Boolean isIsShared() {
     return isShared;
   }
@@ -291,7 +290,7 @@ public class ClickwrapRequest {
    * Not used..
    * @return name
    **/
-  @ApiModelProperty(value = "Not used.")
+  @Schema(description = "Not used.")
   public String getName() {
     return name;
   }
@@ -318,7 +317,7 @@ public class ClickwrapRequest {
    * When **true,** requires signers who have previously agreed to this clickwrap to sign again. The version number is incremented..
    * @return requireReacceptance
    **/
-  @ApiModelProperty(value = "When **true,** requires signers who have previously agreed to this clickwrap to sign again. The version number is incremented.")
+  @Schema(description = "When **true,** requires signers who have previously agreed to this clickwrap to sign again. The version number is incremented.")
   public Boolean isRequireReacceptance() {
     return requireReacceptance;
   }
@@ -345,7 +344,7 @@ public class ClickwrapRequest {
    * The time and date when this clickwrap is activated..
    * @return scheduledDate
    **/
-  @ApiModelProperty(value = "The time and date when this clickwrap is activated.")
+  @Schema(description = "The time and date when this clickwrap is activated.")
   public Object getScheduledDate() {
     return scheduledDate;
   }
@@ -372,7 +371,7 @@ public class ClickwrapRequest {
    * Specifies the interval between reacceptances in days, weeks, months, or years..
    * @return scheduledReacceptance
    **/
-  @ApiModelProperty(value = "Specifies the interval between reacceptances in days, weeks, months, or years.")
+  @Schema(description = "Specifies the interval between reacceptances in days, weeks, months, or years.")
   public ClickwrapScheduledReacceptance getScheduledReacceptance() {
     return scheduledReacceptance;
   }
@@ -399,7 +398,7 @@ public class ClickwrapRequest {
    * Clickwrap status. This property is read-only. Possible values:  - `active` - `inactive` - `deleted`.
    * @return status
    **/
-  @ApiModelProperty(value = "Clickwrap status. This property is read-only. Possible values:  - `active` - `inactive` - `deleted`")
+  @Schema(description = "Clickwrap status. This property is read-only. Possible values:  - `active` - `inactive` - `deleted`")
   public String getStatus() {
     return status;
   }
@@ -426,7 +425,7 @@ public class ClickwrapRequest {
    * Not used. To update the user ID of a clickwrap, use the [updateClickwrap](/docs/click-api/reference/accounts/clickwraps/updateclickwrap/) endpoint..
    * @return transferFromUserId
    **/
-  @ApiModelProperty(value = "Not used. To update the user ID of a clickwrap, use the [updateClickwrap](/docs/click-api/reference/accounts/clickwraps/updateclickwrap/) endpoint.")
+  @Schema(description = "Not used. To update the user ID of a clickwrap, use the [updateClickwrap](/docs/click-api/reference/accounts/clickwraps/updateclickwrap/) endpoint.")
   public String getTransferFromUserId() {
     return transferFromUserId;
   }
@@ -453,7 +452,7 @@ public class ClickwrapRequest {
    * Not used. To update the user ID of a clickwrap, use the [updateClickwrap](/docs/click-api/reference/accounts/clickwraps/updateclickwrap/) endpoint..
    * @return transferToUserId
    **/
-  @ApiModelProperty(value = "Not used. To update the user ID of a clickwrap, use the [updateClickwrap](/docs/click-api/reference/accounts/clickwraps/updateclickwrap/) endpoint.")
+  @Schema(description = "Not used. To update the user ID of a clickwrap, use the [updateClickwrap](/docs/click-api/reference/accounts/clickwraps/updateclickwrap/) endpoint.")
   public String getTransferToUserId() {
     return transferToUserId;
   }

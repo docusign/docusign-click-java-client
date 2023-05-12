@@ -5,14 +5,13 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Data used to transfer a clickwrap from one user to another..
  *
  */
-@ApiModel(description = "Data used to transfer a clickwrap from one user to another.")
+@Schema(description = "Data used to transfer a clickwrap from one user to another.")
 
 public class ClickwrapTransferRequest {
   @JsonProperty("transferFromUserId")
@@ -36,7 +35,7 @@ public class ClickwrapTransferRequest {
    * ID of the user to transfer from. This property is required..
    * @return transferFromUserId
    **/
-  @ApiModelProperty(value = "ID of the user to transfer from. This property is required.")
+  @Schema(description = "ID of the user to transfer from. This property is required.")
   public String getTransferFromUserId() {
     return transferFromUserId;
   }
@@ -63,7 +62,7 @@ public class ClickwrapTransferRequest {
    * ID of the user to transfer to. This property is required..
    * @return transferToUserId
    **/
-  @ApiModelProperty(value = "ID of the user to transfer to. This property is required.")
+  @Schema(description = "ID of the user to transfer to. This property is required.")
   public String getTransferToUserId() {
     return transferToUserId;
   }
