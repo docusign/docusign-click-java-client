@@ -5,6 +5,7 @@ import java.util.Arrays;
 import com.docusign.click.model.DataField;
 import com.docusign.click.model.DisplaySettings;
 import com.docusign.click.model.Document;
+import com.docusign.click.model.UserAgreementResponseStyle;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -68,7 +69,7 @@ public class UserAgreementResponse {
   private String status = null;
 
   @JsonProperty("style")
-  private java.util.Map<String, String> style = null;
+  private UserAgreementResponseStyle style = null;
 
   @JsonProperty("version")
   private String version = null;
@@ -583,37 +584,24 @@ public class UserAgreementResponse {
    *
    * @return UserAgreementResponse
    **/
-  public UserAgreementResponse style(java.util.Map<String, String> style) {
+  public UserAgreementResponse style(UserAgreementResponseStyle style) {
     this.style = style;
     return this;
   }
 
   /**
-   * putStyleItem.
-   *
-   * @return UserAgreementResponse
-   **/
-  public UserAgreementResponse putStyleItem(String key, String styleItem) {
-    if (this.style == null) {
-      this.style = new java.util.HashMap<>();
-    }
-    this.style.put(key, styleItem);
-    return this;
-  }
-
-  /**
-   * This property specifies the custom style provided when the agreement was created by [customizing the template appearance][].    [customizing the template appearance]: /docs/click-api/click101/customize-elastic-template-appearance/ .
+   * Get style.
    * @return style
    **/
-  @Schema(description = "This property specifies the custom style provided when the agreement was created by [customizing the template appearance][].    [customizing the template appearance]: /docs/click-api/click101/customize-elastic-template-appearance/ ")
-  public java.util.Map<String, String> getStyle() {
+  @Schema(description = "")
+  public UserAgreementResponseStyle getStyle() {
     return style;
   }
 
   /**
    * setStyle.
    **/
-  public void setStyle(java.util.Map<String, String> style) {
+  public void setStyle(UserAgreementResponseStyle style) {
     this.style = style;
   }
 

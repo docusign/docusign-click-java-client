@@ -1,0 +1,674 @@
+package com.docusign.click.model;
+
+import java.util.Objects;
+import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.v3.oas.annotations.media.Schema;
+
+/**
+ * BaseAgreeButtonStyles.
+ *
+ */
+
+public class BaseAgreeButtonStyles {
+  @JsonProperty("backgroundColor")
+  private String backgroundColor = null;
+
+  @JsonProperty("border")
+  private String border = null;
+
+  @JsonProperty("borderColor")
+  private String borderColor = null;
+
+  @JsonProperty("borderRadius")
+  private String borderRadius = null;
+
+  @JsonProperty("borderStyle")
+  private String borderStyle = null;
+
+  @JsonProperty("borderWidth")
+  private String borderWidth = null;
+
+  @JsonProperty("boxShadow")
+  private String boxShadow = null;
+
+  @JsonProperty("color")
+  private String color = null;
+
+  @JsonProperty("fontFamily")
+  private String fontFamily = null;
+
+  @JsonProperty("fontSize")
+  private String fontSize = null;
+
+  @JsonProperty("fontStyle")
+  private String fontStyle = null;
+
+  @JsonProperty("fontWeight")
+  private Object fontWeight = null;
+
+  @JsonProperty("height")
+  private String height = null;
+
+  @JsonProperty("margin")
+  private String margin = null;
+
+  @JsonProperty("opacity")
+  private String opacity = null;
+
+  @JsonProperty("outline")
+  private String outline = null;
+
+  @JsonProperty("outlineOffset")
+  private String outlineOffset = null;
+
+  @JsonProperty("padding")
+  private String padding = null;
+
+  @JsonProperty("width")
+  private String width = null;
+
+
+  /**
+   * backgroundColor.
+   *
+   * @return BaseAgreeButtonStyles
+   **/
+  public BaseAgreeButtonStyles backgroundColor(String backgroundColor) {
+    this.backgroundColor = backgroundColor;
+    return this;
+  }
+
+  /**
+   * Control the background color of the element..
+   * @return backgroundColor
+   **/
+  @Schema(description = "Control the background color of the element.")
+  public String getBackgroundColor() {
+    return backgroundColor;
+  }
+
+  /**
+   * setBackgroundColor.
+   **/
+  public void setBackgroundColor(String backgroundColor) {
+    this.backgroundColor = backgroundColor;
+  }
+
+
+  /**
+   * border.
+   *
+   * @return BaseAgreeButtonStyles
+   **/
+  public BaseAgreeButtonStyles border(String border) {
+    this.border = border;
+    return this;
+  }
+
+  /**
+   * Control the border of the element..
+   * @return border
+   **/
+  @Schema(description = "Control the border of the element.")
+  public String getBorder() {
+    return border;
+  }
+
+  /**
+   * setBorder.
+   **/
+  public void setBorder(String border) {
+    this.border = border;
+  }
+
+
+  /**
+   * borderColor.
+   *
+   * @return BaseAgreeButtonStyles
+   **/
+  public BaseAgreeButtonStyles borderColor(String borderColor) {
+    this.borderColor = borderColor;
+    return this;
+  }
+
+  /**
+   * Control the border color of the element..
+   * @return borderColor
+   **/
+  @Schema(description = "Control the border color of the element.")
+  public String getBorderColor() {
+    return borderColor;
+  }
+
+  /**
+   * setBorderColor.
+   **/
+  public void setBorderColor(String borderColor) {
+    this.borderColor = borderColor;
+  }
+
+
+  /**
+   * borderRadius.
+   *
+   * @return BaseAgreeButtonStyles
+   **/
+  public BaseAgreeButtonStyles borderRadius(String borderRadius) {
+    this.borderRadius = borderRadius;
+    return this;
+  }
+
+  /**
+   * Control the border radius of the element..
+   * @return borderRadius
+   **/
+  @Schema(description = "Control the border radius of the element.")
+  public String getBorderRadius() {
+    return borderRadius;
+  }
+
+  /**
+   * setBorderRadius.
+   **/
+  public void setBorderRadius(String borderRadius) {
+    this.borderRadius = borderRadius;
+  }
+
+
+  /**
+   * borderStyle.
+   *
+   * @return BaseAgreeButtonStyles
+   **/
+  public BaseAgreeButtonStyles borderStyle(String borderStyle) {
+    this.borderStyle = borderStyle;
+    return this;
+  }
+
+  /**
+   * Control the border style of the element..
+   * @return borderStyle
+   **/
+  @Schema(description = "Control the border style of the element.")
+  public String getBorderStyle() {
+    return borderStyle;
+  }
+
+  /**
+   * setBorderStyle.
+   **/
+  public void setBorderStyle(String borderStyle) {
+    this.borderStyle = borderStyle;
+  }
+
+
+  /**
+   * borderWidth.
+   *
+   * @return BaseAgreeButtonStyles
+   **/
+  public BaseAgreeButtonStyles borderWidth(String borderWidth) {
+    this.borderWidth = borderWidth;
+    return this;
+  }
+
+  /**
+   * Control the border width of the element..
+   * @return borderWidth
+   **/
+  @Schema(description = "Control the border width of the element.")
+  public String getBorderWidth() {
+    return borderWidth;
+  }
+
+  /**
+   * setBorderWidth.
+   **/
+  public void setBorderWidth(String borderWidth) {
+    this.borderWidth = borderWidth;
+  }
+
+
+  /**
+   * boxShadow.
+   *
+   * @return BaseAgreeButtonStyles
+   **/
+  public BaseAgreeButtonStyles boxShadow(String boxShadow) {
+    this.boxShadow = boxShadow;
+    return this;
+  }
+
+  /**
+   * Control the display of the box shadow of the agree button..
+   * @return boxShadow
+   **/
+  @Schema(description = "Control the display of the box shadow of the agree button.")
+  public String getBoxShadow() {
+    return boxShadow;
+  }
+
+  /**
+   * setBoxShadow.
+   **/
+  public void setBoxShadow(String boxShadow) {
+    this.boxShadow = boxShadow;
+  }
+
+
+  /**
+   * color.
+   *
+   * @return BaseAgreeButtonStyles
+   **/
+  public BaseAgreeButtonStyles color(String color) {
+    this.color = color;
+    return this;
+  }
+
+  /**
+   * Control the fore-ground color of the element..
+   * @return color
+   **/
+  @Schema(description = "Control the fore-ground color of the element.")
+  public String getColor() {
+    return color;
+  }
+
+  /**
+   * setColor.
+   **/
+  public void setColor(String color) {
+    this.color = color;
+  }
+
+
+  /**
+   * fontFamily.
+   *
+   * @return BaseAgreeButtonStyles
+   **/
+  public BaseAgreeButtonStyles fontFamily(String fontFamily) {
+    this.fontFamily = fontFamily;
+    return this;
+  }
+
+  /**
+   * Control the font family of the text..
+   * @return fontFamily
+   **/
+  @Schema(description = "Control the font family of the text.")
+  public String getFontFamily() {
+    return fontFamily;
+  }
+
+  /**
+   * setFontFamily.
+   **/
+  public void setFontFamily(String fontFamily) {
+    this.fontFamily = fontFamily;
+  }
+
+
+  /**
+   * fontSize.
+   *
+   * @return BaseAgreeButtonStyles
+   **/
+  public BaseAgreeButtonStyles fontSize(String fontSize) {
+    this.fontSize = fontSize;
+    return this;
+  }
+
+  /**
+   * Control the font size of the text..
+   * @return fontSize
+   **/
+  @Schema(description = "Control the font size of the text.")
+  public String getFontSize() {
+    return fontSize;
+  }
+
+  /**
+   * setFontSize.
+   **/
+  public void setFontSize(String fontSize) {
+    this.fontSize = fontSize;
+  }
+
+
+  /**
+   * fontStyle.
+   *
+   * @return BaseAgreeButtonStyles
+   **/
+  public BaseAgreeButtonStyles fontStyle(String fontStyle) {
+    this.fontStyle = fontStyle;
+    return this;
+  }
+
+  /**
+   * Control the font style of the text..
+   * @return fontStyle
+   **/
+  @Schema(description = "Control the font style of the text.")
+  public String getFontStyle() {
+    return fontStyle;
+  }
+
+  /**
+   * setFontStyle.
+   **/
+  public void setFontStyle(String fontStyle) {
+    this.fontStyle = fontStyle;
+  }
+
+
+  /**
+   * fontWeight.
+   *
+   * @return BaseAgreeButtonStyles
+   **/
+  public BaseAgreeButtonStyles fontWeight(Object fontWeight) {
+    this.fontWeight = fontWeight;
+    return this;
+  }
+
+  /**
+   * Control the font weight of the text..
+   * @return fontWeight
+   **/
+  @Schema(description = "Control the font weight of the text.")
+  public Object getFontWeight() {
+    return fontWeight;
+  }
+
+  /**
+   * setFontWeight.
+   **/
+  public void setFontWeight(Object fontWeight) {
+    this.fontWeight = fontWeight;
+  }
+
+
+  /**
+   * height.
+   *
+   * @return BaseAgreeButtonStyles
+   **/
+  public BaseAgreeButtonStyles height(String height) {
+    this.height = height;
+    return this;
+  }
+
+  /**
+   * Control the height of the agree button..
+   * @return height
+   **/
+  @Schema(description = "Control the height of the agree button.")
+  public String getHeight() {
+    return height;
+  }
+
+  /**
+   * setHeight.
+   **/
+  public void setHeight(String height) {
+    this.height = height;
+  }
+
+
+  /**
+   * margin.
+   *
+   * @return BaseAgreeButtonStyles
+   **/
+  public BaseAgreeButtonStyles margin(String margin) {
+    this.margin = margin;
+    return this;
+  }
+
+  /**
+   * Control the margin of the element..
+   * @return margin
+   **/
+  @Schema(description = "Control the margin of the element.")
+  public String getMargin() {
+    return margin;
+  }
+
+  /**
+   * setMargin.
+   **/
+  public void setMargin(String margin) {
+    this.margin = margin;
+  }
+
+
+  /**
+   * opacity.
+   *
+   * @return BaseAgreeButtonStyles
+   **/
+  public BaseAgreeButtonStyles opacity(String opacity) {
+    this.opacity = opacity;
+    return this;
+  }
+
+  /**
+   * Control the opacity of the element.
+   * @return opacity
+   **/
+  @Schema(description = "Control the opacity of the element")
+  public String getOpacity() {
+    return opacity;
+  }
+
+  /**
+   * setOpacity.
+   **/
+  public void setOpacity(String opacity) {
+    this.opacity = opacity;
+  }
+
+
+  /**
+   * outline.
+   *
+   * @return BaseAgreeButtonStyles
+   **/
+  public BaseAgreeButtonStyles outline(String outline) {
+    this.outline = outline;
+    return this;
+  }
+
+  /**
+   * Control the outline of the element.
+   * @return outline
+   **/
+  @Schema(description = "Control the outline of the element")
+  public String getOutline() {
+    return outline;
+  }
+
+  /**
+   * setOutline.
+   **/
+  public void setOutline(String outline) {
+    this.outline = outline;
+  }
+
+
+  /**
+   * outlineOffset.
+   *
+   * @return BaseAgreeButtonStyles
+   **/
+  public BaseAgreeButtonStyles outlineOffset(String outlineOffset) {
+    this.outlineOffset = outlineOffset;
+    return this;
+  }
+
+  /**
+   * Conrol the outline offset of the element.
+   * @return outlineOffset
+   **/
+  @Schema(description = "Conrol the outline offset of the element")
+  public String getOutlineOffset() {
+    return outlineOffset;
+  }
+
+  /**
+   * setOutlineOffset.
+   **/
+  public void setOutlineOffset(String outlineOffset) {
+    this.outlineOffset = outlineOffset;
+  }
+
+
+  /**
+   * padding.
+   *
+   * @return BaseAgreeButtonStyles
+   **/
+  public BaseAgreeButtonStyles padding(String padding) {
+    this.padding = padding;
+    return this;
+  }
+
+  /**
+   * Control the padding of the element..
+   * @return padding
+   **/
+  @Schema(description = "Control the padding of the element.")
+  public String getPadding() {
+    return padding;
+  }
+
+  /**
+   * setPadding.
+   **/
+  public void setPadding(String padding) {
+    this.padding = padding;
+  }
+
+
+  /**
+   * width.
+   *
+   * @return BaseAgreeButtonStyles
+   **/
+  public BaseAgreeButtonStyles width(String width) {
+    this.width = width;
+    return this;
+  }
+
+  /**
+   * Control the width of the agree button..
+   * @return width
+   **/
+  @Schema(description = "Control the width of the agree button.")
+  public String getWidth() {
+    return width;
+  }
+
+  /**
+   * setWidth.
+   **/
+  public void setWidth(String width) {
+    this.width = width;
+  }
+
+
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    BaseAgreeButtonStyles baseAgreeButtonStyles = (BaseAgreeButtonStyles) o;
+    return Objects.equals(this.backgroundColor, baseAgreeButtonStyles.backgroundColor) &&
+        Objects.equals(this.border, baseAgreeButtonStyles.border) &&
+        Objects.equals(this.borderColor, baseAgreeButtonStyles.borderColor) &&
+        Objects.equals(this.borderRadius, baseAgreeButtonStyles.borderRadius) &&
+        Objects.equals(this.borderStyle, baseAgreeButtonStyles.borderStyle) &&
+        Objects.equals(this.borderWidth, baseAgreeButtonStyles.borderWidth) &&
+        Objects.equals(this.boxShadow, baseAgreeButtonStyles.boxShadow) &&
+        Objects.equals(this.color, baseAgreeButtonStyles.color) &&
+        Objects.equals(this.fontFamily, baseAgreeButtonStyles.fontFamily) &&
+        Objects.equals(this.fontSize, baseAgreeButtonStyles.fontSize) &&
+        Objects.equals(this.fontStyle, baseAgreeButtonStyles.fontStyle) &&
+        Objects.equals(this.fontWeight, baseAgreeButtonStyles.fontWeight) &&
+        Objects.equals(this.height, baseAgreeButtonStyles.height) &&
+        Objects.equals(this.margin, baseAgreeButtonStyles.margin) &&
+        Objects.equals(this.opacity, baseAgreeButtonStyles.opacity) &&
+        Objects.equals(this.outline, baseAgreeButtonStyles.outline) &&
+        Objects.equals(this.outlineOffset, baseAgreeButtonStyles.outlineOffset) &&
+        Objects.equals(this.padding, baseAgreeButtonStyles.padding) &&
+        Objects.equals(this.width, baseAgreeButtonStyles.width);
+  }
+
+  /**
+   * Returns the HashCode.
+   */
+  @Override
+  public int hashCode() {
+    return Objects.hash(backgroundColor, border, borderColor, borderRadius, borderStyle, borderWidth, boxShadow, color, fontFamily, fontSize, fontStyle, fontWeight, height, margin, opacity, outline, outlineOffset, padding, width);
+  }
+
+
+  /**
+   * Converts the given object to string.
+   */
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class BaseAgreeButtonStyles {\n");
+    
+    sb.append("    backgroundColor: ").append(toIndentedString(backgroundColor)).append("\n");
+    sb.append("    border: ").append(toIndentedString(border)).append("\n");
+    sb.append("    borderColor: ").append(toIndentedString(borderColor)).append("\n");
+    sb.append("    borderRadius: ").append(toIndentedString(borderRadius)).append("\n");
+    sb.append("    borderStyle: ").append(toIndentedString(borderStyle)).append("\n");
+    sb.append("    borderWidth: ").append(toIndentedString(borderWidth)).append("\n");
+    sb.append("    boxShadow: ").append(toIndentedString(boxShadow)).append("\n");
+    sb.append("    color: ").append(toIndentedString(color)).append("\n");
+    sb.append("    fontFamily: ").append(toIndentedString(fontFamily)).append("\n");
+    sb.append("    fontSize: ").append(toIndentedString(fontSize)).append("\n");
+    sb.append("    fontStyle: ").append(toIndentedString(fontStyle)).append("\n");
+    sb.append("    fontWeight: ").append(toIndentedString(fontWeight)).append("\n");
+    sb.append("    height: ").append(toIndentedString(height)).append("\n");
+    sb.append("    margin: ").append(toIndentedString(margin)).append("\n");
+    sb.append("    opacity: ").append(toIndentedString(opacity)).append("\n");
+    sb.append("    outline: ").append(toIndentedString(outline)).append("\n");
+    sb.append("    outlineOffset: ").append(toIndentedString(outlineOffset)).append("\n");
+    sb.append("    padding: ").append(toIndentedString(padding)).append("\n");
+    sb.append("    width: ").append(toIndentedString(width)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+
+}
+
